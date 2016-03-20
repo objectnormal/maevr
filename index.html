@@ -1,29 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-
-    <script src="/socket.io/socket.io.js"></script>
-    <script>
-      var socket = io.connect(window.document.location.host);
-      
-      socket.on('init', function (data) {
-        console.log(data);
-        socket.emit('client response', {});
-      });
-
-      socket.on('begin', function(data) {
-        console.log("START NOW! " + data.timestamp);
-        document.getElementById("timestamp").innerHTML = data.timestamp;
-      });
-
-    </script>
-
+    <title>MAE VR</title>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 
   </head>
 
   <body>
-
-    <div id="timestamp" style="text-align:center;margin-top:4em;">Waiting...</div>
-
   </body>
+
+  <script>
+    WebVRConfig = {};
+  </script>
+
+  <script src="js/vendor/es6-promise.min.js"></script>
+  <script src="js/vendor/three.min.js"></script>
+  <script src="js/vendor/controls/VRControls.js"></script>
+  <script src="js/vendor/effects/VREffect.js"></script>
+  <script src="js/vendor/webvr-polyfill.js"></script>
+  <script src="js/vendor/webvr-manager.js"></script>
+
+  <script src="js/maevr.js"></script>
+  <script src="js/maevr.experience.js"></script>
+
+  <script src="/socket.io/socket.io.js"></script>
+  
+  <script>
+    var socket = io.connect(window.document.location.host);
+
+    socket.on('init', function (data) {
+      console.log("INITIALIZE");
+      socket.emit('client response', {});
+    });
+
+    socket.on('begin', function(data) {
+      console.log("START NOW! " + data.timestamp);
+    });
+  </script>
+
+  <script>
+    MAEVR.init();
+    MAEVR.animate();
+  </script>
+
 </html>

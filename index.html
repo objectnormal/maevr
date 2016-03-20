@@ -33,16 +33,23 @@
   <script src="/socket.io/socket.io.js"></script>
   
   <script>
-    var socket = io.connect(window.document.location.host);
 
-    socket.on('init', function (data) {
-      console.log("INITIALIZE");
-      socket.emit('client response', {});
-    });
+    if (typeof io != 'undefined') {
+      
+      var socket = io.connect(window.document.location.host);
 
-    socket.on('begin', function(data) {
-      console.log("START NOW! " + data.timestamp);
-    });
+      socket.on('init', function (data) {
+        console.log("INITIALIZE");
+        socket.emit('client response', {});
+      });
+
+      socket.on('begin', function(data) {
+        console.log("START NOW! " + data.timestamp);
+      });
+
+    } else {
+
+    }
   </script>
 
   <script>

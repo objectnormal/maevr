@@ -39,13 +39,17 @@
       var socket = io.connect(window.document.location.host);
 
       socket.on('init', function (data) {
-        console.log("INITIALIZE");
+        console.log("MAEVR: INITIALIZE");
         socket.emit('client response', {});
       });
 
       socket.on('begin', function(data) {
-        console.log("START NOW! " + data.timestamp);
+        console.log("MAEVR: START NOW! " + data.currentTime);
       });
+
+      socket.on('end', function(data) {
+        console.log("MAEVR: STOP NOW! " + data.currentTime);
+      });      
 
     } else {
 

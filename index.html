@@ -13,8 +13,7 @@
 
   </head>
 
-  <body>
-  </body>
+  <body></body>
 
   <script>
     WebVRConfig = {};
@@ -33,32 +32,8 @@
   <script src="/socket.io/socket.io.js"></script>
   
   <script>
-
-    if (typeof io != 'undefined') {
-      
-      var socket = io.connect(window.document.location.host);
-
-      socket.on('init', function (data) {
-        console.log("MAEVR: INITIALIZE");
-        socket.emit('client response', {});
-      });
-
-      socket.on('begin', function(data) {
-        console.log("MAEVR: START NOW! " + data.currentTime);
-      });
-
-      socket.on('end', function(data) {
-        console.log("MAEVR: STOP NOW! " + data.currentTime);
-      });      
-
-    } else {
-
-    }
-  </script>
-
-  <script>
-    MAEVR.init();
-    MAEVR.animate();
+    MAEVR.connect();
+    //MAEVR.init(MAEVR.Modes.Static);
   </script>
 
 </html>

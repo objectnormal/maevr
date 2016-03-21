@@ -1,9 +1,106 @@
 "use strict";
 
 var MAEVR = {
-  init: function() {
+  mode: null,
+  audio: null,
+  startTime: 0,
+  elapsedTime: 0,
+  connect: function() {
+
+    // Check for socket support
+
+    if (typeof io != 'undefined') {
+      
+      console.log("MAEVR: Attempting Connection");
+
+      // Connect to socket
+
+      var socket = io.connect(window.document.location.host,
+        {
+          reconnection: false,
+          timeout : 5000 
+        });
+
+      socket.io.on('connect_error', function (data) {
+        console.log("MAEVR: connect_error");
+
+        // Static Mode
+        console.log("MAEVR: Static Mode");
+        MAEVR.init(MAEVR.Modes.STATIC);        
+
+      });
+
+      socket.io.on('connect_timeout', function (data) {
+        console.log("MAEVR: connect_timeout");
+
+        // Static Mode
+        console.log("MAEVR: Static Mode");
+        MAEVR.init(MAEVR.Modes.STATIC);        
+
+      });
+
+      //
+
+      socket.on('connect', function() {
+        console.log("MAEVR: connect");
+
+        // Event Mode        
+        console.log("MAEVR: Event Mode");
+        MAEVR.init(MAEVR.Modes.EVENT);
+
+      });
+
+      socket.on('error', function(data) {
+        console.log("MAEVR: error " + data);
+
+        // Static Mode
+        console.log("MAEVR: Static Mode");
+        MAEVR.init(MAEVR.Modes.STATIC);   
+
+      });      
+
+      socket.on('begin', function(data) {
+        console.log("MAEVR: begin " + data.currentTime);
+
+        MAEVR.startTime = performance.now() - data.currentTime;
+        MAEVR.animate();
+      });
+
+      socket.on('end', function(data) {
+        console.log("MAEVR: end " + data.currentTime);
+      });      
+
+    } else {
+
+      // Static Mode
+      console.log("MAEVR: Static Mode");
+      MAEVR.init(MAEVR.Modes.STATIC);
+
+    }
+
+  },
+  init: function(mode) {
 
     var scope = this;
+    MAEVR.mode = mode;
+
+    // Preload based on mode
+
+    if (MAEVR.mode == MAEVR.Modes.EVENT) {
+      // Clock comes from server
+    } else {
+      // Clock comes from audio stream
+      
+      MAEVR.audio = new Audio();
+      MAEVR.audio.src = 'assets/audio/track.mp3';
+      
+      MAEVR.audio.oncanplaythrough = function() {
+        console.log("MAEVR: oncanplaythrough");
+        MAEVR.audio.play();
+        MAEVR.animate();
+      }
+
+    }
 
     // Init Three.jS
 
@@ -33,15 +130,37 @@ var MAEVR = {
     // Add to DOM
 
     document.body.appendChild(MAEVR.renderer.domElement);
+    
   },
 
   animate: function(timestamp) {
 
+    // Update Time
+
+    if (MAEVR.mode == MAEVR.Modes.EVENT) {
+      MAEVR.elapsedTime = performance.now() - MAEVR.startTime;
+    } else {
+      MAEVR.elapsedTime = MAEVR.audio.currentTime * 1000;
+    }
+
+    // Update VR
+
     MAEVR.vrControls.update();
     MAEVR.vrManager.render(MAEVR.scene, MAEVR.camera, timestamp);
 
+    // Animate experience
+
     MAEVR.Experience.animate(timestamp);
+
+    // Schedule next frame
 
     requestAnimationFrame(MAEVR.animate);
   }
+}
+
+// 
+
+MAEVR.Modes = {
+  STATIC: 0,
+  EVENT: 1
 }

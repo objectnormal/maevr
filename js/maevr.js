@@ -99,14 +99,9 @@ var MAEVR = {
 
       MAEVR.audio.oncanplaythrough = function() {
         console.log("MAEVR: oncanplaythrough");
-<<<<<<< HEAD
-        // MAEVR.audio.play();
-=======
 
         MAEVR.GUI.hideWindow("staticLoad");
-
         MAEVR.audio.play();
->>>>>>> 6ec79997302ba1760879f007e8f35c9882ee0a90
         MAEVR.animate();
       }
 
@@ -182,10 +177,8 @@ MAEVR.Modes = {
   STATIC: 0,
   EVENT: 1
 }
-<<<<<<< HEAD
-=======
 
-//
+
 
 MAEVR.GUI = {
   elapsedDate: null,
@@ -216,4 +209,3 @@ MAEVR.GUI = {
     MAEVR.init(MAEVR.Modes.STATIC);
   }
 }
->>>>>>> 6ec79997302ba1760879f007e8f35c9882ee0a90

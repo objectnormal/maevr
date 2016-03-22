@@ -96,7 +96,7 @@ var MAEVR = {
       
       MAEVR.audio.oncanplaythrough = function() {
         console.log("MAEVR: oncanplaythrough");
-        MAEVR.audio.play();
+        // MAEVR.audio.play();
         MAEVR.animate();
       }
 
@@ -109,14 +109,14 @@ var MAEVR = {
 
     MAEVR.scene = new THREE.Scene();
     MAEVR.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 10000);
-    
+    MAEVR.camera.position.z = 19;
     MAEVR.clock = new THREE.Clock(true);
 
     // Init VR
 
     MAEVR.vrControls = new THREE.VRControls(MAEVR.camera);
     MAEVR.vrEffect = new THREE.VREffect(MAEVR.renderer);
-      MAEVR.vrEffect.setSize(window.innerWidth, window.innerHeight);
+    MAEVR.vrEffect.setSize(window.innerWidth, window.innerHeight);
 
     MAEVR.vrManager = new WebVRManager(MAEVR.renderer, MAEVR.vrEffect, {
       hideButton: false,

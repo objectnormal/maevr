@@ -5,6 +5,7 @@ var MAEVR = {
   audio: null,
   startTime: 0,
   elapsedTime: 0,
+  serverURL: window.document.location.host, 
   connect: function() {
 
     // Check for socket support
@@ -15,7 +16,7 @@ var MAEVR = {
 
       // Connect to socket
 
-      var socket = io.connect(window.document.location.host,
+      var socket = io.connect(MAEVR.serverURL,
         {
           reconnection: false,
           timeout : 5000 
@@ -26,7 +27,7 @@ var MAEVR = {
 
         // Static Mode
         console.log("MAEVR: Static Mode");
-        MAEVR.init(MAEVR.Modes.STATIC);        
+        MAEVR.GUI.showWindow("staticWait");       
 
       });
 
@@ -35,7 +36,7 @@ var MAEVR = {
 
         // Static Mode
         console.log("MAEVR: Static Mode");
-        MAEVR.init(MAEVR.Modes.STATIC);        
+        MAEVR.GUI.showWindow("staticWait");       
 
       });
 
@@ -47,7 +48,7 @@ var MAEVR = {
         // Event Mode        
         console.log("MAEVR: Event Mode");
         MAEVR.init(MAEVR.Modes.EVENT);
-
+        MAEVR.GUI.showWindow("eventWait");
       });
 
       socket.on('error', function(data) {
@@ -55,7 +56,7 @@ var MAEVR = {
 
         // Static Mode
         console.log("MAEVR: Static Mode");
-        MAEVR.init(MAEVR.Modes.STATIC);   
+        MAEVR.GUI.showWindow("staticWait");
 
       });      
 
@@ -64,6 +65,7 @@ var MAEVR = {
 
         MAEVR.startTime = performance.now() - data.currentTime;
         MAEVR.animate();
+        MAEVR.GUI.hideWindow("eventWait");
       });
 
       socket.on('end', function(data) {
@@ -74,7 +76,7 @@ var MAEVR = {
 
       // Static Mode
       console.log("MAEVR: Static Mode");
-      MAEVR.init(MAEVR.Modes.STATIC);
+      MAEVR.GUI.showWindow("staticWait");
 
     }
 
@@ -93,10 +95,18 @@ var MAEVR = {
       
       MAEVR.audio = new Audio();
       MAEVR.audio.src = 'assets/audio/track.mp3';
-      
+      MAEVR.audio.load();
+
       MAEVR.audio.oncanplaythrough = function() {
         console.log("MAEVR: oncanplaythrough");
+<<<<<<< HEAD
         // MAEVR.audio.play();
+=======
+
+        MAEVR.GUI.hideWindow("staticLoad");
+
+        MAEVR.audio.play();
+>>>>>>> 6ec79997302ba1760879f007e8f35c9882ee0a90
         MAEVR.animate();
       }
 
@@ -123,6 +133,10 @@ var MAEVR = {
       isUndistorted: false
     });
 
+    // Initialize GUI
+
+    MAEVR.GUI.init();
+
     // Initialize Experience
 
     MAEVR.Experience.init(0);
@@ -142,6 +156,10 @@ var MAEVR = {
     } else {
       MAEVR.elapsedTime = MAEVR.audio.currentTime * 1000;
     }
+
+    // Update GUI
+
+    MAEVR.GUI.update();
 
     // Update VR
 
@@ -164,3 +182,38 @@ MAEVR.Modes = {
   STATIC: 0,
   EVENT: 1
 }
+<<<<<<< HEAD
+=======
+
+//
+
+MAEVR.GUI = {
+  elapsedDate: null,
+  elapsedTimeDiv: null,
+  init: function() {
+    var scope = this;
+
+    scope.elapseDate = new Date();
+    scope.elapsedTimeDiv = document.getElementById("elaspedTime");
+  },
+  update: function() {
+    var scope = this;
+
+    scope.elapseDate.setTime(MAEVR.elapsedTime);
+    var timeString = scope.elapseDate.toISOString().substr(11, 8);
+    scope.elapsedTimeDiv.innerHTML = timeString;
+  },
+  showWindow: function(windowName){
+    document.getElementById(windowName).style.display = 'initial';
+  },
+  hideWindow: function(windowName){
+    document.getElementById(windowName).style.display = 'none';
+  },
+  staticBegin: function() {
+    MAEVR.GUI.hideWindow("staticWait");
+    MAEVR.GUI.showWindow("staticLoad");
+
+    MAEVR.init(MAEVR.Modes.STATIC);
+  }
+}
+>>>>>>> 6ec79997302ba1760879f007e8f35c9882ee0a90

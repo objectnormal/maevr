@@ -5,7 +5,7 @@ var MAEVR = {
   audio: null,
   startTime: 0,
   elapsedTime: 0,
-  serverURL: "boo", //window.document.location.host, 
+  serverURL: window.document.location.host, 
   connect: function() {
 
     // Check for socket support

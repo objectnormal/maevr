@@ -64,11 +64,13 @@ MAEVR.Experience = {
 
     // Animate Objects
 
-    for(var i = 0 ; i < Curves.numCurves ; i++){
-      scope.swirls[i].offset((i*.3)+MAEVR.clock.getElapsedTime()*-.02);
-      // sc1.swirls[i].setFade(count,1.0);
-      // sc1.swirls[i].setCam(camera);
-      scope.swirls[i].update(MAEVR.clock.getElapsedTime());
+    if (scope.swirls.length > 0) {
+      for(var i = 0 ; i < Curves.numCurves ; i++){
+        scope.swirls[i].offset((i*.3)+MAEVR.clock.getElapsedTime()*-.02);
+        // sc1.swirls[i].setFade(count,1.0);
+        // sc1.swirls[i].setCam(camera);
+        scope.swirls[i].update(MAEVR.clock.getElapsedTime());
+      }
     }
 
 

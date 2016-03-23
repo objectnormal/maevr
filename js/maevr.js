@@ -5,7 +5,7 @@ var MAEVR = {
   audio: null,
   startTime: 0,
   elapsedTime: 0,
-  serverURL: window.document.location.host, 
+  serverURL: "maevr.herokuapp.com", 
   connect: function() {
 
     // Check for socket support

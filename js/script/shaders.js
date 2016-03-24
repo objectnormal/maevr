@@ -201,15 +201,11 @@ var facingFrag = "\
 
 
 var facingVert2 = "\
-	varying vec3 vecNormal;\
-	varying vec3 pos;\
 	varying vec2 vUv;\
 	varying vec3 wNormal;\
 	uniform float switcher;\
 	void main() {\
 		vUv = uv;\
-		pos = position;\
-		vecNormal = normal;\
 		wNormal = mat3(modelMatrix[0].xyz,modelMatrix[1].xyz,modelMatrix[2].xyz)*normal;\
 		wNormal = normalize(wNormal);\
 		gl_Position = projectionMatrix *\
@@ -239,7 +235,6 @@ var facingFrag2 = "\
 	uniform mat4 camMatInverse;\
 	varying vec3 wNormal;\
 	varying vec2 vUv;\
-	varying vec3 pos;\
 	uniform sampler2D textureColor;\
 	uniform sampler2D textureAlpha;\
 	uniform float offset;\
@@ -292,8 +287,8 @@ var facingMat2 = new THREE.ShaderMaterial(
 			fade:   { type: "f", value: 0.0 },
 			power:   { type: "f", value: 1.0 },
 			camMat: {type: 'm4', value:new THREE.Matrix4()},
-			textureColor: { type: "t", value: THREE.ImageUtils.loadTexture( "img/box.png" ) },
-			textureAlpha: { type: "t", value: THREE.ImageUtils.loadTexture( "img/box.png" ) }
+			textureColor: { type: "t", value: null },
+			textureAlpha: { type: "t", value: null }
 		},
 		vertexShader:   facingVert2,
 		fragmentShader: facingFrag2,
@@ -311,7 +306,7 @@ var facingMat = new THREE.ShaderMaterial(
 			"p":   { type: "f", value: 1.4 },
 			glowColor: { type: "c", value: new THREE.Color(0xffffff) },
 			viewVector: { type: "v3", value: new THREE.Vector3(0,0,0) },
-			textureColor: { type: "t", value: THREE.ImageUtils.loadTexture( "img/box.png" ) }
+			textureColor: { type: "t", value: null }
 		},
 		vertexShader:   facingVert,
 		fragmentShader: facingFrag,

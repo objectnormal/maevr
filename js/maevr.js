@@ -5,7 +5,8 @@ var MAEVR = {
   audio: null,
   startTime: 0,
   elapsedTime: 0,
-  serverURL: "maevr.herokuapp.com", 
+  serverURL: "maevr.herokuapp.com",
+  running: false,
   connect: function() {
 
     // Check for socket support
@@ -86,27 +87,6 @@ var MAEVR = {
     var scope = this;
     MAEVR.mode = mode;
 
-    // Preload based on mode
-
-    if (MAEVR.mode == MAEVR.Modes.EVENT) {
-      // Clock comes from server
-    } else {
-      // Clock comes from audio stream
-      
-      MAEVR.audio = new Audio();
-      MAEVR.audio.src = 'assets/audio/track.mp3';
-      MAEVR.audio.load();
-
-      MAEVR.audio.oncanplaythrough = function() {
-        console.log("MAEVR: oncanplaythrough");
-
-        MAEVR.GUI.hideWindow("staticLoad");
-        MAEVR.audio.play();
-        // MAEVR.animate();
-      }
-
-    }
-
     // Init Three.jS
 
     MAEVR.renderer = new THREE.WebGLRenderer({antialias: true});
@@ -117,9 +97,9 @@ var MAEVR = {
     MAEVR.camera.position.z = 19;
     MAEVR.clock = new THREE.Clock(true);
 
-    var sp = new THREE.Mesh(new THREE.SphereGeometry(1), new THREE.MeshNormalMaterial());
-  MAEVR.scene.add(sp);
-  sp.position.z = -5;
+    //var sp = new THREE.Mesh(new THREE.SphereGeometry(1), new THREE.MeshNormalMaterial());
+    //MAEVR.scene.add(sp);
+    //sp.position.z = -5;
 
     // Init VR
 
@@ -145,15 +125,18 @@ var MAEVR = {
     document.body.appendChild(MAEVR.renderer.domElement);
     
   },
-
   animate: function(timestamp) {
 
     // Update Time
 
-    if (MAEVR.mode == MAEVR.Modes.EVENT) {
-      MAEVR.elapsedTime = performance.now() - MAEVR.startTime;
+    if (MAEVR.running) {
+      if (MAEVR.mode == MAEVR.Modes.EVENT) {
+        MAEVR.elapsedTime = performance.now() - MAEVR.startTime;
+      } else {
+        MAEVR.elapsedTime = MAEVR.audio.currentTime * 1000;
+      }
     } else {
-      MAEVR.elapsedTime = MAEVR.audio.currentTime * 1000;
+      MAEVR.elapsedTime = 0;
     }
 
     // Update GUI
@@ -173,6 +156,22 @@ var MAEVR = {
     // Schedule next frame
 
     requestAnimationFrame(MAEVR.animate);
+  },
+  loadAudio: function() {
+
+      MAEVR.audio = new Audio();
+      MAEVR.audio.src = 'assets/audio/track.mp3';
+      MAEVR.audio.load();
+
+      MAEVR.audio.oncanplaythrough = function() {
+        console.log("MAEVR: oncanplaythrough");
+
+        MAEVR.GUI.hideWindow("staticLoad");
+        MAEVR.audio.play();
+
+        MAEVR.running = true;
+      }
+
   }
 }
 
@@ -182,8 +181,6 @@ MAEVR.Modes = {
   STATIC: 0,
   EVENT: 1
 }
-
-
 
 MAEVR.GUI = {
   elapsedDate: null,
@@ -209,8 +206,8 @@ MAEVR.GUI = {
   },
   staticBegin: function() {
     MAEVR.GUI.hideWindow("staticWait");
-    MAEVR.GUI.showWindow("staticLoad");
-    MAEVR.animate();
-    // MAEVR.init(MAEVR.Modes.STATIC);
+    MAEVR.GUI.showWindow("staticLoad"); 
+
+    MAEVR.loadAudio();   
   }
 }

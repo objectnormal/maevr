@@ -93,7 +93,7 @@ var MAEVR = {
 
     MAEVR.scene = new THREE.Scene();
     MAEVR.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 10000);
-    MAEVR.camera.position.z = 19;
+    MAEVR.camera.position.z = -25;
     MAEVR.clock = new THREE.Clock(true);
 
     //var sp = new THREE.Mesh(new THREE.SphereGeometry(1), new THREE.MeshNormalMaterial());

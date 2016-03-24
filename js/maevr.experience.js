@@ -61,10 +61,10 @@ MAEVR.Experience = {
     // }
     //console.log(MAEVR.elapsedTime);
     for(var i = 0 ; i < Curves.numCurves ; i++){
-      scope.swirls[i].offset((i*.3)+.01*MAEVR.elapsedTime*-.02);
+      scope.swirls[i].offset((i*.3)+.001*MAEVR.elapsedTime*-.02);
       // sc1.swirls[i].setFade(count,1.0);
       // sc1.swirls[i].setCam(camera);
-      scope.swirls[i].update(.01*MAEVR.elapsedTime);
+      scope.swirls[i].update(.001*MAEVR.elapsedTime);
     }
 
   }

@@ -64,7 +64,7 @@ MAEVR.Experience = {
 
     // Animate Objects
 
-    if (scope.swirls.length > 0) {
+    if (scope.swirls != null && scope.swirls.length > 0) {
       for(var i = 0 ; i < Curves.numCurves ; i++){
         scope.swirls[i].offset((i*.3)+MAEVR.clock.getElapsedTime()*-.02);
         // sc1.swirls[i].setFade(count,1.0);

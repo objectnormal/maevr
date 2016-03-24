@@ -22,21 +22,23 @@ MAEVR.Experience = {
     scope.texCol = loader.load('assets/img/sky_2.jpg', onTextureLoaded);
     scope.texAlpha = loader.load('assets/img/paintStreak_02.png', onTextureLoaded);
     scope.checker = loader.load('assets/img/checker.jpg', onTextureLoaded);
-    var loading = 0;
+    scope.loadCount = 0;
     scope.loaded = false;
 
     function onTextureLoaded(texture) {
       texture.wrapS = THREE.RepeatWrapping;
       texture.wrapT = THREE.RepeatWrapping;
-      loading++;
-      if(loading>1){
-            scope.setup();
+      console.log(scope.loadCount);
+      if(scope.loadCount>1){
+            scope.ready();
       }
+      scope.loadCount++;
     }
 
   },
 
-  setup: function(){
+  ready: function(){
+    console.log("wrong");
     var scope = this;
     scope.swirls = [];
     for(var i = 0 ; i < Curves.numCurves ; i++){
@@ -53,7 +55,7 @@ MAEVR.Experience = {
       // scene.add( swirl );
       scope.swirls.push(swirl);
     }
-
+    scope.loaded = true;
   },
 
   animate: function(timestamp) {
@@ -61,18 +63,21 @@ MAEVR.Experience = {
     // Set Scope
 
     var scope = this;
-
+    console.log(scope.loaded);
+    if(!scope.loaded)
+      return;
     // Animate Objects
-
-    if (scope.swirls != null && scope.swirls.length > 0) {
-      for(var i = 0 ; i < Curves.numCurves ; i++){
-        scope.swirls[i].offset((i*.3)+MAEVR.clock.getElapsedTime()*-.02);
-        // sc1.swirls[i].setFade(count,1.0);
-        // sc1.swirls[i].setCam(camera);
-        scope.swirls[i].update(MAEVR.clock.getElapsedTime());
-      }
-    }
-
+    // if(scope.loaded){
+    //   if (scope.swirls != null && scope.swirls.length > 0) {
+        for(var i = 0 ; i < Curves.numCurves ; i++){
+          scope.swirls[i].offset((i*.3)+MAEVR.clock.getElapsedTime()*-.02);
+          // sc1.swirls[i].setFade(count,1.0);
+          // sc1.swirls[i].setCam(camera);
+          scope.swirls[i].update(MAEVR.clock.getElapsedTime());
+        }
+     // }
+      
+ // }
 
   }
 

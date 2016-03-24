@@ -48,7 +48,6 @@ var MAEVR = {
 
         // Event Mode        
         console.log("MAEVR: Event Mode");
-        MAEVR.init(MAEVR.Modes.EVENT);
         MAEVR.GUI.showWindow("eventWait");
       });
 
@@ -65,7 +64,8 @@ var MAEVR = {
         console.log("MAEVR: begin " + data.currentTime);
 
         MAEVR.startTime = performance.now() - data.currentTime;
-        MAEVR.animate();
+        MAEVR.running = true;
+
         MAEVR.GUI.hideWindow("eventWait");
       });
 
@@ -82,10 +82,9 @@ var MAEVR = {
     }
 
   },
-  init: function(mode) {
+  init: function() {
 
     var scope = this;
-    MAEVR.mode = mode;
 
     // Init Three.jS
 

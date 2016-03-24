@@ -62,10 +62,13 @@
     <script src="http://maevr.herokuapp.com/socket.io/socket.io.js"></script>
     
     <script>
+
       if (window.location.hash == "#live") {
         MAEVR.connect();
+        MAEVR.mode = MAEVR.Modes.EVENT;
       } else {
         MAEVR.GUI.showWindow("staticWait");
+        MAEVR.mode = MAEVR.Modes.STATIC;
       }
 
       MAEVR.init();

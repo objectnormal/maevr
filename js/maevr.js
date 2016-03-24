@@ -102,7 +102,7 @@ var MAEVR = {
 
         MAEVR.GUI.hideWindow("staticLoad");
         MAEVR.audio.play();
-        MAEVR.animate();
+        // MAEVR.animate();
       }
 
     }
@@ -116,6 +116,10 @@ var MAEVR = {
     MAEVR.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 10000);
     MAEVR.camera.position.z = 19;
     MAEVR.clock = new THREE.Clock(true);
+
+    var sp = new THREE.Mesh(new THREE.SphereGeometry(1), new THREE.MeshNormalMaterial());
+  MAEVR.scene.add(sp);
+  sp.position.z = -5;
 
     // Init VR
 
@@ -163,7 +167,8 @@ var MAEVR = {
 
     // Animate experience
 
-    MAEVR.Experience.animate(timestamp);
+    if(MAEVR.Experience.loaded)
+      MAEVR.Experience.animate(timestamp);
 
     // Schedule next frame
 
@@ -205,7 +210,7 @@ MAEVR.GUI = {
   staticBegin: function() {
     MAEVR.GUI.hideWindow("staticWait");
     MAEVR.GUI.showWindow("staticLoad");
-
-    MAEVR.init(MAEVR.Modes.STATIC);
+    MAEVR.animate();
+    // MAEVR.init(MAEVR.Modes.STATIC);
   }
 }

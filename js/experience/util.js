@@ -6,22 +6,30 @@ MAEVR.Experience.Util = {
 		var geometry = new THREE.ParametricGeometry( params.surface(), parseInt(divisions[1]), parseInt(divisions[2]) );
 		var swirl = new THREE.Mesh( geometry, params.material===undefined?new THREE.MeshNormalMaterial(  ):params.material );
 
-		swirl.material.depthTest = false;
-		swirl.material.uniforms['textureColor'].value = params.textureColor;
-		swirl.material.uniforms['textureAlpha'].value = params.textureAlpha;
-		swirl.material.uniforms['fade'].value = 0;
-		swirl.material.uniforms['power'].value = 1;
+		// swirl.material.depthTest = false;
+		// swirl.material.uniforms['textureColor'].value = params.textureColor;
+		// swirl.material.uniforms['textureAlpha'].value = params.textureAlpha;
+		// swirl.material.uniforms['fade'].value = 0;
+		// swirl.material.uniforms['power'].value = 1;
 		swirl.animation = params.surface.animation
 		swirl.inPoint = swirl.animation[0][0];
 		swirl.outPoint = swirl.animation[swirl.animation.length-1][0];
 
+		swirl.isInScene = false;
+
 		swirl.update = function(time){
 
 			if(time<swirl.inPoint || time>swirl.outPoint && swirl.visible){
-	   			 MAEVR.scene.remove( swirl );
+				if(swirl.isInScene){
+	   				//MAEVR.scene.remove( swirl );
+	   				swirl.isInScene = false;
+	   			}
 			}
 			else if(time>swirl.inPoint && time<swirl.outPoint){
-				MAEVR.scene.add(swirl);
+				if(!swirl.isInScene){
+					//MAEVR.scene.add(swirl);
+					swirl.isInScene = false;
+	   			}
 				var getLerp = swirl.findInOut(time);
 				var value = MAEVR.Experience.Util.Remap(getLerp[0],0,1,swirl.animation[getLerp[1]][1],swirl.animation[getLerp[2]][1]);
 				this.setFade(value,1);

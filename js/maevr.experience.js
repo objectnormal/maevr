@@ -8,6 +8,8 @@ MAEVR.Experience = {
 
     var scope = this;
 
+    // MAEVR.audio.volume = 0;
+
     // Create Objects
 
     var manager = new THREE.LoadingManager();
@@ -32,7 +34,7 @@ MAEVR.Experience = {
     var scope = this;
     scope.swirls = [];
     for(var i = 0 ; i < Curves.numCurves ; i++){
-      var material = facingMat2.clone();//new THREE.MeshBasicMaterial( {map:texture} );//
+      var material = new THREE.MeshNormalMaterial(  ); //facingMat2.clone();//new THREE.MeshBasicMaterial( {map:texture} );//
       var swirl = MAEVR.Experience.Util.makeSurface({
         surface:Curves[i+""],
         material:material,
@@ -42,7 +44,7 @@ MAEVR.Experience = {
       swirl.position.set( 0, 0, -5);
       swirl.material.side = THREE.DoubleSide;
       // swirl.scale.multiplyScalar( 1 );
-      // scene.add( swirl );
+      MAEVR.scene.add( swirl );
       scope.swirls.push(swirl);
     }
     scope.loaded = true;
@@ -54,12 +56,15 @@ MAEVR.Experience = {
 
     var scope = this;
     if(!scope.loaded) return;
+    // else{
+    //   console.log("hi");
+    // }
 
     for(var i = 0 ; i < Curves.numCurves ; i++){
-      scope.swirls[i].offset((i*.3)+MAEVR.clock.getElapsedTime()*-.02);
+      // scope.swirls[i].offset((i*.3)+MAEVR.clock.getElapsedTime()*-.02);
       // sc1.swirls[i].setFade(count,1.0);
       // sc1.swirls[i].setCam(camera);
-      scope.swirls[i].update(MAEVR.clock.getElapsedTime());
+      // scope.swirls[i].update(MAEVR.clock.getElapsedTime());
     }
 
   }

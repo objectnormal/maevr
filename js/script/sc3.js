@@ -7,12 +7,13 @@ sc1 = {
 		clock = new THREE.Clock( true );
 		sc1.swirls = [];
 		for(var i = 0 ; i < numCurves ; i++){
-			var material = facingMat2.clone();//new THREE.MeshBasicMaterial( {map:texture} );//
+			var material = new THREE.MeshNormalMaterial(  );// facingMat2.clone();//new THREE.MeshBasicMaterial( {map:texture} );//
 			var swirl = makeSurface({
 				surface:Curves[i+""],
 				material:material,
 				textureColor:texCol,
-				textureAlpha:texAlpha});
+				textureAlpha:texAlpha
+			});
 			swirl.position.set( 0, 0, -5);
 			// swirl.rotation.y=Math.PI;
 			swirl.material.side = THREE.DoubleSide;

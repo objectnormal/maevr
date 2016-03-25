@@ -6,7 +6,7 @@ var MAEVR = {
   startTime: 0,
   elapsedTime: 0,
   serverURL: "maevr.herokuapp.com",
-  running: false,
+  playing: false,
   sphere: null,
   connect: function() {
 
@@ -65,7 +65,7 @@ var MAEVR = {
         console.log("MAEVR: begin " + data.currentTime);
 
         MAEVR.startTime = performance.now() - data.currentTime;
-        MAEVR.running = true;
+        MAEVR.playing = true;
 
         MAEVR.GUI.hideWindow("eventWait");
       });
@@ -120,7 +120,7 @@ var MAEVR = {
 
     // Initialize Experience
 
-    MAEVR.Experience.init(0);
+    MAEVR.Experience.init();
 
     // Add to DOM
 
@@ -133,7 +133,7 @@ var MAEVR = {
 
     // Update Time
 
-    if (MAEVR.running) {
+    if (MAEVR.playing) {
       if (MAEVR.mode == MAEVR.Modes.EVENT) {
         MAEVR.elapsedTime = performance.now() - MAEVR.startTime;
       } else {
@@ -179,7 +179,8 @@ var MAEVR = {
         MAEVR.GUI.hideWindow("staticLoad");
         MAEVR.audio.play();
 
-        MAEVR.running = true;
+        MAEVR.Experience.play();
+        MAEVR.playing = true;
       }
 
   }

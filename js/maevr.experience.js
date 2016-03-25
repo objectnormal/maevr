@@ -2,7 +2,7 @@
 
 MAEVR.Experience = {
   loaded: false,
-  init: function(startTime) {
+  init: function() {
 
     // Set Scope
 
@@ -49,7 +49,9 @@ MAEVR.Experience = {
     }
     scope.loaded = true;
   },
-
+  play: function() {
+    console.log("MAEVR.Experience: play");
+  },
   animate: function(timestamp) {
 
     // Set Scope

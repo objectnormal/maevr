@@ -30,7 +30,7 @@ MAEVR.Experience.Util = {
 					MAEVR.scene.add(swirl);
 					swirl.isInScene = true;
 	   			}
-				var getLerp = swirl.findInOut(time);
+				var getLerp = MAEVR.Experience.Util.FindInOut(time,swirl.animation);
 
 				var value = MAEVR.Experience.Util.Remap(
 					getLerp[0],0,1,
@@ -41,17 +41,17 @@ MAEVR.Experience.Util = {
 			}
 		}
 
-		swirl.findInOut = function(time){
+		swirl.findInOut = function(time,animationArray){
 
 			var tween = 0;
 			var inPoint,outPoint;
-			for(var i = 1 ; i < swirl.animation.length ; i++){
+			for(var i = 1 ; i < animationArray.length ; i++){
 
-				var b = swirl.animation[i][0];
-				var bVal = swirl.animation[i][1];
+				var b = animationArray[i][0];
+				var bVal = animationArray[i][1];
 
-				var a = swirl.animation[i-1][0];
-				var aVal = swirl.animation[i-1][a];
+				var a = animationArray[i-1][0];
+				var aVal = animationArray[i-1][a];
 
 				if(time<b && time>a){
 					tween = 1-((b-time)/(b-a));
@@ -78,8 +78,32 @@ MAEVR.Experience.Util = {
 		
 		return swirl;
 	},
+	FindInOut:function(time,animationArray){
+		var tween = 0;
+		var inPoint,outPoint;
+		for(var i = 1 ; i < animationArray.length ; i++){
+
+			var b = animationArray[i][0];
+			var bVal = animationArray[i][1];
+
+			var a = animationArray[i-1][0];
+			var aVal = animationArray[i-1][a];
+
+			if(time<b && time>a){
+				tween = 1-((b-time)/(b-a));
+				inPoint = i-1;
+				outPoint = i;
+			}
+		}
+		return [tween,inPoint,outPoint];
+	},
 	Remap: function  (value,  from1,  to1,  from2,  to2) {
 		return (value - from1) / (to1 - from1) * (to2 - from2) + from2;
+	},
+	SmoothStep: function(edge0, edge1,  x)
+	{
+	    x = clamp((x - edge0)/(edge1 - edge0), 0.0, 1.0); 
+	    return x*x*(3 - 2*x);
 	}
 }
 

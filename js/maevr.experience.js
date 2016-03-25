@@ -67,9 +67,16 @@ MAEVR.Experience = {
       scope.swirls[i].update(.001*MAEVR.elapsedTime);
     }
 
+  },
+
+  updateCamera: function(){
+
+
   }
 
 }
+
+// MAEVR.Experience.camAnimation=[]
 
 
 

@@ -7,6 +7,7 @@ var MAEVR = {
   elapsedTime: 0,
   serverURL: "maevr.herokuapp.com",
   running: false,
+  sphere: null,
   connect: function() {
 
     // Check for socket support
@@ -96,9 +97,11 @@ var MAEVR = {
     MAEVR.camera.position.z = -25;
     MAEVR.clock = new THREE.Clock(true);
 
-    //var sp = new THREE.Mesh(new THREE.SphereGeometry(1), new THREE.MeshNormalMaterial());
-    //MAEVR.scene.add(sp);
-    //sp.position.z = -5;
+    // Test Sphere
+
+    // scope.sphere = new THREE.Mesh(new THREE.SphereGeometry(1, 32, 32), new THREE.MeshNormalMaterial());
+    // MAEVR.scene.add(scope.sphere);
+    // scope.sphere.position.z = -30;
 
     // Init VR
 
@@ -126,6 +129,8 @@ var MAEVR = {
   },
   animate: function(timestamp) {
 
+    var scope = MAEVR;
+
     // Update Time
 
     if (MAEVR.running) {
@@ -137,6 +142,11 @@ var MAEVR = {
     } else {
       MAEVR.elapsedTime = 0;
     }
+
+    // Animate Test Sphere
+    
+    // var scale = .1 + MAEVR.Stems.getStemValue(0);
+    // scope.sphere.scale.set( scale, scale, scale );
 
     // Update GUI
 
@@ -155,6 +165,7 @@ var MAEVR = {
     // Schedule next frame
 
     requestAnimationFrame(MAEVR.animate);
+
   },
   loadAudio: function() {
 
@@ -181,21 +192,54 @@ MAEVR.Modes = {
   EVENT: 1
 }
 
+MAEVR.Stems = {
+  chunkCount: 30,
+  getStemValue: function(stemIndex) {
+
+    if (stemIndex >= stems.length) return null;
+    if (MAEVR.elapsedTime == 0) return 0;
+
+    var stem = stems[stemIndex];
+    var sampleIndex = (MAEVR.elapsedTime / 1000) * this.chunkCount;
+
+    var previousIndex = Math.floor(sampleIndex);
+    var nextIndex = Math.ceil(sampleIndex);
+
+    var progress = sampleIndex % Math.floor(sampleIndex);
+
+    var previousValue = stem[previousIndex];
+    var nextValue = stem[nextIndex];
+
+    var lerpValue =  previousValue + progress * (nextValue - previousValue);
+
+    return lerpValue;
+  }
+}
+
 MAEVR.GUI = {
   elapsedDate: null,
   elapsedTimeDiv: null,
+  meterBarDiv: null,
   init: function() {
     var scope = this;
 
     scope.elapseDate = new Date();
     scope.elapsedTimeDiv = document.getElementById("elaspedTime");
+    scope.meterBarDiv = document.getElementById("meterBar");
   },
   update: function() {
     var scope = this;
 
+    // Time
+
     scope.elapseDate.setTime(MAEVR.elapsedTime);
     var timeString = scope.elapseDate.toISOString().substr(11, 8);
     scope.elapsedTimeDiv.innerHTML = timeString;
+
+    // Meter
+    
+    scope.meterBarDiv.style.width = (MAEVR.Stems.getStemValue(0) * 100) + "%";
+
   },
   showWindow: function(windowName){
     document.getElementById(windowName).style.display = 'initial';

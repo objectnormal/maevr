@@ -8,81 +8,6 @@ var MAEVR = {
   serverURL: "maevr.herokuapp.com",
   playing: false,
   sphere: null,
-  connect: function() {
-
-    // Check for socket support
-
-    if (typeof io != 'undefined') {
-      
-      console.log("MAEVR: Attempting Connection");
-
-      // Connect to socket
-
-      var socket = io.connect(MAEVR.serverURL,
-        {
-          reconnection: false,
-          timeout : 5000 
-        });
-
-      socket.io.on('connect_error', function (data) {
-        console.log("MAEVR: connect_error");
-
-        // Static Mode
-        console.log("MAEVR: Static Mode");
-        MAEVR.GUI.showWindow("staticWait");       
-
-      });
-
-      socket.io.on('connect_timeout', function (data) {
-        console.log("MAEVR: connect_timeout");
-
-        // Static Mode
-        console.log("MAEVR: Static Mode");
-        MAEVR.GUI.showWindow("staticWait");       
-
-      });
-
-      //
-
-      socket.on('connect', function() {
-        console.log("MAEVR: connect");
-
-        // Event Mode        
-        console.log("MAEVR: Event Mode");
-        MAEVR.GUI.showWindow("eventWait");
-      });
-
-      socket.on('error', function(data) {
-        console.log("MAEVR: error " + data);
-
-        // Static Mode
-        console.log("MAEVR: Static Mode");
-        MAEVR.GUI.showWindow("staticWait");
-
-      });      
-
-      socket.on('begin', function(data) {
-        console.log("MAEVR: begin " + data.currentTime);
-
-        MAEVR.startTime = performance.now() - data.currentTime;
-        MAEVR.playing = true;
-
-        MAEVR.GUI.hideWindow("eventWait");
-      });
-
-      socket.on('end', function(data) {
-        console.log("MAEVR: end " + data.currentTime);
-      });      
-
-    } else {
-
-      // Static Mode
-      console.log("MAEVR: Static Mode");
-      MAEVR.GUI.showWindow("staticWait");
-
-    }
-
-  },
   init: function() {
 
     var scope = this;
@@ -121,6 +46,14 @@ var MAEVR = {
     // Initialize Experience
 
     MAEVR.Experience.init();
+
+    // Init Mode
+
+    if (MAEVR.mode == MAEVR.Modes.EVENT) {
+      MAEVR.connect();
+    } else {
+      MAEVR.GUI.showWindow("staticWait");
+    }
 
     // Add to DOM
 
@@ -165,6 +98,81 @@ var MAEVR = {
     // Schedule next frame
 
     requestAnimationFrame(MAEVR.animate);
+
+  },
+  connect: function() {
+
+    // Check for socket support
+
+    if (typeof io != 'undefined') {
+
+      console.log("MAEVR: Attempting Connection");
+
+      // Connect to socket
+
+      var socket = io.connect(MAEVR.serverURL,
+        {
+          reconnection: false,
+          timeout : 5000
+        });
+
+      socket.io.on('connect_error', function (data) {
+        console.log("MAEVR: connect_error");
+
+        // Static Mode
+        console.log("MAEVR: Static Mode");
+        MAEVR.GUI.showWindow("staticWait");
+
+      });
+
+      socket.io.on('connect_timeout', function (data) {
+        console.log("MAEVR: connect_timeout");
+
+        // Static Mode
+        console.log("MAEVR: Static Mode");
+        MAEVR.GUI.showWindow("staticWait");
+
+      });
+
+      //
+
+      socket.on('connect', function() {
+        console.log("MAEVR: connect");
+
+        // Event Mode
+        console.log("MAEVR: Event Mode");
+        MAEVR.GUI.showWindow("eventWait");
+      });
+
+      socket.on('error', function(data) {
+        console.log("MAEVR: error " + data);
+
+        // Static Mode
+        console.log("MAEVR: Static Mode");
+        MAEVR.GUI.showWindow("staticWait");
+
+      });
+
+      socket.on('begin', function(data) {
+        console.log("MAEVR: begin " + data.currentTime);
+
+        MAEVR.startTime = performance.now() - data.currentTime;
+        MAEVR.playing = true;
+
+        MAEVR.GUI.hideWindow("eventWait");
+      });
+
+      socket.on('end', function(data) {
+        console.log("MAEVR: end " + data.currentTime);
+      });
+
+    } else {
+
+      // Static Mode
+      console.log("MAEVR: Static Mode");
+      MAEVR.GUI.showWindow("staticWait");
+
+    }
 
   },
   loadAudio: function() {

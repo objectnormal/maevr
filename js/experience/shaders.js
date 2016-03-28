@@ -149,86 +149,21 @@ var simpleMat = new THREE.ShaderMaterial({
 	lights: true
 });
 
-var shaderToy = "\
-	varying vec2 vUv;\
-	uniform float time;\
-	void main(void)\
-	{\
-		vec2 p = vUv;\
-		float x = p.x;\
-		float y = p.y;\
-		float mov0 = x+y+cos(sin(time)*2.0)*100.+sin(x/100.)*1000.;\
-		float mov1 = y / 0.9 +  time;\
-		float mov2 = x / 0.2;\
-		float c1 = abs(sin(mov1+time)/2.+mov2/2.-mov1-mov2+time);\
-		float c2 = abs(sin(c1+sin(mov0/1000.+time)+sin(y/40.+time)+sin((x+y)/100.)*3.));\
-		float c3 = abs(sin(c2+cos(mov1+mov2+c2)+cos(mov2)+sin(x/1000.)));\
-		gl_FragColor = vec4(c1,c2,c3,.1);	\
-	}\
-";
-
-
-var facingVert = "\
-	uniform vec3 viewVector;\
-	varying vec2 vUv;\
-	uniform float c;\
-	uniform float p;\
-	varying float intensity;\
-	void main() \
-	{\
-	    vec3 vNormal = normalize( normalMatrix * normal );\
-		vec3 vNormel = normalize( normalMatrix * viewVector );\
-		intensity = pow( c - dot(vNormal, vNormel), .5 );\
-		vUv = uv;\
-	    gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );\
-	}\
-";
-
-
-var facingFrag = "\
- 	uniform vec3 glowColor;\
- 	varying vec2 vUv;\
-	varying float intensity;\
-	uniform sampler2D textureColor;\
-	uniform sampler2D textureAlpha;\
-	void main() \
-	{\
-		vec4 tex = texture2D(textureColor, vUv*5.);\
-		vec3 glow = glowColor * intensity;\
-	    gl_FragColor = vec4( (1.0-glow)*tex.rgb,tex.a );\
-	}\
-";
-
 
 var facingVert2 = "\
 	varying vec2 vUv;\
 	varying vec3 wNormal;\
 	uniform float switcher;\
+	uniform float offset;\
 	void main() {\
 		vUv = uv;\
 		wNormal = mat3(modelMatrix[0].xyz,modelMatrix[1].xyz,modelMatrix[2].xyz)*normal;\
 		wNormal = normalize(wNormal);\
 		gl_Position = projectionMatrix *\
-		modelViewMatrix * vec4(position, 1.0 );\
+		modelViewMatrix * vec4(position+vec3(cos(offset*30.*vUv.x)*10.,sin(offset*30.*vUv.x)*10.,0), 1.0 );\
 	}\
 ";
 
-// var facingFrag2 = "\
-// 	precision highp float;\
-// 	uniform mat4 camMat;\
-// 	uniform mat4 camMatInverse;\
-// 	varying vec3 wNormal;\
-// 	varying vec2 vUv;\
-// 	varying vec3 pos;\
-// 	uniform sampler2D textureColor;\
-// 	uniform sampler2D textureAlpha;\
-// 	uniform float offset;\
-// 	uniform float fade;\
-// 	uniform float power;\
-// 	void main(void) {\
-// 		gl_FragColor = vec4(texture2D(textureColor,vec2(vUv.x+fade,vUv.y)).rgb,1.0);\
-// 	}\
-// ";
 var facingFrag2 = "\
 	precision highp float;\
 	uniform mat4 camMat;\
@@ -249,35 +184,7 @@ var facingFrag2 = "\
 		gl_FragColor = vec4(vec3(min(1.0,max(0.0,pow(camNorm.z,1.5))))*tex.rgb*texA.a*tex.a*fader, 1.0);\
 	}\
 ";
-//gl_FragColor = vec4(vec3(min(1.0,max(0.0,pow(camNorm.z,1.5))))*tex.rgb*texA.a*tex.a*fader, 1.0);\
-/*
-vec4 texB = texture2D(textureColor, vUv);\
-		vec4 tex = texture2D(textureColor, (texB.rg*.021)+vec2(vUv.x*.4+offset,vUv.y));\
-		vec4 texA = texture2D(textureAlpha, vUv+(.05-tex.rg*.1));\
-		vec4 camNorm = vec4(vec3(wNormal),0.) * camMat;\
-		float fader = pow((1.0+(cos(   ( max(0.0,min(1.0,(fade+vUv.x))) * 3.1415*2.))  *-1.0))*.5,power);\
- */
-//		gl_FragColor = vec4((cos((fade+vUv.x)* 3.1415*2.)*-.5)+.5);\
 
-//		gl_FragColor = vec4(vec3(min(1.0,max(0.0,pow(camNorm.z,1.5))))*tex.rgb*texA.a*tex.a*fader, 1.0);\
-
-// var facingFrag2 = "\
-// 	precision highp float;\
-// 	uniform mat4 camMat;\
-// 	uniform mat4 camMatInverse;\
-// 	varying vec3 wNormal;\
-// 	varying vec2 vUv;\
-// 	varying vec3 pos;\
-// 	uniform sampler2D textureColor;\
-// 	uniform sampler2D textureAlpha;\
-// 	uniform float offset;\
-// 	void main(void) {\
-// 		vec4 tex = texture2D(textureColor, vec2(vUv.x*.4+offset,vUv.y));\
-// 		vec4 texA = texture2D(textureAlpha, vUv);\
-// 		vec4 camNorm = vec4(vec3(wNormal),0.) * camMat;\
-// 		gl_FragColor = vec4(pow(camNorm.z,1.5));\
-// 	}\
-// ";
 
 var facingMat2 = new THREE.ShaderMaterial( 
 	{
@@ -298,38 +205,58 @@ var facingMat2 = new THREE.ShaderMaterial(
 	}   
 );
 
-var facingMat = new THREE.ShaderMaterial( 
+
+var facingFrag3 = "\
+	precision highp float;\
+	uniform mat4 camMat;\
+	uniform mat4 camMatInverse;\
+	varying vec3 wNormal;\
+	uniform vec3 Color1;\
+	uniform vec3 Color2;\
+	uniform vec3 Color3;\
+	varying vec2 vUv;\
+	uniform sampler2D textureColor;\
+	uniform sampler2D textureAlpha;\
+	uniform float offset;\
+	uniform float fade;\
+	uniform float power;\
+	uniform float repeat;\
+	void main(void) {\
+		float fader = pow((1.0+(cos(   ( max(0.0,min(1.0,(fade+vUv.x))) * 3.1415*2.))  *-1.0))*.5,power)*2.;\
+		vec4 tex = texture2D(textureColor, vec2(vUv.x*repeat+offset,vUv.y));\
+		vec4 texA = texture2D(textureAlpha, vUv);\
+		vec3 col1 = Color1*tex.r;\
+		vec3 col2 = Color2*tex.g;\
+		vec3 col3 = Color3*tex.b;\
+		vec3 col = col1+col2+col3;\
+		vec4 camNorm = vec4(vec3(wNormal),0.) * camMat;\
+		gl_FragColor = vec4(vec3(min(1.0,max(0.0,pow(camNorm.z,1.5))))*col*col*texA.a*fader, 1.0);\
+	}\
+";
+//		gl_FragColor = vec4(vec3(min(1.0,max(0.0,pow(camNorm.z,1.5))))*col*tex.a*fader, 1.0);\
+//
+
+var facingMat3 = new THREE.ShaderMaterial( 
 	{
 	    uniforms: 
 		{ 
-			"c":   { type: "f", value: 1.0 },
-			"p":   { type: "f", value: 1.4 },
-			glowColor: { type: "c", value: new THREE.Color(0xffffff) },
-			viewVector: { type: "v3", value: new THREE.Vector3(0,0,0) },
-			textureColor: { type: "t", value: null }
+			offset:   { type: "f", value: 1.0 },
+			fade:   { type: "f", value: 0.0 },
+			power:   { type: "f", value: 1.0 },
+			repeat:   { type: "f", value: 1.0 },
+			camMat: {type: 'm4', value:new THREE.Matrix4()},
+			textureColor: { type: "t", value: null },
+			textureAlpha: { type: "t", value: null },
+			Color1:{type:"v3",value:new THREE.Vector3(0,0,0)},
+			Color2:{type:"v3",value:new THREE.Vector3(0,0,0)},
+			Color3:{type:"v3",value:new THREE.Vector3(0,0,0)},
 		},
-		vertexShader:   facingVert,
-		fragmentShader: facingFrag,
-		// side: THREE.FrontSide,
-		// blending: THREE.AdditiveBlending,
-		transparent: true
+		vertexShader:   facingVert2,
+		fragmentShader: facingFrag3,
+		// side: THREE.DoubleSide,
+		blending: THREE.AdditiveBlending,
+		transparent: true,
+		opacity:.5
 	}   
 );
 
-// var facingMat = new THREE.ShaderMaterial({
-// 	uniforms:{time:{type:'f',value:1.0}},//,viewVector:{type'v3',value:new THREE.Vector3(0,0,0))}},
-// 	vertexShader: facingVert,
-// 	fragmentShader: facingFrag,
-// 	blending: THREE.NormalBlending,
-//     depthTest: false,
-//     transparent: true
-// });
-
-var toyMat = new THREE.ShaderMaterial({
-	uniforms:{time:{type:'f',value:1.0}},
-	vertexShader: simpleVert,
-	fragmentShader: shaderToy,
-	blending: THREE.NormalBlending,
-    depthTest: false,
-    transparent: true
-});

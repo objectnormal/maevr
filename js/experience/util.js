@@ -75,6 +75,9 @@ MAEVR.Experience.Util = {
 			this.material.uniforms['power'].value = power;
 		}
 
+		swirl.setUniform = function(uniform,value){
+			swirl.material.uniforms[uniform].value = value;
+		}
 		
 		return swirl;
 	},

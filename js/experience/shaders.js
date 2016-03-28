@@ -160,10 +160,12 @@ var facingVert2 = "\
 		wNormal = mat3(modelMatrix[0].xyz,modelMatrix[1].xyz,modelMatrix[2].xyz)*normal;\
 		wNormal = normalize(wNormal);\
 		gl_Position = projectionMatrix *\
-		modelViewMatrix * vec4(position+vec3(cos(offset*30.*vUv.x)*10.,sin(offset*30.*vUv.x)*10.,0), 1.0 );\
+		modelViewMatrix * vec4(position, 1.0 );\
 	}\
 ";
 
+//gl_Position = projectionMatrix *\
+		// modelViewMatrix * vec4(position+vec3(cos(offset*30.*vUv.x)*10.,sin(offset*30.*vUv.x)*10.,0), 1.0 );\
 var facingFrag2 = "\
 	precision highp float;\
 	uniform mat4 camMat;\

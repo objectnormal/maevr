@@ -45,16 +45,14 @@ MAEVR.Experience = {
       swirl.position.set( 0, 0, -5);
       swirl.material.side = THREE.DoubleSide;
       // swirl.setUniform("Color2",new THREE.Vector3(Math.random(),Math.random(),Math.random()));
-       swirl.setUniform("Color1",new THREE.Vector3(Math.random(),Math.random(),Math.random()));
-        swirl.setUniform("Color2",new THREE.Vector3(Math.random(),Math.random(),Math.random()));
+      swirl.setUniform("Color1",new THREE.Vector3(Math.random(),Math.random(),Math.random()));
+      swirl.setUniform("Color2",new THREE.Vector3(Math.random(),Math.random(),Math.random()));
          // swirl.setUniform("Color3",new THREE.Vector3(Math.random(),Math.random(),Math.random()));
       // swirl.scale.multiplyScalar( 1 );
       // MAEVR.scene.add( swirl );
       scope.swirls.push(swirl);
     }
     scope.loaded = true;
-    MAEVR.camera.rotation.y=180;
-        MAEVR.camera.position.z = 10;
 
 
   },
@@ -62,21 +60,24 @@ MAEVR.Experience = {
     console.log("MAEVR.Experience: play");
   },
   animate: function(timestamp) {
-     // MAEVR.audio.volume = 0;
-    // Set Scope
-    MAEVR.camera.position.y = MAEVR.elapsedTime*.0001;
+
+
+    //MAEVR.camera.position.y = MAEVR.elapsedTime*.0001;
+    
     var scope = this;
     if(!scope.loaded) return;
-    // else{
-    //   console.log("hi");
-    // }
-    //console.log(MAEVR.elapsedTime);
+
+
     for(var i = 0 ; i < Curves.numCurves ; i++){
       scope.swirls[i].offset((i*.3)+.001*MAEVR.elapsedTime*-.02);
       // sc1.swirls[i].setFade(count,1.0);
       scope.swirls[i].setCam(MAEVR.camera);
       scope.swirls[i].update(.001*MAEVR.elapsedTime);
     }
+
+    TWEEN.update(MAEVR.elapsedTime);
+
+    console.log(MAEVR.camera.position.z);
 
   },
 

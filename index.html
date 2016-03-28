@@ -40,6 +40,7 @@
     </script>
 
     <script src="js/vendor/es6-promise.min.js"></script>
+    <script src="js/vendor/Detector.js"></script>
     <script src="js/vendor/three.min.js"></script>
    <!-- <script src="js/vendor/controls/VRControls.js"></script>-->
     <script src="js/experience/VRControlsExp.js"></script>
@@ -71,16 +72,19 @@
     
     <script>
 
-      if (window.location.hash == "#live") {
-        MAEVR.connect();
-        MAEVR.mode = MAEVR.Modes.EVENT;
-      } else {
-        MAEVR.GUI.showWindow("staticWait");
-        MAEVR.mode = MAEVR.Modes.STATIC;
-      }
+      if (Detector.webgl) {
 
-      MAEVR.init();
-      MAEVR.animate();
+        if (window.location.hash == "#live") {
+          MAEVR.mode = MAEVR.Modes.EVENT;
+        } else {
+          MAEVR.mode = MAEVR.Modes.STATIC;
+        }
+
+        MAEVR.init();
+        MAEVR.animate();
+      } else {
+        Detector.addGetWebGLMessage();
+      }
       
     </script>
 

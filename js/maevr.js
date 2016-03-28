@@ -19,33 +19,14 @@ var MAEVR = {
 
     MAEVR.scene = new THREE.Scene();
     MAEVR.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 10000);
-    // MAEVR.camera.position.z = -25;
     MAEVR.clock = new THREE.Clock(true);
 
-//Laura
-/////
-///
     MAEVR.camera.position.z = 397;
-
-    MAEVR.parentCamera = CamUtil.setParentCam( MAEVR.camera, {
-      startPosition: new THREE.Vector3(0,12,0),
-      cameraSpeed: 1,
-      camKeyTimes:[1000, 2736, 5840, 6591, 6628, 6979, 7766]
-    });
-
-
-   
-
-//End Laura
-/////
-///
-
-    // Test Sphere
-
-    // scope.sphere = new THREE.Mesh(new THREE.SphereGeometry(1, 32, 32), new THREE.MeshNormalMaterial());
-    // MAEVR.scene.add(scope.sphere);
-    // scope.sphere.position.z = -30;
-
+    MAEVR.parentCamera = new THREE.Object3D();
+    MAEVR.parentCamera.position.y = 12;
+    MAEVR.parentCamera.add(MAEVR.camera);
+    MAEVR.scene.add(MAEVR.parentCamera);
+  
     // Init VR
 
     MAEVR.vrControls = new THREE.VRControls(MAEVR.camera);
@@ -277,10 +258,9 @@ MAEVR.GUI = {
   staticBegin: function() {
     MAEVR.GUI.hideWindow("staticWait");
     MAEVR.GUI.showWindow("staticLoad"); 
-    CamUtil.align(MAEVR.camera,MAEVR.vrControls);
-    setTimeout(function(){
-      CamUtil.startCameraAnimationSeries( MAEVR.parentCamera );
-    },50);   
+
+    MAEVR.Experience.Util.Align(MAEVR.camera,MAEVR.vrControls);
+   
     MAEVR.loadAudio();   
   }
 }

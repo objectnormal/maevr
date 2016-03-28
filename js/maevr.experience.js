@@ -75,9 +75,36 @@ MAEVR.Experience = {
       scope.swirls[i].update(.001*MAEVR.elapsedTime);
     }
 
-    TWEEN.update(MAEVR.elapsedTime);
+    var getLerp = MAEVR.Experience.Util.FindInOut(
+      MAEVR.elapsedTime/100,MAEVR.Experience.CamCurves.camZ);
+    var value = MAEVR.Experience.Util.Remap(
+      MAEVR.Experience.Util.SmoothStep(getLerp[0]),0,1,
+      MAEVR.Experience.CamCurves.camZ[getLerp[1]][1],
+      MAEVR.Experience.CamCurves.camZ[getLerp[2]][1]);
 
-    console.log(MAEVR.camera.position.z);
+    MAEVR.camera.position.z = value;
+
+    getLerp = MAEVR.Experience.Util.FindInOut(
+      MAEVR.elapsedTime/100,MAEVR.Experience.CamCurves.parentY);
+    value = MAEVR.Experience.Util.Remap(
+      MAEVR.Experience.Util.SmoothStep(getLerp[0]),0,1,
+      MAEVR.Experience.CamCurves.parentY[getLerp[1]][1],
+      MAEVR.Experience.CamCurves.parentY[getLerp[2]][1]);
+
+     MAEVR.parentCamera.position.y = value;
+
+    getLerp = MAEVR.Experience.Util.FindInOut(
+      MAEVR.elapsedTime/100,MAEVR.Experience.CamCurves.parentRX);
+    value = MAEVR.Experience.Util.Remap(
+      MAEVR.Experience.Util.SmoothStep(getLerp[0]),0,1,
+      MAEVR.Experience.CamCurves.parentRX[getLerp[1]][1],
+      MAEVR.Experience.CamCurves.parentRX[getLerp[2]][1]);
+
+     MAEVR.parentCamera.rotation.x = value;
+
+    // TWEEN.update(MAEVR.elapsedTime);
+
+    // console.log(MAEVR.camera.position.z);
 
   },
 

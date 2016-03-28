@@ -41,27 +41,6 @@ MAEVR.Experience.Util = {
 			}
 		}
 
-		swirl.findInOut = function(time,animationArray){
-
-			var tween = 0;
-			var inPoint,outPoint;
-			for(var i = 1 ; i < animationArray.length ; i++){
-
-				var b = animationArray[i][0];
-				var bVal = animationArray[i][1];
-
-				var a = animationArray[i-1][0];
-				var aVal = animationArray[i-1][a];
-
-				if(time<b && time>a){
-					tween = 1-((b-time)/(b-a));
-					inPoint = i-1;
-					outPoint = i;
-				}
-			}
-			return [tween,inPoint,outPoint];
-		}
-
 		swirl.setCam = function(cam){
 			this.material.uniforms['camMat'].value = cam.matrixWorld;
 		}
@@ -81,9 +60,10 @@ MAEVR.Experience.Util = {
 		
 		return swirl;
 	},
+	
 	FindInOut:function(time,animationArray){
 		var tween = 0;
-		var inPoint,outPoint;
+		var inPoint = outPoint = 0;
 		for(var i = 1 ; i < animationArray.length ; i++){
 
 			var b = animationArray[i][0];
@@ -103,11 +83,57 @@ MAEVR.Experience.Util = {
 	Remap: function  (value,  from1,  to1,  from2,  to2) {
 		return (value - from1) / (to1 - from1) * (to2 - from2) + from2;
 	},
-	SmoothStep: function(edge0, edge1,  x)
+	SmoothStep: function(x) //actually smootherstep
 	{
-	    x = clamp((x - edge0)/(edge1 - edge0), 0.0, 1.0); 
-	    return x*x*(3 - 2*x);
+	    return x*x*x*(x*(x*6 - 15) + 10);
 	}
 }
 
 
+MAEVR.Experience.CamCurves = {};
+MAEVR.Experience.CamCurves.camZ = 
+[[0, 397],
+[40, 17.6],
+[10000, 17.6]];
+
+MAEVR.Experience.CamCurves.parentY = 
+[[0, 2.8],
+[91, 2.8],
+[220, 316],
+[246, -4.7],
+[10000, -4.7]];
+
+MAEVR.Experience.CamCurves.parentRX = 
+[[0, 0],
+[195, 0],
+[221,-Math.PI/2],
+[10000,-Math.PI/2]];
+
+
+MAEVR.Experience.Util.Align = function(camera, controls) {
+
+	THREE.VRControls.deviceQuaternion = new THREE.Quaternion();
+	THREE.VRControls.alignQuaternion = new THREE.Quaternion();
+	THREE.VRControls.finalQuaternion = new THREE.Quaternion();
+
+	var worldcenter = new THREE.Vector3();
+	var tempQuaternion = new THREE.Quaternion();
+	var tempVector3 = new THREE.Vector3();
+	var tempMatrix4 = new THREE.Matrix4();
+	var tempEuler = new THREE.Euler();
+	var up = new THREE.Vector3(0, 1, 0);
+
+	tempVector3.copy( camera.position ).applyQuaternion( tempQuaternion.copy( controls.deviceQuaternion ).inverse(), 'ZXY' );
+
+	tempEuler.setFromQuaternion(
+		tempQuaternion.setFromRotationMatrix(
+			tempMatrix4.lookAt(tempVector3, worldcenter, up)
+		)
+	);
+
+	// var ttt = tempEuler.y + Math.PI;
+	tempEuler.set(0, tempEuler.y, 0);
+	controls.alignQuaternion.setFromEuler(tempEuler);
+
+	console.log("re-align!");
+}

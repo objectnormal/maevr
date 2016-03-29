@@ -150,6 +150,35 @@ var simpleMat = new THREE.ShaderMaterial({
 });
 
 
+
+
+var simpleFrag5 = "\
+	precision highp float;\
+	varying vec3 vecNormal;\
+	uniform float offset;\
+	varying vec2 vUv;\
+	uniform sampler2D map;\
+	uniform sampler2D map2;\
+	void main(void) {\
+		vec4 lgts = vec4(vec3(0.0),1.0);\
+		vec4 tex = texture2D(map, vUv*7.);\
+		vec4 tex2 = texture2D(map2, vec2(offset,0)+vUv);\
+		gl_FragColor = vec4((tex2.b*vec3(.08,.0,.15))+pow(tex2.r,2.)*tex.rgb*9.*vec3(.3,.5,.9), 1.0);\
+	}\
+";
+
+var simpleMat5 = new THREE.ShaderMaterial({
+	uniforms: 
+		{
+			offset: {type: 'f', value: 1.0},
+			map: { type: "t", value: null },
+			map2: { type: "t", value: null },
+		},
+	vertexShader: simpleVert,
+	fragmentShader: simpleFrag5,
+});
+
+
 var facingVert2 = "\
 	varying vec2 vUv;\
 	varying vec3 wNormal;\
@@ -160,7 +189,7 @@ var facingVert2 = "\
 		wNormal = mat3(modelMatrix[0].xyz,modelMatrix[1].xyz,modelMatrix[2].xyz)*normal;\
 		wNormal = normalize(wNormal);\
 		gl_Position = projectionMatrix *\
-		modelViewMatrix * vec4(position, 1.0 );\
+		modelViewMatrix * vec4(position+vec3(cos(offset+10.*vUv.x)*2.,sin(offset+10.*vUv.x)*2.,0), 1.0 );\
 	}\
 ";
 
@@ -224,15 +253,15 @@ var facingFrag3 = "\
 	uniform float power;\
 	uniform float repeat;\
 	void main(void) {\
-		float fader = pow((1.0+(cos(   ( max(0.0,min(1.0,(fade+vUv.x))) * 3.1415*2.))  *-1.0))*.5,power)*2.;\
-		vec4 tex = texture2D(textureColor, vec2(vUv.x*repeat+offset,vUv.y));\
+		float fader = pow((1.0+(cos(   ( max(0.0,min(1.0,(fade+vUv.x))) * 3.1415*2.))  *-1.0))*1.0,power)*2.;\
 		vec4 texA = texture2D(textureAlpha, vUv);\
+		vec4 tex = texture2D(textureColor, texA.aa*.1+vec2(vUv.x*repeat+offset,vUv.y));\
 		vec3 col1 = Color1*tex.r;\
 		vec3 col2 = Color2*tex.g;\
 		vec3 col3 = Color3*tex.b;\
 		vec3 col = col1+col2+col3;\
 		vec4 camNorm = vec4(vec3(wNormal),0.) * camMat;\
-		gl_FragColor = vec4(vec3(min(1.0,max(0.0,pow(camNorm.z,1.5))))*col*col*texA.a*fader, 1.0);\
+		gl_FragColor = vec4(vec3(min(1.0,max(0.0,pow(camNorm.z,.1))))*col*col*texA.a*fader, 1.0);\
 	}\
 ";
 //		gl_FragColor = vec4(vec3(min(1.0,max(0.0,pow(camNorm.z,1.5))))*col*tex.a*fader, 1.0);\

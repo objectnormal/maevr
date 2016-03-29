@@ -258,8 +258,6 @@ MAEVR.GUI = {
   staticBegin: function() {
     MAEVR.GUI.hideWindow("staticWait");
     MAEVR.GUI.showWindow("staticLoad"); 
-
-    MAEVR.Experience.Util.Align(MAEVR.camera,MAEVR.vrControls);
    
     MAEVR.loadAudio();   
   }

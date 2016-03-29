@@ -34,7 +34,7 @@ var MAEVR = {
     MAEVR.vrEffect.setSize(window.innerWidth, window.innerHeight);
 
     MAEVR.vrManager = new WebVRManager(MAEVR.renderer, MAEVR.vrEffect, {
-      hideButton: false,
+      hideButton: true,
       isUndistorted: false
     });
 
@@ -49,15 +49,19 @@ var MAEVR = {
     // Init Mode
 
     if (MAEVR.mode == MAEVR.Modes.EVENT) {
-      MAEVR.connect();
+      MAEVR.GUI.showWindow("eventWelcome");
     } else {
-      MAEVR.GUI.showWindow("staticWait");
+      MAEVR.GUI.showWindow("staticWelcome");
     }
 
     // Add to DOM
 
     document.body.appendChild(MAEVR.renderer.domElement);
     
+  },
+  play: function() {
+    MAEVR.Experience.play();
+    MAEVR.playing = true;
   },
   animate: function(timestamp) {
 
@@ -86,6 +90,7 @@ var MAEVR = {
 
     // Update VR
 
+    MAEVR.camera.updateMatrixWorld ();
     MAEVR.vrControls.update();
     MAEVR.vrManager.render(MAEVR.scene, MAEVR.camera, timestamp);
 
@@ -120,7 +125,7 @@ var MAEVR = {
 
         // Static Mode
         console.log("MAEVR: Static Mode");
-        MAEVR.GUI.showWindow("staticWait");
+        MAEVR.GUI.showWindow("staticWelcome");
 
       });
 
@@ -129,7 +134,7 @@ var MAEVR = {
 
         // Static Mode
         console.log("MAEVR: Static Mode");
-        MAEVR.GUI.showWindow("staticWait");
+        MAEVR.GUI.showWindow("staticWelcome");
 
       });
 
@@ -140,7 +145,6 @@ var MAEVR = {
 
         // Event Mode
         console.log("MAEVR: Event Mode");
-        MAEVR.GUI.showWindow("eventWait");
       });
 
       socket.on('error', function(data) {
@@ -148,17 +152,18 @@ var MAEVR = {
 
         // Static Mode
         console.log("MAEVR: Static Mode");
-        MAEVR.GUI.showWindow("staticWait");
+        MAEVR.GUI.showWindow("staticWelcome");
 
       });
 
       socket.on('begin', function(data) {
         console.log("MAEVR: begin " + data.currentTime);
 
-        MAEVR.startTime = performance.now() - data.currentTime;
-        MAEVR.playing = true;
+        MAEVR.Message.hideMessage();
 
-        MAEVR.GUI.hideWindow("eventWait");
+        MAEVR.startTime = performance.now() - data.currentTime;
+        MAEVR.play();
+
       });
 
       socket.on('end', function(data) {
@@ -169,7 +174,7 @@ var MAEVR = {
 
       // Static Mode
       console.log("MAEVR: Static Mode");
-      MAEVR.GUI.showWindow("staticWait");
+      MAEVR.GUI.showWindow("staticWelcome");
 
     }
 
@@ -183,11 +188,10 @@ var MAEVR = {
       MAEVR.audio.oncanplaythrough = function() {
         console.log("MAEVR: oncanplaythrough");
 
-        MAEVR.GUI.hideWindow("staticLoad");
+        MAEVR.Message.hideMessage();
         MAEVR.audio.play();
 
-        MAEVR.Experience.play();
-        MAEVR.playing = true;
+        MAEVR.play();
       }
 
   }
@@ -199,6 +203,69 @@ MAEVR.Modes = {
   STATIC: 0,
   EVENT: 1
 }
+
+//
+
+MAEVR.Message = {
+  canvas: null,
+  object: null,
+  showMessage: function(messageText) {
+    
+    // Create canvas if needed
+
+    if (this.canvas == null) {
+      this.canvas = document.createElement('canvas');
+      this.canvas.width  = 256;
+      this.canvas.height = 128;   
+    }
+
+    // Create container object if neeeded
+
+    if (this.object == null) {
+      this.object = new THREE.Object3D();
+
+      var messageTexture = new THREE.Texture(this.canvas);
+      messageTexture.needsUpdate = true;
+
+      var messageGeometry =  new THREE.PlaneBufferGeometry(3, 1.5, 1, 1);
+      var messageMaterial = new THREE.MeshBasicMaterial({
+        map : messageTexture
+      });
+
+      var messageMesh = new THREE.Mesh(messageGeometry, messageMaterial);
+
+      this.object.add(messageMesh);
+      messageMesh.position.set(0,0,0);
+
+      MAEVR.camera.add(this.object);
+      this.object.position.z = -10;
+
+    }
+
+      // Draw Background
+      
+      var context = this.canvas.getContext("2d");
+      context.fillStyle = '#333';
+      context.fillRect(0,0,256,128);
+      
+      context.strokeStyle = 'white';
+      context.lineWidth = 2;
+      context.strokeRect(1,1,254,126);
+
+      context.fillStyle = "white";
+      context.font = "24px Arial";
+      context.textAlign = "center";
+      context.textBaseline = "middle";
+      context.fillText(messageText,this.canvas.width/2, this.canvas.height/2);          
+
+      this.object.traverse( function ( object ) { object.visible = true; } );
+  },
+  hideMessage: function(text) {
+    this.object.traverse( function ( object ) { object.visible = false; } );
+  }
+}
+
+//
 
 MAEVR.Stems = {
   chunkCount: 30,
@@ -223,6 +290,8 @@ MAEVR.Stems = {
     return lerpValue;
   }
 }
+
+//
 
 MAEVR.GUI = {
   elapsedDate: null,
@@ -255,10 +324,22 @@ MAEVR.GUI = {
   hideWindow: function(windowName){
     document.getElementById(windowName).style.display = 'none';
   },
+  eventBegin: function() {
+    MAEVR.GUI.hideWindow("eventWelcome");
+    MAEVR.Message.showMessage("WAITING...");
+
+    if (MAEVR.vrManager.isVRCompatible)
+      MAEVR.vrManager.button.setVisibility(true);
+
+    MAEVR.connect();
+  },
   staticBegin: function() {
-    MAEVR.GUI.hideWindow("staticWait");
-    MAEVR.GUI.showWindow("staticLoad"); 
-   
+    MAEVR.GUI.hideWindow("staticWelcome");
+    MAEVR.Message.showMessage("LOADING...");
+
+    if (MAEVR.vrManager.isVRCompatible)
+      MAEVR.vrManager.button.setVisibility(true);
+
     MAEVR.loadAudio();   
   }
 }

@@ -17,18 +17,14 @@
     <div id="elaspedTime"></div>
     <div id="meter"><div id="meterBar"></div></div>
     <div id="windows">
-      
-      <div id="eventWait" class="window">
-        Waiting for event.
+
+      <div id="staticWelcome" class="window">
+        <button id="staticBegin" class="button" onclick="MAEVR.GUI.staticBegin()">BEGIN</button>
       </div>
 
-      <div id="staticWait" class="window">
-        <button id="staticBegin" onclick="MAEVR.GUI.staticBegin()">BEGIN</button>
-      </div>
-
-      <div id="staticLoad" class="window">
-        Loading assets...
-      </div>
+      <div id="eventWelcome" class="window">
+        <button id="eventBegin" class="button" onclick="MAEVR.GUI.eventBegin()">READY</button>
+      </div>  
 
     </div>
 

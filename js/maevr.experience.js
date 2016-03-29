@@ -7,10 +7,7 @@ MAEVR.Experience = {
     var scope = this;
 
     var manager = new THREE.LoadingManager();
-    manager.onLoad = function() { 
-      for(var i = 0 ; i < Curves.numCurves ;i++){
-        // console.log(Curves[i+""]);
-    }scope.ready(); }
+    manager.onLoad = function() { scope.ready(); }
     var loader = new THREE.TextureLoader(manager);
     
     scope.texCol = loader.load('assets/img/dots.jpg', onTextureLoaded);
@@ -26,7 +23,7 @@ MAEVR.Experience = {
     }
 
     scope.time = 0;
-    scope.timeMultiplier = 3;
+    scope.timeMultiplier = 1;
 
     scope.sky = new THREE.Mesh(new THREE.SphereGeometry(500),simpleMat5);
     scope.sky.material.uniforms['map'].value = scope.texCol;
@@ -34,7 +31,7 @@ MAEVR.Experience = {
     scope.sky.material.side = THREE.BackSide;
     MAEVR.scene.add(scope.sky);
 
-    scope.tempTime = 0;
+    // scope.tempTime = 0;
   },
 
   ready: function(){
@@ -55,8 +52,6 @@ MAEVR.Experience = {
       scope.swirls.push(swirl);
     }
     scope.loaded = true;
-
-
   },
 
   play: function() {
@@ -75,11 +70,11 @@ MAEVR.Experience = {
 
     scope.sky.material.uniforms['offset'].value = MAEVR.elapsedTime/100000;
     scope.updateCamera();
-    // console.log(MAEVR.elapsedTime);
-    if(scope.tempTime+MAEVR.elapsedTime>1000){
-      console.log((MAEVR.elapsedTime/1000)*30,MAEVR.parentCamera.position.y);
-      scope.tempTime-=1000;
-    }
+
+    // if(scope.tempTime+MAEVR.elapsedTime>1000){
+    //   console.log((MAEVR.elapsedTime/1000)*30,MAEVR.parentCamera.position.y);
+    //   scope.tempTime-=1000;
+    // }
   },
 
   updateCamera: function(){

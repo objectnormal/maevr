@@ -437,7 +437,7 @@ THREE.NURBSUtils = {
 		var Nu = this.calcBasisFunctions( uspan, u, p, U );
 		var Nv = this.calcBasisFunctions( vspan, v, q, V );
 		var temp = [];
-		// console.log(P);
+
 		for ( var l = 0; l <= q; ++ l ) {
 
 			temp[ l ] = new THREE.Vector4( 0, 0, 0, 0 );

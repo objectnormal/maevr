@@ -38,6 +38,10 @@ var MAEVR = {
       isUndistorted: false
     });
 
+    // Initialize Events
+
+    MAEVR.Events.init();
+
     // Initialize GUI
 
     MAEVR.GUI.init();
@@ -194,6 +198,21 @@ var MAEVR = {
         MAEVR.play();
       }
 
+  }
+}
+
+//
+
+MAEVR.Events = {
+  init: function() {
+    window.addEventListener('resize', MAEVR.Events.resize, true);
+    window.addEventListener('vrdisplaypresentchange', MAEVR.Events.resize, true);      
+  },
+  resize: function(e) {
+    console.log("RESIZE");
+    MAEVR.vrEffect.setSize(window.innerWidth, window.innerHeight);
+    MAEVR.camera.aspect = window.innerWidth / window.innerHeight;
+    MAEVR.camera.updateProjectionMatrix();
   }
 }
 

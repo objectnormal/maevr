@@ -19,7 +19,7 @@ MAEVR.Experience.Util = {
 		swirl.rampPower = shaderInfo[2];
 		swirl.colorMult = shaderInfo[7];
 		swirl.warp = shaderInfo[8];
-
+		swirl.objName = shaderInfo[0];
 
 		swirl.timeOffsetRandom = (((Math.random()) * shaderInfo[1])/1000)*30;
 		swirl.color = new THREE.Vector3(

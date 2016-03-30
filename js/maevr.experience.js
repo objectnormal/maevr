@@ -23,7 +23,7 @@ MAEVR.Experience = {
     }
 
     scope.time = 0;
-    scope.timeMultiplier = 3;
+    scope.timeMultiplier = 1;
 
     scope.sky = new THREE.Mesh(new THREE.SphereGeometry(500),simpleMat5);
     scope.sky.material.uniforms['map'].value = scope.texCol;
@@ -42,6 +42,9 @@ MAEVR.Experience = {
     scope.swirls = [];
     for(var i = 0 ; i < Curves.numCurves ; i++){
       var material = facingMat3.clone();//new THREE.MeshBasicMaterial( {map:texture} );//
+      if(Curves[i+""].divisions.includes("tunnel"))
+        material = facingMatTunnel.clone();
+      console.log(Curves[i+""].divisions.includes("tunnel"));
       var swirl = MAEVR.Experience.Util.makeSurface({
         surface:Curves[i+""],
         material:material,

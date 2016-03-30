@@ -138,6 +138,7 @@ MAEVR.Experience.CamCurves.parentRX =
 [10000,-Math.PI/2]];
 
 
+/*
 MAEVR.Experience.Util.Align = function(camera, controls) {
 
 	THREE.VRControls.deviceQuaternion = new THREE.Quaternion();
@@ -165,7 +166,7 @@ MAEVR.Experience.Util.Align = function(camera, controls) {
 
 	console.log("re-align!");
 }
-
+*/
 
 
 

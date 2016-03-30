@@ -38,6 +38,10 @@ var MAEVR = {
       isUndistorted: false
     });
 
+    // Initialize Events
+
+    MAEVR.Events.init();
+
     // Initialize GUI
 
     MAEVR.GUI.init();
@@ -197,6 +201,21 @@ var MAEVR = {
   }
 }
 
+//
+
+MAEVR.Events = {
+  init: function() {
+    window.addEventListener('resize', MAEVR.Events.resize, true);
+    window.addEventListener('vrdisplaypresentchange', MAEVR.Events.resize, true);      
+  },
+  resize: function(e) {
+    console.log("RESIZE");
+    MAEVR.vrEffect.setSize(window.innerWidth, window.innerHeight);
+    MAEVR.camera.aspect = window.innerWidth / window.innerHeight;
+    MAEVR.camera.updateProjectionMatrix();
+  }
+}
+
 // 
 
 MAEVR.Modes = {
@@ -245,7 +264,7 @@ MAEVR.Message = {
       // Draw Background
       
       var context = this.canvas.getContext("2d");
-      context.fillStyle = '#333';
+      context.fillStyle = 'rgba(0,0,0,.5)';
       context.fillRect(0,0,256,128);
       
       context.strokeStyle = 'white';

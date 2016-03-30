@@ -58,8 +58,9 @@ MAEVR.Experience = {
   play: function() {
     console.log("MAEVR.Experience: play");
 
-    MAEVR.Experience.Util.Align(MAEVR.camera,MAEVR.vrControls);
-    // MAEVR.audio.volume = 0;
+    console.log("MAEVR.vrControls.resetSensor");
+    MAEVR.vrControls.resetSensor();
+
   },
 
   animate: function(timestamp) {

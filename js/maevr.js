@@ -264,7 +264,7 @@ MAEVR.Message = {
       // Draw Background
       
       var context = this.canvas.getContext("2d");
-      context.fillStyle = '#333';
+      context.fillStyle = 'rgba(0,0,0,.5)';
       context.fillRect(0,0,256,128);
       
       context.strokeStyle = 'white';

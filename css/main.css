@@ -7,72 +7,86 @@ body {
   padding: 0;
   overflow: hidden;
   font-family: sans-serif;  
-  font-size: 12pt;
+  font-size: 10pt;
+  line-height: 1.5em;
 
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#logo {
+  position: absolute;
+  opacity: .2;
+  left: 16px;
+  bottom: 4px;
+  z-index: 100;
+  width: 96px;
+  height: 48px;
 }
 
 #elaspedTime {
-	position: absolute;
-	top: 1.5em; right: .5em;
-	z-index: 100;
-	font-size: .7em;
+  position: absolute;
+  top: 1.5em; right: .5em;
+  z-index: 100;
+  font-size: .7em;
+  color: white;
 }
 
 #meter {
-	position: absolute;
-	top: .5em; right: .5em;	
-	width: 128px;
-	height: .5em;
-	background: rgba(255,255,255, .25);
+  position: absolute;
+  top: .5em; right: .5em; 
+  width: 128px;
+  height: .5em;
+  background: rgba(255,255,255, .25);
 }
 
 #meterBar {
-	position: absolute;
-	top: 0; left: 0;	
-	width: 0;
-	height: .5em;
-	background: rgba(255,255,255, .75);	
+  position: absolute;
+  top: 0; left: 0;  
+  width: 0;
+  height: .5em;
+  background: rgba(255,255,255, .75); 
 }
 
 #windows {
-	position: fixed;
-	top: 0; left: 0; right: 0; bottom: 0;
-	
-	display: flex;
-	align-items: center;
-	justify-content: center;	
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;  
 }
 
 .window {
-	border: 1px solid white;
-	background: rgba(255,255,255,.25);
-	padding: 24px;
-	display: none;
+  text-align: center;
+  border: 1px solid white;
+  background: rgba(0,0,0,.5);
+  padding: 24px;
+  max-width: 200px;
+  display: none;
 }
 
 #eventWait {
-	display: none;
+  display: none;
 }
 
 #staticWait {
-	display: none;
+  display: none;
 }
 
 .button {
-	border: 1px solid white;
-	background: rgba(255,255,255,.25);
-	color: white;
-	cursor: pointer;
-	width: 64px;
-	height: 32px;
+  border: 1px solid white;
+  background: rgba(0,0,0,.25);
+  color: white;
+  cursor: pointer;
+  width: 64px;
+  height: 32px;
 }
 
 #staticBegin:active {
-	background: rgba(255,255,255,.50);
+  background: rgba(255,255,255,.25);
 }

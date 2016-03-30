@@ -9,7 +9,6 @@ MAEVR.Experience.Util = {
 		var geometry = new THREE.ParametricGeometry( params.surface(), parseInt(divisions[1]), parseInt(divisions[2]) );
 		var swirl = new THREE.Mesh( geometry, params.material===undefined?new THREE.MeshNormalMaterial(  ):params.material );
 
-
 		swirl.material.depthTest = false;
 		swirl.material.uniforms['textureColor'].value = params.textureColor;
 		swirl.material.uniforms['textureAlpha'].value = params.textureAlpha;
@@ -17,14 +16,22 @@ MAEVR.Experience.Util = {
 		swirl.material.uniforms['power'].value = 1;
 
 		swirl.whichTexture = shaderInfo[3];
-		swirl.timeOffsetRandom = ((Math.random()-.5) * shaderInfo[1])/1000;
+		swirl.rampPower = shaderInfo[2];
+		swirl.colorMult = shaderInfo[7];
+		swirl.warp = shaderInfo[8];
+
+
+		swirl.timeOffsetRandom = (((Math.random()) * shaderInfo[1])/1000)*30;
 		swirl.color = new THREE.Vector3(
-			(shaderInfo[4]/256)+Math.random()*.2,
-			(shaderInfo[5]/256)+Math.random()*.2,
-			(shaderInfo[6]/256)+Math.random()*.2);
+			(swirl.colorMult*shaderInfo[4]/256)+Math.random()*.2,
+			(swirl.colorMult*shaderInfo[5]/256)+Math.random()*.2,
+			(swirl.colorMult*shaderInfo[6]/256)+Math.random()*.2);
 
 
 		swirl.animation = params.surface.animation
+		for(var i = 0 ; i < swirl.animation.length ; i++){
+			swirl.animation[i][0]+=swirl.timeOffsetRandom;
+		}
 		swirl.inPoint = swirl.animation[0][0];
 		swirl.outPoint = swirl.animation[swirl.animation.length-1][0];
 
@@ -43,14 +50,14 @@ MAEVR.Experience.Util = {
 					MAEVR.scene.add(swirl);
 					swirl.isInScene = true;
 	   			}
-				var getLerp = MAEVR.Experience.Util.FindInOut(time+swirl.timeOffsetRandom,swirl.animation);
+				var getLerp = MAEVR.Experience.Util.FindInOut(time,swirl.animation);
 
 				var value = MAEVR.Experience.Util.Remap(
 					getLerp[0],0,1,
 					swirl.animation[getLerp[1]][1],
 					swirl.animation[getLerp[2]][1]);
 
-				this.setFade(value,1);
+				this.setFade(value,swirl.rampPower);
 			}
 		}
 
@@ -77,7 +84,8 @@ MAEVR.Experience.Util = {
 		}
 
 		swirl.setColor(swirl.color);
-		
+		swirl.setUniform("warp",swirl.warp);
+
 		return swirl;
 	},
 

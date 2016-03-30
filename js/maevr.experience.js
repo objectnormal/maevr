@@ -23,7 +23,7 @@ MAEVR.Experience = {
     }
 
     scope.time = 0;
-    scope.timeMultiplier = 1;
+    scope.timeMultiplier = 3;
 
     scope.sky = new THREE.Mesh(new THREE.SphereGeometry(500),simpleMat5);
     scope.sky.material.uniforms['map'].value = scope.texCol;
@@ -32,6 +32,7 @@ MAEVR.Experience = {
     MAEVR.scene.add(scope.sky);
 
     // scope.tempTime = 0;
+    // scope.animateCamera = true;
   },
 
   ready: function(){
@@ -58,6 +59,7 @@ MAEVR.Experience = {
     console.log("MAEVR.Experience: play");
 
     MAEVR.Experience.Util.Align(MAEVR.camera,MAEVR.vrControls);
+    // MAEVR.audio.volume = 0;
   },
 
   animate: function(timestamp) {
@@ -71,8 +73,15 @@ MAEVR.Experience = {
     }
 
     scope.sky.material.uniforms['offset'].value = MAEVR.elapsedTime/100000;
-    scope.updateCamera();
+    if(scope.animateCamera)
+      scope.updateCamera();
+    else{
+      MAEVR.camera.position.z = 0;
+      MAEVR.parentCamera.position.y = 0;
+    }
 
+    // if(MAEVR.audio!==null)
+      // MAEVR.audio.volume=0;
     // if(scope.tempTime+MAEVR.elapsedTime>1000){
     //   console.log((MAEVR.elapsedTime/1000)*30,MAEVR.parentCamera.position.y);
     //   scope.tempTime-=1000;

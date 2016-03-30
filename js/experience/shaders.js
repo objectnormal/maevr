@@ -262,7 +262,7 @@ var facingFrag3 = "\
 		vec3 col3 = Color3*tex.b;\
 		vec3 col = col1+col2+col3;\
 		vec4 camNorm = vec4(vec3(wNormal),0.) * camMat;\
-		gl_FragColor = vec4(vec3(min(1.0,max(0.0,min(1.0,abs(pow(camNorm.z,3.))))))*col*col*texA.a*fader*10., 1.0);\
+		gl_FragColor = vec4(vec3(min(1.0,max(0.0,min(1.0,abs(pow(camNorm.z,3.))))))*col*col*texA.a*fader, 1.0);\
 	}\
 ";
 //		gl_FragColor = vec4(vec3(min(1.0,max(0.0,min(1.0,camNorm.z*3.))))*col*col*texA.a*fader*10., 1.0);\

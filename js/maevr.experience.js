@@ -32,7 +32,7 @@ MAEVR.Experience = {
     MAEVR.scene.add(scope.sky);
 
     // scope.tempTime = 0;
-    // scope.animateCamera = true;
+    scope.animateCamera = true;
   },
 
   ready: function(){

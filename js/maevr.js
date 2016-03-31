@@ -341,7 +341,7 @@ MAEVR.GUI = {
   },
   hideLogo: function() {
     document.getElementById("logo").style.display = 'none';
-  }
+  },
   showWindow: function(windowName){
     document.getElementById(windowName).style.display = 'initial';
   },

@@ -174,6 +174,14 @@ var MAEVR = {
         console.log("MAEVR: oncanplaythrough");
 
         MAEVR.Message.hideMessage();
+
+        var audioStartTime = 0;
+
+        if (!isNaN(parseInt(window.location.hash.substr(1))) {
+          audioStartTime = window.location.hash.substr(1);
+        }
+
+        MAEVR.audio.currentTime = audioStartTime;
         MAEVR.audio.play();
 
         MAEVR.play();

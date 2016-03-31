@@ -343,7 +343,7 @@ var facingMatTunnel = new THREE.ShaderMaterial(
 			Color2:{type:"v3",value:new THREE.Vector3(0,0,0)},
 			Color3:{type:"v3",value:new THREE.Vector3(0,0,0)},
 		},
-		vertexShader:   simpleVert,
+		vertexShader:   facingVert2,
 		fragmentShader: facingFragtunnel,
 		// side: THREE.DoubleSide,
 		blending: THREE.AdditiveBlending,

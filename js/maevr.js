@@ -177,7 +177,7 @@ var MAEVR = {
 
         var audioStartTime = 0;
 
-        if (!isNaN(parseInt(window.location.hash.substr(1))) {
+        if (!isNaN(parseInt(window.location.hash.substr(1)))) {
           audioStartTime = window.location.hash.substr(1);
         }
 

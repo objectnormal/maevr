@@ -195,7 +195,17 @@ var MAEVR = {
 MAEVR.Events = {
   init: function() {
     window.addEventListener('resize', MAEVR.Events.resize, true);
-    window.addEventListener('vrdisplaypresentchange', MAEVR.Events.resize, true);      
+    window.addEventListener('vrdisplaypresentchange', MAEVR.Events.vrdisplaypresentchange, true);
+  },
+  vrdisplaypresentchange: function(e) {
+    if (MAEVR.vrManager.hmd.isPresenting) {
+      console.log("MAEVR: VR Mode");
+      MAEVR.GUI.hideLogo();
+    } else {
+      console.log("MAEVR: Normal Mode");
+      MAEVR.GUI.showLogo();
+    }
+    MAEVR.Events.resize(null);
   },
   resize: function(e) {
     console.log("RESIZE");
@@ -326,6 +336,12 @@ MAEVR.GUI = {
     scope.meterBarDiv.style.width = (MAEVR.Stems.getStemValue(0) * 100) + "%";
 
   },
+  showLogo: function() {
+    document.getElementById("logo").style.display = 'initial';
+  },
+  hideLogo: function() {
+    document.getElementById("logo").style.display = 'none';
+  }
   showWindow: function(windowName){
     document.getElementById(windowName).style.display = 'initial';
   },

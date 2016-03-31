@@ -59,7 +59,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center; 
-  pointer-events:none;
+
+  pointer-events: none;
 }
 
 .window {
@@ -69,6 +70,7 @@ body {
   padding: 24px;
   max-width: 200px;
   display: none;
+  pointer-events: auto;
 }
 
 #eventWait {

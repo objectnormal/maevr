@@ -32,7 +32,7 @@ MAEVR.Experience = {
     MAEVR.scene.add(scope.sky);
 
     // scope.tempTime = 0;
-    scope.animateCamera = true;
+    scope.animateCamera = false;
   },
 
   ready: function(){
@@ -80,7 +80,7 @@ MAEVR.Experience = {
     if(scope.animateCamera)
       scope.updateCamera();
     else{
-      MAEVR.camera.position.z = 0;
+      MAEVR.camera.position.z = 17;
       MAEVR.parentCamera.position.y = 0;
     }
 

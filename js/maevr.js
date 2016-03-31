@@ -118,28 +118,14 @@ var MAEVR = {
 
       // Connect to socket
 
-      var socket = io.connect(MAEVR.serverURL,
-        {
-          reconnection: false,
-          timeout : 5000
-        });
+      var socket = io.connect(MAEVR.serverURL,{});
 
       socket.io.on('connect_error', function (data) {
         console.log("MAEVR: connect_error");
-
-        // Static Mode
-        console.log("MAEVR: Static Mode");
-        MAEVR.GUI.showWindow("staticWelcome");
-
       });
 
       socket.io.on('connect_timeout', function (data) {
         console.log("MAEVR: connect_timeout");
-
-        // Static Mode
-        console.log("MAEVR: Static Mode");
-        MAEVR.GUI.showWindow("staticWelcome");
-
       });
 
       //
@@ -153,11 +139,6 @@ var MAEVR = {
 
       socket.on('error', function(data) {
         console.log("MAEVR: error " + data);
-
-        // Static Mode
-        console.log("MAEVR: Static Mode");
-        MAEVR.GUI.showWindow("staticWelcome");
-
       });
 
       socket.on('begin', function(data) {
@@ -166,7 +147,7 @@ var MAEVR = {
         MAEVR.Message.hideMessage();
 
         MAEVR.startTime = performance.now() - data.currentTime;
-        MAEVR.play();
+        if (!MAEVR.playing) MAEVR.play();
 
       });
 
@@ -193,6 +174,14 @@ var MAEVR = {
         console.log("MAEVR: oncanplaythrough");
 
         MAEVR.Message.hideMessage();
+
+        var audioStartTime = 0;
+
+        if (!isNaN(parseInt(window.location.hash.substr(1)))) {
+          audioStartTime = window.location.hash.substr(1);
+        }
+
+        MAEVR.audio.currentTime = audioStartTime;
         MAEVR.audio.play();
 
         MAEVR.play();
@@ -206,7 +195,17 @@ var MAEVR = {
 MAEVR.Events = {
   init: function() {
     window.addEventListener('resize', MAEVR.Events.resize, true);
-    window.addEventListener('vrdisplaypresentchange', MAEVR.Events.resize, true);      
+    window.addEventListener('vrdisplaypresentchange', MAEVR.Events.vrdisplaypresentchange, true);
+  },
+  vrdisplaypresentchange: function(e) {
+    if (MAEVR.vrManager.hmd.isPresenting) {
+      console.log("MAEVR: VR Mode");
+      MAEVR.GUI.hideLogo();
+    } else {
+      console.log("MAEVR: Normal Mode");
+      MAEVR.GUI.showLogo();
+    }
+    MAEVR.Events.resize(null);
   },
   resize: function(e) {
     console.log("RESIZE");
@@ -336,6 +335,12 @@ MAEVR.GUI = {
     
     scope.meterBarDiv.style.width = (MAEVR.Stems.getStemValue(0) * 100) + "%";
 
+  },
+  showLogo: function() {
+    document.getElementById("logo").style.display = 'initial';
+  },
+  hideLogo: function() {
+    document.getElementById("logo").style.display = 'none';
   },
   showWindow: function(windowName){
     document.getElementById(windowName).style.display = 'initial';

@@ -147,7 +147,7 @@ var MAEVR = {
         MAEVR.Message.hideMessage();
 
         MAEVR.startTime = performance.now() - data.currentTime;
-        if (!MARVR.playing) MAEVR.play();
+        if (!MAEVR.playing) MAEVR.play();
 
       });
 

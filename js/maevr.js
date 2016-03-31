@@ -118,28 +118,14 @@ var MAEVR = {
 
       // Connect to socket
 
-      var socket = io.connect(MAEVR.serverURL,
-        {
-          reconnection: false,
-          timeout : 5000
-        });
+      var socket = io.connect(MAEVR.serverURL,{});
 
       socket.io.on('connect_error', function (data) {
         console.log("MAEVR: connect_error");
-
-        // Static Mode
-        console.log("MAEVR: Static Mode");
-        MAEVR.GUI.showWindow("staticWelcome");
-
       });
 
       socket.io.on('connect_timeout', function (data) {
         console.log("MAEVR: connect_timeout");
-
-        // Static Mode
-        console.log("MAEVR: Static Mode");
-        MAEVR.GUI.showWindow("staticWelcome");
-
       });
 
       //
@@ -153,11 +139,6 @@ var MAEVR = {
 
       socket.on('error', function(data) {
         console.log("MAEVR: error " + data);
-
-        // Static Mode
-        console.log("MAEVR: Static Mode");
-        MAEVR.GUI.showWindow("staticWelcome");
-
       });
 
       socket.on('begin', function(data) {
@@ -166,7 +147,7 @@ var MAEVR = {
         MAEVR.Message.hideMessage();
 
         MAEVR.startTime = performance.now() - data.currentTime;
-        MAEVR.play();
+        if (!MARVR.playing) MAEVR.play();
 
       });
 

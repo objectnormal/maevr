@@ -1362,6 +1362,12 @@ CardboardVRDisplay.prototype.beginPresent_ = function() {
   if (!gl)
     return; // Can't do distortion without a WebGL context.
 
+  /* TODO: TOTAL HACK */
+
+  this.layer_.predistorted = true;
+
+  /* TODO: END TOTAL HACK */
+
   // Provides a way to opt out of distortion
   if (this.layer_.predistorted) {
     this.cardboardUI_ = new CardboardUI(gl);

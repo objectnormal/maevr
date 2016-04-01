@@ -183,16 +183,26 @@ var MAEVR = {
       MAEVR.audio.oncanplaythrough = function() {
         console.log("MAEVR: oncanplaythrough");
 
+        // Ignore repeat events. Looking at you Chrome.
+
+        if (MAEVR.playing) return;
+
+        // Clear wait messages
+
         MAEVR.Message.hideMessage();
+
+        // Seek audio and play
 
         var audioStartTime = 0;
 
-        // if (!isNaN(parseInt(window.location.hash.substr(1)))) {
-        //   audioStartTime = window.location.hash.substr(1);
-        // }
+        if (!isNaN(parseInt(window.location.hash.substr(1)))) {
+          audioStartTime = window.location.hash.substr(1);
+        }
 
-        // MAEVR.audio.currentTime = audioStartTime;
+        MAEVR.audio.currentTime = audioStartTime;
         MAEVR.audio.play();
+
+        // Play experience
 
         MAEVR.play();
       }

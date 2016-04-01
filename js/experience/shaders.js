@@ -185,12 +185,13 @@ var facingVert2 = "\
 	uniform float switcher;\
 	uniform float offset;\
 	uniform float warp;\
+	uniform float warpSpeed;\
 	void main() {\
 		vUv = uv;\
 		wNormal = mat3(modelMatrix[0].xyz,modelMatrix[1].xyz,modelMatrix[2].xyz)*normal;\
 		wNormal = normalize(wNormal);\
 		gl_Position = projectionMatrix *\
-		modelViewMatrix * vec4(position+vec3(cos(offset+10.*vUv.x)*warp*.01,sin(offset+10.*vUv.x)*warp*.01,0), 1.0 );\
+		modelViewMatrix * vec4(position+vec3(cos((warpSpeed*.01)*offset+10.*vUv.x)*warp*.01,sin((warpSpeed*.01)*offset+10.*vUv.x)*warp*.01,0), 1.0 );\
 	}\
 ";
 
@@ -250,13 +251,14 @@ var facingFrag3 = "\
 	uniform sampler2D textureColor;\
 	uniform sampler2D textureAlpha;\
 	uniform float offset;\
+	uniform float offsetMult;\
 	uniform float fade;\
 	uniform float power;\
 	uniform float repeat;\
 	void main(void) {\
 		float fader = pow((.5+(cos(   ( max(0.0,min(1.0,(fade+vUv.x))) * 3.1415*2.))  *-.5))*1.0,power)*2.;\
 		vec4 texA = texture2D(textureAlpha, vUv);\
-		vec4 tex = texture2D(textureColor, texA.aa*.1+vec2(vUv.x*repeat+offset,vUv.y));\
+		vec4 tex = texture2D(textureColor, vec2(texA.a,0.0)*.1+vec2(vUv.x*(repeat*.01)+offset*(offsetMult*.01),vUv.y));\
 		vec3 col1 = Color1*tex.r;\
 		vec3 col2 = Color2*tex.g;\
 		vec3 col3 = Color3*tex.b;\
@@ -278,10 +280,12 @@ var facingMat3 = new THREE.ShaderMaterial(
 	    uniforms: 
 		{ 
 			offset:   { type: "f", value: 1.0 },
+			offsetMult:   { type: "f", value: 100.0 },
 			fade:   { type: "f", value: 0.0 },
 			power:   { type: "f", value: 1.0 },
 			warp:   { type: "f", value: 0.0 },
-			repeat:   { type: "f", value: 1.0 },
+			warpSpeed:   { type: "f", value: 100.0 },
+			repeat:   { type: "f", value: 100.0 },
 			camMat: {type: 'm4', value:new THREE.Matrix4()},
 			textureColor: { type: "t", value: null },
 			textureAlpha: { type: "t", value: null },
@@ -317,7 +321,7 @@ var facingFragtunnel = "\
 	void main(void) {\
 		float fader = pow((.5+(cos(   ( max(0.0,min(1.0,(fade+vUv.x))) * 3.1415*2.))  *-.5))*1.0,power)*4.;\
 		vec4 texA = texture2D(textureAlpha, vUv);\
-		vec4 tex = texture2D(textureColor, texA.aa*.1+vec2(vUv.x*repeat+offset,vUv.y));\
+		vec4 tex = texture2D(textureColor, vec2(texA.a,0.0)*.1+vec2(vUv.x*(repeat*.01)+offset,vUv.y));\
 		vec3 col1 = Color1*tex.r;\
 		vec3 col2 = Color2*tex.g;\
 		vec3 col3 = Color3*tex.b;\
@@ -332,9 +336,11 @@ var facingMatTunnel = new THREE.ShaderMaterial(
 	    uniforms: 
 		{ 
 			offset:   { type: "f", value: 1.0 },
+			offsetMult:   { type: "f", value: 1.0 },
 			fade:   { type: "f", value: 0.0 },
 			power:   { type: "f", value: 1.0 },
 			warp:   { type: "f", value: 0.0 },
+			warpSpeed:   { type: "f", value: 1.0 },
 			repeat:   { type: "f", value: 1.0 },
 			camMat: {type: 'm4', value:new THREE.Matrix4()},
 			textureColor: { type: "t", value: null },

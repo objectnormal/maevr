@@ -19,6 +19,13 @@ MAEVR.Experience.Util = {
 		swirl.rampPower = shaderInfo[2];
 		swirl.colorMult = shaderInfo[7];
 		swirl.warp = shaderInfo[8];
+
+		swirl.warpSpeed = shaderInfo[9]?shaderInfo[9]:100;
+		swirl.offsetMult = shaderInfo[10]?shaderInfo[10]:100;
+		swirl.repeat = shaderInfo[11]?shaderInfo[11]:100;
+
+		console.log(swirl.warpSpeed);
+
 		swirl.objName  = shaderInfo[0];
 
 		swirl.timeOffsetRandom = (((Math.random()) * shaderInfo[1])/1000)*30;
@@ -85,6 +92,9 @@ MAEVR.Experience.Util = {
 
 		swirl.setColor(swirl.color);
 		swirl.setUniform("warp",swirl.warp);
+		swirl.setUniform("warpSpeed",swirl.warpSpeed);
+		swirl.setUniform("repeat",swirl.repeat);
+		swirl.setUniform("offsetMult",swirl.offsetMult);
 
 		return swirl;
 	},

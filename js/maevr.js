@@ -35,7 +35,7 @@ var MAEVR = {
 
     MAEVR.vrManager = new WebVRManager(MAEVR.renderer, MAEVR.vrEffect, {
       hideButton: true,
-      isUndistorted: false
+      isUndistorted: true
     });
 
     // Initialize Events

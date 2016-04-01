@@ -53,7 +53,7 @@ MAEVR.Experience = {
         textureColor:scope.rgb,
         textureAlpha:scope.texAlpha
       });
-      swirl.position.set( 0, 0, -5);
+      // swirl.position.set( 0, 0, -5);
       swirl.material.side = THREE.DoubleSide;
       scope.swirls.push(swirl);
     }

@@ -3,6 +3,9 @@
 MAEVR.Experience.Util = {
 	makeSurface: function(params){
 
+		//AtomB_5000_1_2_124_202_247_200_100_1000_100_10
+		//name_timeOffset_rampPower_whichTexture_red_green_blue_colorMult_warp_warpSpeed_offsetMult_repeat_saturation
+
 		var nameSplit = params.surface.divisions.split("|");
 		var divisions = nameSplit[3].split("_");
 		var shaderInfo = nameSplit[2].split("_");
@@ -23,16 +26,17 @@ MAEVR.Experience.Util = {
 		swirl.warpSpeed = shaderInfo[9]?shaderInfo[9]:100;
 		swirl.offsetMult = shaderInfo[10]?shaderInfo[10]:100;
 		swirl.repeat = shaderInfo[11]?shaderInfo[11]:100;
+		swirl.saturation = shaderInfo[12]?shaderInfo[12]:20;
 
-		console.log(swirl.warpSpeed);
+		// console.log(swirl.warpSpeed);
 
 		swirl.objName  = shaderInfo[0];
 
 		swirl.timeOffsetRandom = (((Math.random()) * shaderInfo[1])/1000)*30;
 		swirl.color = new THREE.Vector3(
-			((swirl.colorMult*.01)*shaderInfo[4]/256)+Math.random()*.2,
-			((swirl.colorMult*.01)*shaderInfo[5]/256)+Math.random()*.2,
-			((swirl.colorMult*.01)*shaderInfo[6]/256)+Math.random()*.2);
+			((swirl.colorMult*.01)*shaderInfo[4]/256)+Math.random()*(swirl.saturation*.01),
+			((swirl.colorMult*.01)*shaderInfo[5]/256)+Math.random()*(swirl.saturation*.01),
+			((swirl.colorMult*.01)*shaderInfo[6]/256)+Math.random()*(swirl.saturation*.01));
 
 
 		swirl.animation = params.surface.animation

@@ -46,7 +46,7 @@ MAEVR.Experience = {
         material = facingMatTunnel.clone();
       if(Curves[i+""].divisions.includes("normal"))
         material = new THREE.MeshNormalMaterial( );
-      console.log(Curves[i+""].divisions.includes("tunnel"));
+      // console.log(Curves[i+""].divisions.includes("tunnel"));
       var swirl = MAEVR.Experience.Util.makeSurface({
         surface:Curves[i+""],
         material:material,

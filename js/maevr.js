@@ -167,22 +167,42 @@ var MAEVR = {
   loadAudio: function() {
 
       MAEVR.audio = new Audio();
-      MAEVR.audio.src = 'assets/audio/track.mp3';
+      
+      if (MAEVR.audio.canPlayType('audio/mpeg;')) {
+          console.log("MAEVR: MP3 Support");
+          MAEVR.audio.type= 'audio/mpeg';
+          MAEVR.audio.src = 'assets/audio/track.mp3';
+      } else {
+          console.log("MAEVR: OGG Support");
+          MAEVR.audio.type= 'audio/ogg';
+          MAEVR.audio.src = 'assets/audio/track.ogg';
+      }
+
       MAEVR.audio.load();
 
       MAEVR.audio.oncanplaythrough = function() {
         console.log("MAEVR: oncanplaythrough");
 
+        // Ignore repeat events. Looking at you Chrome.
+
+        if (MAEVR.playing) return;
+
+        // Clear wait messages
+
         MAEVR.Message.hideMessage();
+
+        // Seek audio and play
 
         var audioStartTime = 0;
 
-        // if (!isNaN(parseInt(window.location.hash.substr(1)))) {
-        //   audioStartTime = window.location.hash.substr(1);
-        // }
+        if (!isNaN(parseInt(window.location.hash.substr(1)))) {
+          audioStartTime = window.location.hash.substr(1);
+        }
 
-        // MAEVR.audio.currentTime = audioStartTime;
+        MAEVR.audio.currentTime = audioStartTime;
         MAEVR.audio.play();
+
+        // Play experience
 
         MAEVR.play();
       }

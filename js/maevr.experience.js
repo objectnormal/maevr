@@ -80,7 +80,7 @@ MAEVR.Experience = {
     if(scope.animateCamera)
       scope.updateCamera();
     else{
-      MAEVR.camera.position.z = 0;
+      MAEVR.camera.position.z = 17;
       MAEVR.parentCamera.position.y = 0;
     }
 

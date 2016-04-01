@@ -70,14 +70,16 @@
     
     <script>
 
+      /*******************************/
+      /****** SET DEFAULT MODE *******/
+      /*******************************/
+      
+      MAEVR.mode = MAEVR.Modes.STATIC;
+      //MAEVR.mode = MAEVR.Modes.EVENT;
+
+      /*******************************/
+
       if (Detector.webgl) {
-
-        if (window.location.hash == "#live") {
-          MAEVR.mode = MAEVR.Modes.EVENT;
-        } else {
-          MAEVR.mode = MAEVR.Modes.STATIC;
-        }
-
         MAEVR.init();
         MAEVR.animate();
       } else {

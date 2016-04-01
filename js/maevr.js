@@ -12,6 +12,14 @@ var MAEVR = {
 
     var scope = this;
 
+    // Detect mode from Hash
+
+    if (window.location.hash == "#live") {
+      MAEVR.mode = MAEVR.Modes.EVENT;
+    } else if (window.location.hash == "#static") {
+      MAEVR.mode = MAEVR.Modes.STATIC;
+    }
+
     // Init Three.jS
 
     MAEVR.renderer = new THREE.WebGLRenderer({antialias: true});

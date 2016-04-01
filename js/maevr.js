@@ -167,7 +167,17 @@ var MAEVR = {
   loadAudio: function() {
 
       MAEVR.audio = new Audio();
-      MAEVR.audio.src = 'assets/audio/track.mp3';
+      
+      if (MAEVR.audio.canPlayType('audio/mpeg;')) {
+          console.log("MAEVR: MP3 Support");
+          MAEVR.audio.type= 'audio/mpeg';
+          MAEVR.audio.src = 'assets/audio/track.mp3';
+      } else {
+          console.log("MAEVR: OGG Support");
+          MAEVR.audio.type= 'audio/ogg';
+          MAEVR.audio.src = 'assets/audio/track.ogg';
+      }
+
       MAEVR.audio.load();
 
       MAEVR.audio.oncanplaythrough = function() {

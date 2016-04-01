@@ -12,7 +12,7 @@ MAEVR.Experience = {
     
     scope.texCol = loader.load('assets/img/dots.jpg', onTextureLoaded);
     scope.texAlpha = loader.load('assets/img/paintStreak_02.png', onTextureLoaded);
-    scope.checker = loader.load('assets/img/checker.jpg', onTextureLoaded);
+    // scope.checker = loader.load('assets/img/checker.jpg', onTextureLoaded);
     scope.rgb = loader.load('assets/img/sky_RGB.png', onTextureLoaded);
 
     function onTextureLoaded(texture) {
@@ -86,12 +86,6 @@ MAEVR.Experience = {
       MAEVR.parentCamera.position.y = 0;
     }
 
-    // if(MAEVR.audio!==null)
-      // MAEVR.audio.volume=0;
-    // if(scope.tempTime+MAEVR.elapsedTime>1000){
-    //   console.log((MAEVR.elapsedTime/1000)*30,MAEVR.parentCamera.position.y);
-    //   scope.tempTime-=1000;
-    // }
   },
 
   updateCamera: function(){

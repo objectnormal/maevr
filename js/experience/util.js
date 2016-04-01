@@ -19,7 +19,7 @@ MAEVR.Experience.Util = {
 		swirl.rampPower = shaderInfo[2];
 		swirl.colorMult = shaderInfo[7];
 		swirl.warp = shaderInfo[8];
-		swirl.objName = shaderInfo[0];
+		swirl.objName  = shaderInfo[0];
 
 		swirl.timeOffsetRandom = (((Math.random()) * shaderInfo[1])/1000)*30;
 		swirl.color = new THREE.Vector3(
@@ -113,7 +113,8 @@ MAEVR.Experience.Util = {
 	},
 	SmoothStep: function(x) //actually smootherstep
 	{
-	    return x*x*x*(x*(x*6 - 15) + 10);
+	    // return x*x*x*(x*(x*6 - 15) + 10);
+	    return x*x*(3 - 2*x);
 	}
 }
 
@@ -121,20 +122,20 @@ MAEVR.Experience.Util = {
 MAEVR.Experience.CamCurves = {};
 MAEVR.Experience.CamCurves.camZ = 
 [[0, 397],
-[40, 17.6],
+[80, 17.6],
 [10000, 17.6]];
 
 MAEVR.Experience.CamCurves.parentY = 
 [[0, 2.8],
-[91, 2.8],
-[220, 316],
-[246, -4.7],
+[75, 2.8],
+[240, 316],
+[255, -4.7],
 [10000, -4.7]];
 
 MAEVR.Experience.CamCurves.parentRX = 
 [[0, 0],
 [195, 0],
-[221,-Math.PI/2],
+[240,-Math.PI/2],
 [10000,-Math.PI/2]];
 
 

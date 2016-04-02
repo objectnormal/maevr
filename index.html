@@ -14,7 +14,7 @@
   </head>
 
   <body>
-    <div id=logo><a href="http://vertigomusic.com/" target="_blank"><img src="assets/gui/vertigo.png" width="96px" height="48px"></a></div>
+    <div id=logo><a href="http://vertigomusic.com/" target="_blank"><img src="assets/gui/vertigo.png" width="80px" height="40px"></a></div>
     <div id="elaspedTime"></div>
     <div id="meter"><div id="meterBar"></div></div>
     <div id="windows">
@@ -22,7 +22,10 @@
       <div id="staticWelcome" class="window">
         <head>MAE VR</head>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-        <button id="staticBegin" class="button" onclick="MAEVR.GUI.staticBegin()">BEGIN</button>
+        <div id="staticButtons">
+          <button id="staticBeginStandard" class="button" onclick="MAEVR.GUI.staticBeginStandard()">STANDARD MODE</button>
+          <button id="staticBeginVR" class="button" onclick="MAEVR.GUI.staticBeginVR()">VR MODE</button>
+        </div>
       </div>
 
       <div id="eventWelcome" class="window">
@@ -33,7 +36,7 @@
 
     <script>
       WebVRConfig = {
-        BUFFER_SCALE: 0.25,
+        BUFFER_SCALE: 0.5,
         TOUCH_PANNER_DISABLED: true
       };
     </script>
@@ -42,7 +45,6 @@
     <script src="js/vendor/Detector.js"></script>
     <script src="js/vendor/three.min.js"></script>
     <script src="js/vendor/controls/VRControls.js"></script>
-    <!--<script src="js/experience/VRControlsExp.js"></script>-->
     <script src="js/vendor/effects/VREffect.js"></script>
     <script src="js/vendor/webvr-polyfill.js"></script>
     <script src="js/vendor/webvr-manager.js"></script>
@@ -52,8 +54,6 @@
     <script src="js/experience/shaders.js"></script>
     <script src="js/experience/lilyCurves.js"></script>
     <script src="js/experience/stems.js"></script>
-
-    <!--<script src="js/experience/cameraUtil.js"></script>-->
 
     <script src="js/vendor/curves/NURBSCurve.js"></script>
     <script src="js/vendor/curves/NURBSSurface.js"></script>

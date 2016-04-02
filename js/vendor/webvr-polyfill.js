@@ -5022,18 +5022,18 @@ FusionPoseSensor.prototype.getOrientation = function() {
 };
 
 FusionPoseSensor.prototype.resetPose = function() {
-  // Reduce to inverted yaw-only
+  
   this.resetQ.copy(this.filter.getOrientation());
 
-  // TODO: FIX
+  // Adjust for landscape orientation
 
-  if (Util.isLandscapeMode() && Util.isMobile()) {
+  if (Util.isLandscapeMode()) {
     var orientationQ = new THREE.Quaternion()
       .setFromAxisAngle ( new THREE.Vector3( 0, 0, 1 ) , -window.orientation * (Math.PI/180.0) );
     this.resetQ.multiply(orientationQ);  
   }
 
-  // TODO: FIX
+  // Reduce to inverted yaw-only
 
   this.resetQ.x = 0;
   this.resetQ.y = 0;

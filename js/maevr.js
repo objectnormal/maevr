@@ -22,7 +22,7 @@ var MAEVR = {
 
     // Init Three.jS
 
-    MAEVR.renderer = new THREE.WebGLRenderer({antialias: true});
+    MAEVR.renderer = new THREE.WebGLRenderer({antialias: false});
     MAEVR.renderer.setPixelRatio(window.devicePixelRatio);
 
     MAEVR.scene = new THREE.Scene();
@@ -41,10 +41,21 @@ var MAEVR = {
     MAEVR.vrEffect = new THREE.VREffect(MAEVR.renderer);
     MAEVR.vrEffect.setSize(window.innerWidth, window.innerHeight);
 
-    MAEVR.vrManager = new WebVRManager(MAEVR.renderer, MAEVR.vrEffect, {
-      hideButton: true,
-      isUndistorted: true
-    });
+    var vrParams = {
+      hideButton: false,
+      isUndistorted: false
+    }
+
+    // if (!/(iPad|iPhone|iPod)/g.test(navigator.userAgent)) {
+    //   console.log("MAEVR: Not iOS")
+    //   vrParams.isUndistorted = true;
+    // }
+
+    MAEVR.vrManager = new WebVRManager(MAEVR.renderer, MAEVR.vrEffect, vrParams);
+
+    if (MAEVR.vrManager.isVRCompatible) {
+      document.getElementById("staticBeginVR").style.display = 'initial';
+    }
 
     // Initialize Events
 
@@ -102,7 +113,6 @@ var MAEVR = {
 
     // Update VR
 
-    MAEVR.camera.updateMatrixWorld ();
     MAEVR.vrControls.update();
     MAEVR.vrManager.render(MAEVR.scene, MAEVR.camera, timestamp);
 
@@ -174,6 +184,8 @@ var MAEVR = {
   },
   loadAudio: function() {
 
+      console.log("MAEVR: Load Audio")
+
       MAEVR.audio = new Audio();
       
       if (MAEVR.audio.canPlayType('audio/mpeg;')) {
@@ -223,17 +235,18 @@ var MAEVR = {
 MAEVR.Events = {
   init: function() {
     window.addEventListener('resize', MAEVR.Events.resize, true);
-    window.addEventListener('vrdisplaypresentchange', MAEVR.Events.vrdisplaypresentchange, true);
+    window.addEventListener('modechange', MAEVR.Events.modechange, true); // TODO: Use real event
   },
-  vrdisplaypresentchange: function(e) {
-    if (MAEVR.vrManager.hmd.isPresenting) {
+  modechange: function(e) {
+    console.log("MODECHANGE");
+    console.log(MAEVR.vrManager.mode);
+    if (MAEVR.vrManager.mode == 3) { //TODO: Don't use hardcoded mode
       console.log("MAEVR: VR Mode");
       MAEVR.GUI.hideLogo();
     } else {
       console.log("MAEVR: Normal Mode");
       MAEVR.GUI.showLogo();
     }
-    MAEVR.Events.resize(null);
   },
   resize: function(e) {
     console.log("RESIZE");
@@ -380,17 +393,27 @@ MAEVR.GUI = {
     MAEVR.GUI.hideWindow("eventWelcome");
     MAEVR.Message.showMessage("WAITING...");
 
-    if (MAEVR.vrManager.isVRCompatible)
-      MAEVR.vrManager.button.setVisibility(true);
+    var webVRButtons = document.getElementsByClassName("webvr-button");
+    for(var i = 0; i < webVRButtons.length; i++)
+    {
+      webVRButtons[i].style.visibility="visible";
+    }
 
     MAEVR.connect();
   },
-  staticBegin: function() {
+  staticBeginVR: function() {    
+    MAEVR.GUI.staticBeginStandard();
+    MAEVR.vrManager.onVRClick_();
+  },
+  staticBeginStandard: function() {
     MAEVR.GUI.hideWindow("staticWelcome");
     MAEVR.Message.showMessage("LOADING...");
 
-    if (MAEVR.vrManager.isVRCompatible)
-      MAEVR.vrManager.button.setVisibility(true);
+    var webVRButtons = document.getElementsByClassName("webvr-button");
+    for(var i = 0; i < webVRButtons.length; i++)
+    {
+      webVRButtons[i].style.visibility="visible";
+    }
 
     MAEVR.loadAudio();   
   }

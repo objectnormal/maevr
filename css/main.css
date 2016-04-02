@@ -23,20 +23,19 @@ body {
   user-select: none;
 }
 
-canvas {
+/*canvas {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
   z-index: -100;
-}
+}*/
 
 #logo {
   position: fixed;
-  opacity: .2;
   left: 16px;
   bottom: 4px;
   z-index: 0;
-  width: 96px;
-  height: 48px;
+  width: 80px;
+  height: 40px;
 }
 
 #elaspedTime {
@@ -80,17 +79,9 @@ canvas {
   border: 1px solid white;
   background: rgba(0,0,0,.5);
   padding: 24px;
-  max-width: 200px;
+  max-width: 300px;
   display: none;
   pointer-events: auto;
-}
-
-#eventWait {
-  display: none;
-}
-
-#staticWait {
-  display: none;
 }
 
 .button {
@@ -98,10 +89,14 @@ canvas {
   background: rgba(0,0,0,.25);
   color: white;
   cursor: pointer;
-  width: 64px;
-  height: 32px;
+  width: 128px;
+  height: 36px;
 }
 
-#staticBegin:active {
+.button:active {
   background: rgba(255,255,255,.25);
+}
+
+#staticBeginVR {
+  display: none;
 }

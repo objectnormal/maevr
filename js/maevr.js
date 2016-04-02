@@ -22,7 +22,7 @@ var MAEVR = {
 
     // Init Three.jS
 
-    MAEVR.renderer = new THREE.WebGLRenderer({antialias: true});
+    MAEVR.renderer = new THREE.WebGLRenderer({antialias: false});
     MAEVR.renderer.setPixelRatio(window.devicePixelRatio);
 
     MAEVR.scene = new THREE.Scene();
@@ -41,10 +41,23 @@ var MAEVR = {
     MAEVR.vrEffect = new THREE.VREffect(MAEVR.renderer);
     MAEVR.vrEffect.setSize(window.innerWidth, window.innerHeight);
 
-    MAEVR.vrManager = new WebVRManager(MAEVR.renderer, MAEVR.vrEffect, {
+    var vrParams = {
       hideButton: true,
       isUndistorted: false
-    });
+    }
+
+    // if (!/(iPad|iPhone|iPod)/g.test(navigator.userAgent)) {
+    //   console.log("MAEVR: Not iOS")
+    //   vrParams.isUndistorted = true;
+    // }
+
+    MAEVR.vrManager = new WebVRManager(MAEVR.renderer, MAEVR.vrEffect, vrParams);
+
+    console.log("MAEVR: VR Compatible " + MAEVR.vrManager.isVRCompatible);
+
+    if (MAEVR.vrManager.isVRCompatible) {
+      document.getElementById("staticBeginVR").style.display = 'initial';
+    }
 
     // Initialize Events
 
@@ -102,7 +115,6 @@ var MAEVR = {
 
     // Update VR
 
-    MAEVR.camera.updateMatrixWorld ();
     MAEVR.vrControls.update();
     MAEVR.vrManager.render(MAEVR.scene, MAEVR.camera, timestamp);
 
@@ -174,6 +186,8 @@ var MAEVR = {
   },
   loadAudio: function() {
 
+      console.log("MAEVR: Load Audio")
+
       MAEVR.audio = new Audio();
       
       if (MAEVR.audio.canPlayType('audio/mpeg;')) {
@@ -223,9 +237,12 @@ var MAEVR = {
 MAEVR.Events = {
   init: function() {
     window.addEventListener('resize', MAEVR.Events.resize, true);
+    window.addEventListener('modechange', MAEVR.Events.modechange, true); // TODO: Use real event
   },
-  vrdisplaypresentchange: function(e) {
-    if (MAEVR.vrManager.hmd.isPresenting) {
+  modechange: function(e) {
+    console.log("MODECHANGE");
+    console.log(MAEVR.vrManager.mode);
+    if (MAEVR.vrManager.mode == 3) { //TODO: Don't use hardcoded mode
       console.log("MAEVR: VR Mode");
       MAEVR.GUI.hideLogo();
     } else {
@@ -383,9 +400,9 @@ MAEVR.GUI = {
 
     MAEVR.connect();
   },
-  staticBeginVR: function() {
-    MAEVR.vrManager.onVRClick_();
+  staticBeginVR: function() {    
     MAEVR.GUI.staticBeginStandard();
+    MAEVR.vrManager.onVRClick_();
   },
   staticBeginStandard: function() {
     MAEVR.GUI.hideWindow("staticWelcome");

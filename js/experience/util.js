@@ -57,10 +57,7 @@ MAEVR.Experience.Util = {
 	   			}
 			}
 			else if(time>swirl.inPoint && time<swirl.outPoint){
-				if(!swirl.isInScene){
-					MAEVR.scene.add(swirl);
-					swirl.isInScene = true;
-	   			}
+
 				var getLerp = MAEVR.Experience.Util.FindInOut(time,swirl.animation);
 
 				var value = MAEVR.Experience.Util.Remap(
@@ -68,7 +65,21 @@ MAEVR.Experience.Util = {
 					swirl.animation[getLerp[1]][1],
 					swirl.animation[getLerp[2]][1]);
 
-				this.setFade(value,swirl.rampPower);
+				if(value > -1 && value < 1){
+					this.setFade(value,swirl.rampPower);
+
+					if(!swirl.isInScene){
+						MAEVR.scene.add(swirl);
+						swirl.isInScene = true;
+		   			}
+		   		}
+		   		else{
+		   			if(swirl.isInScene){
+		   				MAEVR.scene.remove( swirl );
+		   				swirl.isInScene = false;
+		   			}
+		   		}
+				
 			}
 		}
 
@@ -151,6 +162,22 @@ MAEVR.Experience.CamCurves.parentRX =
 [195, 0],
 [240,-Math.PI/2],
 [10000,-Math.PI/2]];
+
+MAEVR.Experience.CamCurves.intro = 
+[[0,0],[3,1],[5,1],[8,0]];
+
+MAEVR.Experience.CamCurves.outro = 
+[[237,0],[240,1],[10000,1]];
+
+MAEVR.Experience.CamCurves.checkFadeStatus = function(time){
+	var c1 = MAEVR.Experience.CamCurves.intro;
+	var c2 = MAEVR.Experience.CamCurves.outro;
+	// console.log(c1[c1.length-1][0]);
+	if(time>c1[c1.length-1][0] && time < c2[0][0])
+		return false;
+	else
+		return true;
+}
 
 
 /*

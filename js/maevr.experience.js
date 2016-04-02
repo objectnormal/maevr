@@ -15,6 +15,9 @@ MAEVR.Experience = {
     // scope.checker = loader.load('assets/img/checker.jpg', onTextureLoaded);
     scope.rgb = loader.load('assets/img/sky_RGB.png', onTextureLoaded);
 
+    scope.vertIn = loader.load('assets/img/VertigoIntro.png', onTextureLoaded);
+    scope.vertOut = loader.load('assets/img/VertigoOutro.png', onTextureLoaded);
+
     function onTextureLoaded(texture) {
       console.log("MAEVR.Experience: onTextureLoaded");
 
@@ -31,6 +34,17 @@ MAEVR.Experience = {
     scope.sky.material.side = THREE.BackSide;
     MAEVR.scene.add(scope.sky);
 
+    scope.vertInQuad = new THREE.Mesh(new THREE.PlaneGeometry( 5.12,1.88), new THREE.MeshBasicMaterial( {map:scope.vertIn,transparent:true,opacity:0} ));
+    scope.vertOutQuad = new THREE.Mesh(new THREE.PlaneGeometry( 5.12,1.17), new THREE.MeshBasicMaterial( {map:scope.vertOut,transparent:true,opacity:0} ));
+
+    scope.quadParent = new THREE.Object3D();
+    scope.quadParent.add(scope.vertInQuad);
+    scope.quadParent.add(scope.vertOutQuad);
+    console.log(scope.quadParent);
+    scope.quadParent.scale.set(2,2,2);
+    // MAEVR.camera.add(scope.quadParent);
+    scope.quadParent.position.z = -15;
+    scope.quadParent.isInScene = false;
     // scope.tempTime = 0;
     scope.animateCamera = true;
   },
@@ -118,6 +132,42 @@ MAEVR.Experience = {
       MAEVR.Experience.CamCurves.parentRX[getLerp[2]][1]);
 
      MAEVR.parentCamera.rotation.x = value;
+
+    //fade in and out the titles
+
+      var time = .001*MAEVR.elapsedTime*scope.timeMultiplier;
+
+      if(MAEVR.Experience.CamCurves.checkFadeStatus(time)){
+
+        if(!scope.quadParent.isInScene){
+          MAEVR.camera.add(scope.quadParent);
+          scope.quadParent.isInScene = true;
+        }
+
+        getLerp = MAEVR.Experience.Util.FindInOut(
+        .001*MAEVR.elapsedTime*scope.timeMultiplier,MAEVR.Experience.CamCurves.intro);
+        value = MAEVR.Experience.Util.Remap(
+        MAEVR.Experience.Util.SmoothStep(getLerp[0]),0,1,
+        MAEVR.Experience.CamCurves.intro[getLerp[1]][1],
+        MAEVR.Experience.CamCurves.intro[getLerp[2]][1]);
+
+        scope.vertInQuad.material.opacity = value;
+
+        getLerp = MAEVR.Experience.Util.FindInOut(
+        .001*MAEVR.elapsedTime*scope.timeMultiplier,MAEVR.Experience.CamCurves.outro);
+        value = MAEVR.Experience.Util.Remap(
+        MAEVR.Experience.Util.SmoothStep(getLerp[0]),0,1,
+        MAEVR.Experience.CamCurves.outro[getLerp[1]][1],
+        MAEVR.Experience.CamCurves.outro[getLerp[2]][1]);
+
+        scope.vertOutQuad.material.opacity = value;
+     }
+     else{
+       if(scope.quadParent.isInScene){
+          MAEVR.camera.remove(scope.quadParent);
+          scope.quadParent.isInScene = false;
+        }
+     }
 
   }
 

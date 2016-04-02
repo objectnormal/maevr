@@ -42,7 +42,7 @@ var MAEVR = {
     MAEVR.vrEffect.setSize(window.innerWidth, window.innerHeight);
 
     var vrParams = {
-      hideButton: true,
+      hideButton: false,
       isUndistorted: false
     }
 
@@ -52,8 +52,6 @@ var MAEVR = {
     // }
 
     MAEVR.vrManager = new WebVRManager(MAEVR.renderer, MAEVR.vrEffect, vrParams);
-
-    console.log("MAEVR: VR Compatible " + MAEVR.vrManager.isVRCompatible);
 
     if (MAEVR.vrManager.isVRCompatible) {
       document.getElementById("staticBeginVR").style.display = 'initial';
@@ -395,8 +393,11 @@ MAEVR.GUI = {
     MAEVR.GUI.hideWindow("eventWelcome");
     MAEVR.Message.showMessage("WAITING...");
 
-    if (MAEVR.vrManager.isVRCompatible)
-      MAEVR.vrManager.button.setVisibility(true);
+    var webVRButtons = document.getElementsByClassName("webvr-button");
+    for(var i = 0; i < webVRButtons.length; i++)
+    {
+      webVRButtons[i].style.visibility="visible";
+    }
 
     MAEVR.connect();
   },
@@ -408,8 +409,11 @@ MAEVR.GUI = {
     MAEVR.GUI.hideWindow("staticWelcome");
     MAEVR.Message.showMessage("LOADING...");
 
-    if (MAEVR.vrManager.isVRCompatible)
-      MAEVR.vrManager.button.setVisibility(true);
+    var webVRButtons = document.getElementsByClassName("webvr-button");
+    for(var i = 0; i < webVRButtons.length; i++)
+    {
+      webVRButtons[i].style.visibility="visible";
+    }
 
     MAEVR.loadAudio();   
   }

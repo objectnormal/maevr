@@ -40,9 +40,7 @@ MAEVR.Experience = {
     scope.quadParent = new THREE.Object3D();
     scope.quadParent.add(scope.vertInQuad);
     scope.quadParent.add(scope.vertOutQuad);
-    console.log(scope.quadParent);
     scope.quadParent.scale.set(2,2,2);
-    // MAEVR.camera.add(scope.quadParent);
     scope.quadParent.position.z = -15;
     scope.quadParent.isInScene = false;
     // scope.tempTime = 0;
@@ -88,7 +86,7 @@ MAEVR.Experience = {
 
     for(var i = 0 ; i < Curves.numCurves ; i++){
       scope.swirls[i].offset((i*.3)+scope.timeMultiplier*.01*MAEVR.elapsedTime*-.02);
-      scope.swirls[i].setCam(MAEVR.camera);
+      // scope.swirls[i].setCam(MAEVR.camera);
       scope.swirls[i].update(scope.timeMultiplier*(MAEVR.elapsedTime/1000)*30);
     }
 

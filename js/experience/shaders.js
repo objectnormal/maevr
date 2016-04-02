@@ -110,11 +110,9 @@ var bumpMat = new THREE.ShaderMaterial({
 });
 
 var simpleVert = "\
-	varying vec3 vecNormal;\
 	varying vec2 vUv;\
 	void main() {\
 		vUv = uv;\
-		vecNormal = normal;\
 		gl_Position = projectionMatrix *\
 		modelViewMatrix * vec4(position, 1.0 );\
 	}\
@@ -195,6 +193,19 @@ var facingVert2 = "\
 	}\
 ";
 
+var facingVertTunnel = "\
+	varying vec2 vUv;\
+	uniform float switcher;\
+	uniform float offset;\
+	uniform float warp;\
+	uniform float warpSpeed;\
+	void main() {\
+		vUv = uv;\
+		gl_Position = projectionMatrix *\
+		modelViewMatrix * vec4(position+vec3(cos((warpSpeed*.01)*offset+10.*vUv.x)*warp*.01,sin((warpSpeed*.01)*offset+10.*vUv.x)*warp*.01,0), 1.0 );\
+	}\
+";
+
 //gl_Position = projectionMatrix *\
 		// modelViewMatrix * vec4(position+vec3(cos(offset*30.*vUv.x)*10.,sin(offset*30.*vUv.x)*10.,0), 1.0 );\
 var facingFrag2 = "\
@@ -263,7 +274,7 @@ var facingFrag3 = "\
 		vec3 col2 = Color2*tex.g;\
 		vec3 col3 = Color3*tex.b;\
 		vec3 col = col1+col2+col3;\
-		vec4 camNorm = vec4(vec3(wNormal),0.) * camMat;\
+		vec4 camNorm = vec4(vec3(wNormal),0.) * viewMatrix;\
 		gl_FragColor = vec4(vec3(min(1.0,max(0.0,min(1.0,abs(pow(camNorm.z,3.))))))*col*col*texA.a*fader, 1.0);\
 	}\
 ";
@@ -305,9 +316,6 @@ var facingMat3 = new THREE.ShaderMaterial(
 
 var facingFragtunnel = "\
 	precision highp float;\
-	uniform mat4 camMat;\
-	uniform mat4 camMatInverse;\
-	varying vec3 wNormal;\
 	uniform vec3 Color1;\
 	uniform vec3 Color2;\
 	uniform vec3 Color3;\
@@ -326,7 +334,6 @@ var facingFragtunnel = "\
 		vec3 col2 = Color2*tex.g;\
 		vec3 col3 = Color3*tex.b;\
 		vec3 col = col1+col2+col3;\
-		vec4 camNorm = vec4(vec3(wNormal),0.) * camMat;\
 		gl_FragColor = vec4(col*col*texA.a*fader, 1.0);\
 	}\
 ";
@@ -349,7 +356,7 @@ var facingMatTunnel = new THREE.ShaderMaterial(
 			Color2:{type:"v3",value:new THREE.Vector3(0,0,0)},
 			Color3:{type:"v3",value:new THREE.Vector3(0,0,0)},
 		},
-		vertexShader:   facingVert2,
+		vertexShader:   facingVertTunnel,
 		fragmentShader: facingFragtunnel,
 		// side: THREE.DoubleSide,
 		blending: THREE.AdditiveBlending,

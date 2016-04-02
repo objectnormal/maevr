@@ -167,7 +167,7 @@ MAEVR.Experience.CamCurves.intro =
 [[0,0],[3,1],[5,1],[8,0]];
 
 MAEVR.Experience.CamCurves.outro = 
-[[237,0],[240,1],[10000,1]];
+[[253,0],[256,1],[10000,1]];
 
 MAEVR.Experience.CamCurves.checkFadeStatus = function(time){
 	var c1 = MAEVR.Experience.CamCurves.intro;

@@ -6,8 +6,6 @@ THREE.OBJLoader = function ( manager ) {
 
 	this.manager = ( manager !== undefined ) ? manager : THREE.DefaultLoadingManager;
 
-	this.materials = null;
-
 };
 
 THREE.OBJLoader.prototype = {
@@ -19,7 +17,7 @@ THREE.OBJLoader.prototype = {
 		var scope = this;
 
 		var loader = new THREE.XHRLoader( scope.manager );
-		loader.setPath( this.path );
+		loader.setCrossOrigin( this.crossOrigin );
 		loader.load( url, function ( text ) {
 
 			onLoad( scope.parse( text ) );
@@ -28,15 +26,9 @@ THREE.OBJLoader.prototype = {
 
 	},
 
-	setPath: function ( value ) {
+	setCrossOrigin: function ( value ) {
 
-		this.path = value;
-
-	},
-
-	setMaterials: function ( materials ) {
-
-		this.materials = materials;
+		this.crossOrigin = value;
 
 	},
 
@@ -44,35 +36,8 @@ THREE.OBJLoader.prototype = {
 
 		console.time( 'OBJLoader' );
 
-		var objects = [];
-		var object;
-		var foundObjects = false;
-		var vertices = [];
-		var normals = [];
-		var uvs = [];
-
-		function addObject( name ) {
-
-			var geometry = {
-				vertices: [],
-				normals: [],
-				uvs: []
-			};
-
-			var material = {
-				name: '',
-				smooth: true
-			};
-
-			object = {
-				name: name,
-				geometry: geometry,
-				material: material
-			};
-
-			objects.push( object );
-
-		}
+		var object, objects = [];
+		var geometry, material;
 
 		function parseVertexIndex( value ) {
 
@@ -100,7 +65,7 @@ THREE.OBJLoader.prototype = {
 
 		function addVertex( a, b, c ) {
 
-			object.geometry.vertices.push(
+			geometry.vertices.push(
 				vertices[ a ], vertices[ a + 1 ], vertices[ a + 2 ],
 				vertices[ b ], vertices[ b + 1 ], vertices[ b + 2 ],
 				vertices[ c ], vertices[ c + 1 ], vertices[ c + 2 ]
@@ -110,7 +75,7 @@ THREE.OBJLoader.prototype = {
 
 		function addNormal( a, b, c ) {
 
-			object.geometry.normals.push(
+			geometry.normals.push(
 				normals[ a ], normals[ a + 1 ], normals[ a + 2 ],
 				normals[ b ], normals[ b + 1 ], normals[ b + 2 ],
 				normals[ c ], normals[ c + 1 ], normals[ c + 2 ]
@@ -120,7 +85,7 @@ THREE.OBJLoader.prototype = {
 
 		function addUV( a, b, c ) {
 
-			object.geometry.uvs.push(
+			geometry.uvs.push(
 				uvs[ a ], uvs[ a + 1 ],
 				uvs[ b ], uvs[ b + 1 ],
 				uvs[ c ], uvs[ c + 1 ]
@@ -192,32 +157,61 @@ THREE.OBJLoader.prototype = {
 
 		}
 
-		addObject( '' );
+		// create mesh if no objects in text
+
+		if ( /^o /gm.test( text ) === false ) {
+
+			geometry = {
+				vertices: [],
+				normals: [],
+				uvs: []
+			};
+
+			material = {
+				name: ''
+			};
+
+			object = {
+				name: '',
+				geometry: geometry,
+				material: material
+			};
+
+			objects.push( object );
+
+		}
+
+		var vertices = [];
+		var normals = [];
+		var uvs = [];
 
 		// v float float float
-		var vertex_pattern = /^v\s+([\d|\.|\+|\-|e|E]+)\s+([\d|\.|\+|\-|e|E]+)\s+([\d|\.|\+|\-|e|E]+)/;
+
+		var vertex_pattern = /v( +[\d|\.|\+|\-|e|E]+)( +[\d|\.|\+|\-|e|E]+)( +[\d|\.|\+|\-|e|E]+)/;
 
 		// vn float float float
-		var normal_pattern = /^vn\s+([\d|\.|\+|\-|e|E]+)\s+([\d|\.|\+|\-|e|E]+)\s+([\d|\.|\+|\-|e|E]+)/;
+
+		var normal_pattern = /vn( +[\d|\.|\+|\-|e|E]+)( +[\d|\.|\+|\-|e|E]+)( +[\d|\.|\+|\-|e|E]+)/;
 
 		// vt float float
-		var uv_pattern = /^vt\s+([\d|\.|\+|\-|e|E]+)\s+([\d|\.|\+|\-|e|E]+)/;
+
+		var uv_pattern = /vt( +[\d|\.|\+|\-|e|E]+)( +[\d|\.|\+|\-|e|E]+)/;
 
 		// f vertex vertex vertex ...
-		var face_pattern1 = /^f\s+(-?\d+)\s+(-?\d+)\s+(-?\d+)(?:\s+(-?\d+))?/;
+
+		var face_pattern1 = /f( +-?\d+)( +-?\d+)( +-?\d+)( +-?\d+)?/;
 
 		// f vertex/uv vertex/uv vertex/uv ...
-		var face_pattern2 = /^f\s+((-?\d+)\/(-?\d+))\s+((-?\d+)\/(-?\d+))\s+((-?\d+)\/(-?\d+))(?:\s+((-?\d+)\/(-?\d+)))?/;
+
+		var face_pattern2 = /f( +(-?\d+)\/(-?\d+))( +(-?\d+)\/(-?\d+))( +(-?\d+)\/(-?\d+))( +(-?\d+)\/(-?\d+))?/;
 
 		// f vertex/uv/normal vertex/uv/normal vertex/uv/normal ...
-		var face_pattern3 = /^f\s+((-?\d+)\/(-?\d+)\/(-?\d+))\s+((-?\d+)\/(-?\d+)\/(-?\d+))\s+((-?\d+)\/(-?\d+)\/(-?\d+))(?:\s+((-?\d+)\/(-?\d+)\/(-?\d+)))?/;
+
+		var face_pattern3 = /f( +(-?\d+)\/(-?\d+)\/(-?\d+))( +(-?\d+)\/(-?\d+)\/(-?\d+))( +(-?\d+)\/(-?\d+)\/(-?\d+))( +(-?\d+)\/(-?\d+)\/(-?\d+))?/;
 
 		// f vertex//normal vertex//normal vertex//normal ...
-		var face_pattern4 = /^f\s+((-?\d+)\/\/(-?\d+))\s+((-?\d+)\/\/(-?\d+))\s+((-?\d+)\/\/(-?\d+))(?:\s+((-?\d+)\/\/(-?\d+)))?/;
 
-		var object_pattern = /^[og]\s*(.+)?/;
-
-		var smoothing_pattern = /^s\s+(\d+|on|off)/;
+		var face_pattern4 = /f( +(-?\d+)\/\/(-?\d+))( +(-?\d+)\/\/(-?\d+))( +(-?\d+)\/\/(-?\d+))( +(-?\d+)\/\/(-?\d+))?/;
 
 		//
 
@@ -300,55 +294,58 @@ THREE.OBJLoader.prototype = {
 					result[ 3 ], result[ 6 ], result[ 9 ], result[ 12 ]
 				);
 
-			} else if ( ( result = object_pattern.exec( line ) ) !== null ) {
+			} else if ( /^o /.test( line ) ) {
 
-				// o object_name
-				// or
-				// g group_name
+				geometry = {
+					vertices: [],
+					normals: [],
+					uvs: []
+				};
 
-				var name = result[ 0 ].substr( 1 ).trim();
+				material = {
+					name: ''
+				};
 
-				if ( foundObjects === false ) {
+				object = {
+					name: line.substring( 2 ).trim(),
+					geometry: geometry,
+					material: material
+				};
 
-					foundObjects = true;
-					object.name = name;
+				objects.push( object )
 
-				} else {
+			} else if ( /^g /.test( line ) ) {
 
-					addObject( name );
-
-				}
+				// group
 
 			} else if ( /^usemtl /.test( line ) ) {
 
 				// material
 
-				object.material.name = line.substring( 7 ).trim();
+				material.name = line.substring( 7 ).trim();
 
 			} else if ( /^mtllib /.test( line ) ) {
 
 				// mtl file
 
-			} else if ( ( result = smoothing_pattern.exec( line ) ) !== null ) {
+			} else if ( /^s /.test( line ) ) {
 
 				// smooth shading
 
-				object.material.smooth = result[ 1 ] === "1" || result[ 1 ] === "on";
-
 			} else {
 
-				throw new Error( "Unexpected line: " + line );
+				// console.log( "THREE.OBJLoader: Unhandled line " + line );
 
 			}
 
 		}
 
-		var container = new THREE.Group();
+		var container = new THREE.Object3D();
 
 		for ( var i = 0, l = objects.length; i < l; i ++ ) {
 
 			object = objects[ i ];
-			var geometry = object.geometry;
+			geometry = object.geometry;
 
 			var buffergeometry = new THREE.BufferGeometry();
 
@@ -358,10 +355,6 @@ THREE.OBJLoader.prototype = {
 
 				buffergeometry.addAttribute( 'normal', new THREE.BufferAttribute( new Float32Array( geometry.normals ), 3 ) );
 
-			} else {
-
-				buffergeometry.computeVertexNormals();
-
 			}
 
 			if ( geometry.uvs.length > 0 ) {
@@ -370,22 +363,8 @@ THREE.OBJLoader.prototype = {
 
 			}
 
-			var material;
-
-			if ( this.materials !== null ) {
-
-				material = this.materials.create( object.material.name );
-
-			}
-
-			if ( !material ) {
-
-				material = new THREE.MeshPhongMaterial();
-				material.name = object.material.name;
-
-			}
-
-			material.shading = object.material.smooth ? THREE.SmoothShading : THREE.FlatShading;
+			material = new THREE.MeshLambertMaterial();
+			material.name = object.material.name;
 
 			var mesh = new THREE.Mesh( buffergeometry, material );
 			mesh.name = object.name;

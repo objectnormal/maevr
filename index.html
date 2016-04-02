@@ -22,7 +22,7 @@
       <div id="staticWelcome" class="window">
         <head>MAE VR</head>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-        <button id="staticBegin" class="button" onclick="MAEVR.GUI.staticBegin()">BEGIN</button>
+        <button id="staticBegin" class="button" onclick="MAEVR.GUI.staticBeginStandard()">BEGIN</button>
       </div>
 
       <div id="eventWelcome" class="window">
@@ -34,7 +34,8 @@
     <script>
       WebVRConfig = {
         BUFFER_SCALE: 0.25,
-        TOUCH_PANNER_DISABLED: true
+        TOUCH_PANNER_DISABLED: true,
+        PREVENT_DISTORTION: true
       };
     </script>
 

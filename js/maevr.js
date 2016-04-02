@@ -43,7 +43,7 @@ var MAEVR = {
 
     MAEVR.vrManager = new WebVRManager(MAEVR.renderer, MAEVR.vrEffect, {
       hideButton: true,
-      isUndistorted: true
+      isUndistorted: false
     });
 
     // Initialize Events
@@ -223,7 +223,6 @@ var MAEVR = {
 MAEVR.Events = {
   init: function() {
     window.addEventListener('resize', MAEVR.Events.resize, true);
-    window.addEventListener('vrdisplaypresentchange', MAEVR.Events.vrdisplaypresentchange, true);
   },
   vrdisplaypresentchange: function(e) {
     if (MAEVR.vrManager.hmd.isPresenting) {
@@ -233,7 +232,6 @@ MAEVR.Events = {
       console.log("MAEVR: Normal Mode");
       MAEVR.GUI.showLogo();
     }
-    MAEVR.Events.resize(null);
   },
   resize: function(e) {
     console.log("RESIZE");
@@ -385,7 +383,11 @@ MAEVR.GUI = {
 
     MAEVR.connect();
   },
-  staticBegin: function() {
+  staticBeginVR: function() {
+    MAEVR.vrManager.onVRClick_();
+    MAEVR.GUI.staticBeginStandard();
+  },
+  staticBeginStandard: function() {
     MAEVR.GUI.hideWindow("staticWelcome");
     MAEVR.Message.showMessage("LOADING...");
 

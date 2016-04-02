@@ -7,37 +7,54 @@ THREE.VRControls = function ( object, onError ) {
 
 	var scope = this;
 
-	var vrInput;
+	var vrInputs = [];
 
-	function gotVRDevices( devices ) {
+	function filterInvalidDevices( devices ) {
 
-		for ( var i = 0; i < devices.length; i ++ ) {
+		// Exclude Cardboard position sensor if Oculus exists.
 
-			if ( ( 'VRDisplay' in window && devices[ i ] instanceof VRDisplay ) ||
-				 ( 'PositionSensorVRDevice' in window && devices[ i ] instanceof PositionSensorVRDevice ) ) {
+		var oculusDevices = devices.filter( function ( device ) {
 
-				vrInput = devices[ i ];
-				break;  // We keep the first we encounter
+			return device.deviceName.toLowerCase().indexOf( 'oculus' ) !== - 1;
 
-			}
+		} );
 
-		}
+		if ( oculusDevices.length >= 1 ) {
 
-		if ( !vrInput ) {
+			return devices.filter( function ( device ) {
 
-			if ( onError ) onError( 'VR input not available.' );
+				return device.deviceName.toLowerCase().indexOf( 'cardboard' ) === - 1;
+
+			} );
+
+		} else {
+
+			return devices;
 
 		}
 
 	}
 
-	if ( navigator.getVRDisplays ) {
+	function gotVRDevices( devices ) {
 
-		navigator.getVRDisplays().then( gotVRDevices );
+		devices = filterInvalidDevices( devices );
 
-	} else if ( navigator.getVRDevices ) {
+		for ( var i = 0; i < devices.length; i ++ ) {
 
-		// Deprecated API.
+			if ( devices[ i ] instanceof PositionSensorVRDevice ) {
+
+				vrInputs.push( devices[ i ] );
+
+			}
+
+		}
+
+		if ( onError ) onError( 'HMD not available' );
+
+	}
+
+	if ( navigator.getVRDevices ) {
+
 		navigator.getVRDevices().then( gotVRDevices );
 
 	}
@@ -50,40 +67,21 @@ THREE.VRControls = function ( object, onError ) {
 
 	this.update = function () {
 
-		if ( vrInput ) {
+		for ( var i = 0; i < vrInputs.length; i ++ ) {
 
-			if ( vrInput.getPose ) {
+			var vrInput = vrInputs[ i ];
 
-				var pose = vrInput.getPose();
+			var state = vrInput.getState();
 
-				if ( pose.orientation !== null ) {
+			if ( state.orientation !== null ) {
 
-					object.quaternion.fromArray( pose.orientation );
+				object.quaternion.copy( state.orientation );
 
-				}
+			}
 
-				if ( pose.position !== null ) {
+			if ( state.position !== null ) {
 
-					object.position.fromArray( pose.position ).multiplyScalar( scope.scale );
-
-				}
-
-			} else {
-
-				// Deprecated API.
-				var state = vrInput.getState();
-
-				if ( state.orientation !== null ) {
-
-					object.quaternion.copy( state.orientation );
-
-				}
-
-				if ( state.position !== null ) {
-
-					object.position.copy( state.position ).multiplyScalar( scope.scale );
-
-				}
+				object.position.copy( state.position ).multiplyScalar( scope.scale );
 
 			}
 
@@ -93,20 +91,16 @@ THREE.VRControls = function ( object, onError ) {
 
 	this.resetSensor = function () {
 
-		if ( vrInput ) {
+		for ( var i = 0; i < vrInputs.length; i ++ ) {
 
-			if ( vrInput.resetPose !== undefined ) {
+			var vrInput = vrInputs[ i ];
 
-				vrInput.resetPose();
+			if ( vrInput.resetSensor !== undefined ) {
 
-			} else if ( vrInput.resetSensor !== undefined ) {
-
-				// Deprecated API.
 				vrInput.resetSensor();
 
 			} else if ( vrInput.zeroSensor !== undefined ) {
 
-				// Really deprecated API.
 				vrInput.zeroSensor();
 
 			}
@@ -124,7 +118,7 @@ THREE.VRControls = function ( object, onError ) {
 
 	this.dispose = function () {
 
-		vrInput = null;
+		vrInputs = [];
 
 	};
 

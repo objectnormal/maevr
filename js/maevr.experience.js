@@ -85,9 +85,12 @@ MAEVR.Experience = {
     if(!scope.loaded) return;
 
     for(var i = 0 ; i < Curves.numCurves ; i++){
-      scope.swirls[i].offset((i*.3)+scope.timeMultiplier*.01*MAEVR.elapsedTime*-.02);
-      // scope.swirls[i].setCam(MAEVR.camera);
-      scope.swirls[i].update(scope.timeMultiplier*(MAEVR.elapsedTime/1000)*30);
+       
+        // scope.swirls[i].setCam(MAEVR.camera);
+        scope.swirls[i].update(scope.timeMultiplier*(MAEVR.elapsedTime/1000)*30);
+        if(scope.swirls[i].isInScene)
+          scope.swirls[i].offset((i*.3)+scope.timeMultiplier*.01*MAEVR.elapsedTime*-.02);
+      
     }
 
     scope.sky.material.uniforms['offset'].value = MAEVR.elapsedTime/100000;

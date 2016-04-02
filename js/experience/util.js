@@ -81,6 +81,8 @@ MAEVR.Experience.Util = {
 		   		}
 				
 			}
+			this.isInScene = swirl.isInScene;
+			// console.log(swirl.isInScene);
 		}
 
 		swirl.setCam = function(cam){
@@ -103,6 +105,14 @@ MAEVR.Experience.Util = {
 		swirl.setColor = function(value){
 			var thisTexture = "Color" + swirl.whichTexture;
 			swirl.material.uniforms[thisTexture].value = value;
+		}
+
+		swirl.checkIfIsInScene = function(){
+			// console.log(swirl.isInScene);
+			if(this.isInScene)
+				return true;
+			else
+				return false;
 		}
 
 		swirl.setColor(swirl.color);

@@ -23,9 +23,7 @@ MAEVR.Experience = {
 
       texture.wrapS = THREE.RepeatWrapping;
       texture.wrapT = THREE.RepeatWrapping;
-
-      texture.minFilter = THREE.NearestFilter;
-      texture.magFilter = THREE.NearestFilter;
+      
     }
 
     scope.time = 0;

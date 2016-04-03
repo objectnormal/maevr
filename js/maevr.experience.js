@@ -13,7 +13,7 @@ MAEVR.Experience = {
     scope.texCol = loader.load('assets/img/dots.jpg', onTextureLoaded);
     scope.texAlpha = loader.load('assets/img/paintStreak_02.png', onTextureLoaded);
     // scope.checker = loader.load('assets/img/checker.jpg', onTextureLoaded);
-    scope.rgb = loader.load('assets/img/sky_RGB.png', onTextureLoaded);
+    scope.rgb = loader.load('assets/img/sky_RGB.jpg', onTextureLoaded);
 
     scope.vertIn = loader.load('assets/img/VertigoIntro.png', onTextureLoaded);
     scope.vertOut = loader.load('assets/img/VertigoOutro.png', onTextureLoaded);

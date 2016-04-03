@@ -7,7 +7,6 @@ var MAEVR = {
   elapsedTime: 0,
   serverURL: "maevr.herokuapp.com",
   playing: false,
-  sphere: null,
   init: function() {
 
     var scope = this;
@@ -102,11 +101,6 @@ var MAEVR = {
     } else {
       MAEVR.elapsedTime = 0;
     }
-
-    // Animate Test Sphere
-    
-    // var scale = .1 + MAEVR.Stems.getStemValue(0);
-    // scope.sphere.scale.set( scale, scale, scale );
 
     // Update GUI
 

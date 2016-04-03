@@ -25,7 +25,6 @@ var MAEVR = {
     MAEVR.renderer = new THREE.WebGLRenderer(
       {
         antialias: true,
-        precision: "mediump",
         depth: false,
         stencil: false
       });

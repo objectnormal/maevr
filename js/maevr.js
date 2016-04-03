@@ -22,7 +22,13 @@ var MAEVR = {
 
     // Init Three.jS
 
-    MAEVR.renderer = new THREE.WebGLRenderer({antialias: false});
+    MAEVR.renderer = new THREE.WebGLRenderer(
+      {
+        antialias: true,
+        precision: "mediump",
+        depth: false,
+        stencil: false
+      });
     MAEVR.renderer.setPixelRatio(window.devicePixelRatio);
 
     MAEVR.scene = new THREE.Scene();

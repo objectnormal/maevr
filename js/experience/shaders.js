@@ -62,7 +62,7 @@ var bumpVert = "\
 //http://www.sunandblackcat.com/tipFullView.php?l=eng&topicid=30
 
 var bumpFrag = "\
-	precision highp float;\
+	precision mediump float;\
 	varying vec3 vecNormal;\
 	uniform vec3 directionalLightColor[MAX_DIR_LIGHTS];\
 	uniform vec3 directionalLightDirection[MAX_DIR_LIGHTS];\
@@ -120,7 +120,7 @@ var simpleVert = "\
 
 
 var simpleFrag = "\
-	precision highp float;\
+	precision mediump float;\
 	varying vec3 vecNormal;\
 	uniform vec3 directionalLightColor[MAX_DIR_LIGHTS];\
 	uniform vec3 directionalLightDirection[MAX_DIR_LIGHTS];\
@@ -151,7 +151,7 @@ var simpleMat = new THREE.ShaderMaterial({
 
 
 var simpleFrag5 = "\
-	precision highp float;\
+	precision mediump float;\
 	varying vec3 vecNormal;\
 	uniform float offset;\
 	varying vec2 vUv;\
@@ -209,7 +209,7 @@ var facingVertTunnel = "\
 //gl_Position = projectionMatrix *\
 		// modelViewMatrix * vec4(position+vec3(cos(offset*30.*vUv.x)*10.,sin(offset*30.*vUv.x)*10.,0), 1.0 );\
 var facingFrag2 = "\
-	precision highp float;\
+	precision mediump float;\
 	uniform mat4 camMat;\
 	uniform mat4 camMatInverse;\
 	varying vec3 wNormal;\
@@ -251,7 +251,7 @@ var facingMat2 = new THREE.ShaderMaterial(
 
 
 var facingFrag3 = "\
-	precision highp float;\
+	precision mediump float;\
 	uniform mat4 camMat;\
 	uniform mat4 camMatInverse;\
 	varying vec3 wNormal;\
@@ -315,7 +315,7 @@ var facingMat3 = new THREE.ShaderMaterial(
 
 
 var facingFragtunnel = "\
-	precision highp float;\
+	precision mediump float;\
 	uniform vec3 Color1;\
 	uniform vec3 Color2;\
 	uniform vec3 Color3;\

@@ -235,12 +235,11 @@ var MAEVR = {
 MAEVR.Events = {
   init: function() {
     window.addEventListener('resize', MAEVR.Events.resize, true);
-    window.addEventListener('modechange', MAEVR.Events.modechange, true); // TODO: Use real event
+    window.addEventListener('vrdisplaypresentchange', MAEVR.Events.resize, true);
+    window.addEventListener('vrdisplaypresentchange', MAEVR.Events.vrdisplaypresentchange, true);
   },
-  modechange: function(e) {
-    console.log("MODECHANGE");
-    console.log(MAEVR.vrManager.mode);
-    if (MAEVR.vrManager.mode == 3) { //TODO: Don't use hardcoded mode
+  vrdisplaypresentchange: function(e) {
+    if (MAEVR.vrManager.hmd.isPresenting) {
       console.log("MAEVR: VR Mode");
       MAEVR.GUI.hideLogo();
     } else {

@@ -60,7 +60,7 @@ var MAEVR = {
     MAEVR.vrManager = new WebVRManager(MAEVR.renderer, MAEVR.vrEffect, vrParams);
 
     if (MAEVR.vrManager.isVRCompatible) {
-      document.getElementById("staticBeginVR").style.display = 'initial';
+      document.getElementById("welcomeWindow").className += " vr";
     }
 
     // Initialize Events
@@ -69,19 +69,15 @@ var MAEVR = {
 
     // Initialize GUI
 
-    MAEVR.GUI.init();
+    //MAEVR.GUI.init();
 
     // Initialize Experience
 
     MAEVR.Experience.init();
 
-    // Init Mode
+    // Display Window
 
-    if (MAEVR.mode == MAEVR.Modes.EVENT) {
-      MAEVR.GUI.showWindow("eventWelcome");
-    } else {
-      MAEVR.GUI.showWindow("staticWelcome");
-    }
+    MAEVR.GUI.showWindow("welcomeWindow");
 
     // Add to DOM
 
@@ -115,7 +111,7 @@ var MAEVR = {
 
     // Update GUI
 
-    MAEVR.GUI.update();
+    //MAEVR.GUI.update();
 
     // Update VR
 
@@ -181,9 +177,7 @@ var MAEVR = {
 
     } else {
 
-      // Static Mode
-      console.log("MAEVR: Static Mode");
-      MAEVR.GUI.showWindow("staticWelcome");
+      console.log("MAEVR: socket missing");
 
     }
 
@@ -394,25 +388,14 @@ MAEVR.GUI = {
   hideWindow: function(windowName){
     document.getElementById(windowName).style.display = 'none';
   },
-  eventBegin: function() {
-    MAEVR.GUI.hideWindow("eventWelcome");
-    MAEVR.Message.showMessage("WAITING...");
-
-    var webVRButtons = document.getElementsByClassName("webvr-button");
-    for(var i = 0; i < webVRButtons.length; i++)
-    {
-      webVRButtons[i].style.visibility="visible";
-    }
-
-    MAEVR.connect();
-  },
-  staticBeginVR: function() {    
-    MAEVR.GUI.staticBeginStandard();
+  beginVR: function() {    
+    MAEVR.GUI.beginStandard();
     MAEVR.vrManager.onVRClick_();
   },
-  staticBeginStandard: function() {
-    MAEVR.GUI.hideWindow("staticWelcome");
-    MAEVR.Message.showMessage("LOADING...");
+  beginStandard: function() {
+    MAEVR.GUI.hideWindow("welcomeWindow");
+    
+    // Show/Hide buttons
 
     var webVRButtons = document.getElementsByClassName("webvr-button");
     for(var i = 0; i < webVRButtons.length; i++)
@@ -420,6 +403,15 @@ MAEVR.GUI = {
       webVRButtons[i].style.visibility="visible";
     }
 
-    MAEVR.loadAudio();   
+    // Connect or start audio
+
+    if (MAEVR.mode == MAEVR.Modes.EVENT) {
+      MAEVR.Message.showMessage("WAITING...");
+      MAEVR.connect();
+    } else {
+      MAEVR.Message.showMessage("LOADING...");
+      MAEVR.loadAudio();  
+    }
+     
   }
 }

@@ -44,6 +44,7 @@ body {
   z-index: 100;
   font-size: .7em;
   color: white;
+  display: none;
 }
 
 #meter {
@@ -53,6 +54,7 @@ body {
   height: .5em;
   background: rgba(255,255,255, .25);
   z-index: 100;
+  display: none;
 }
 
 #meterBar {
@@ -79,9 +81,30 @@ body {
   border: 1px solid white;
   background: rgba(0,0,0,.5);
   padding: 24px;
-  max-width: 300px;
+  width: 280px;
   display: none;
   pointer-events: auto;
+}
+
+#welcomeButtons {
+}
+
+#welcomeButtonsVR {
+  display: none;
+}
+
+#welcomeWindow.vr #welcomeButtons {
+  display: none;
+}
+
+#welcomeWindow.vr #welcomeButtonsVR {
+  display: initial;
+}
+
+#welcomeFooter {
+  font-size:.8em;
+  opacity: .5;
+  margin-bottom: -16px;
 }
 
 .button {
@@ -91,14 +114,11 @@ body {
   cursor: pointer;
   width: 128px;
   height: 36px;
+  margin: 16px 2px 16px 2px;
 }
 
 .button:active {
   background: rgba(255,255,255,.25);
-}
-
-#staticBeginVR {
-  display: none;
 }
 
 .webvr-button {

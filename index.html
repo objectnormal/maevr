@@ -19,18 +19,23 @@
     <div id="meter"><div id="meterBar"></div></div>
     <div id="windows">
 
-      <div id="staticWelcome" class="window">
-        <head>MAE VR</head>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-        <div id="staticButtons">
-          <button id="staticBeginStandard" class="button" onclick="MAEVR.GUI.staticBeginStandard()">STANDARD MODE</button>
-          <button id="staticBeginVR" class="button" onclick="MAEVR.GUI.staticBeginVR()">VR MODE</button>
-        </div>
-      </div>
+      <div id="welcomeWindow" class="window">
+        <div id="welcomeHeader"><img src="assets/gui/maevr.svg" width="88px" height="22px"></div>    
 
-      <div id="eventWelcome" class="window">
-        <button id="eventBegin" class="button" onclick="MAEVR.GUI.eventBegin()">READY</button>
-      </div>  
+        <div id="welcomeButtons">
+          <button id="beginButtonStandard" class="button" onclick="MAEVR.GUI.beginStandard()">BEGIN</button>
+        </div> 
+
+        <div id="welcomeButtonsVR">
+          <button id="beginButtonStandard" class="button" onclick="MAEVR.GUI.beginStandard()">STANDARD MODE</button>
+          <button id="beginButtonVR" class="button" onclick="MAEVR.GUI.beginVR()">VR MODE</button>
+        </div> 
+
+        <div id="welcomeFooter">
+        PRESENTED BY <img src="assets/gui/vertigo.png" width="80px" height="40px" style="vertical-align:-1.55em">
+        </div>  
+
+      </div>
 
     </div>
 

@@ -11,9 +11,9 @@ MAEVR.Experience = {
     var loader = new THREE.TextureLoader(manager);
     
     scope.texCol = loader.load('assets/img/dots.jpg', onTextureLoaded);
-    scope.texAlpha = loader.load('assets/img/paintStreak_02.png', onTextureLoaded);
+    scope.texAlpha = loader.load('assets/img/paintStreak_02_half.png', onTextureLoaded);
     // scope.checker = loader.load('assets/img/checker.jpg', onTextureLoaded);
-    scope.rgb = loader.load('assets/img/sky_RGB.png', onTextureLoaded);
+    scope.rgb = loader.load('assets/img/sky_RGB_half.jpg', onTextureLoaded);
 
     scope.vertIn = loader.load('assets/img/VertigoIntro.png', onTextureLoaded);
     scope.vertOut = loader.load('assets/img/VertigoOutro.png', onTextureLoaded);

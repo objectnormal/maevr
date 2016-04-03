@@ -67,6 +67,16 @@ body {
   background: rgba(255,255,255, .75); 
 }
 
+#footer {
+  position: fixed;
+  bottom: 12px;
+  margin-left: -128px;
+  left: 50%;
+  width: 280px;
+  text-align: center;
+  opacity: .2;
+}
+
 #windows {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -82,7 +92,7 @@ body {
   text-align: center;
   border: 1px solid white;
   background: rgba(0,0,0,.5);
-  padding: 32px;
+  padding: 24px;
   width: 240px;
   display: none;
   pointer-events: auto;
@@ -104,13 +114,7 @@ body {
 }
 
 #welcomeHeader {
-  margin-bottom: 16px;
-}
-
-#welcomeFooter {
-  font-size:.8em;
-  opacity: .25;
-  margin-bottom: -24px;
+  margin: 32px 0;
 }
 
 .button {
@@ -120,7 +124,6 @@ body {
   cursor: pointer;
   width: 112px;
   height: 40px;
-  margin: 24px 2px;
 }
 
 .button:active {

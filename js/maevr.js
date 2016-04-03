@@ -75,7 +75,7 @@ var MAEVR = {
 
     // Display Window
 
-    MAEVR.GUI.showWindow("welcomeWindow");
+    MAEVR.GUI.showElement("welcomeWindow");
 
     // Add to DOM
 
@@ -234,10 +234,10 @@ MAEVR.Events = {
   vrdisplaypresentchange: function(e) {
     if (MAEVR.vrManager.hmd.isPresenting) {
       console.log("MAEVR: VR Mode");
-      MAEVR.GUI.hideLogo();
+      MAEVR.GUI.hideElement("logo");
     } else {
       console.log("MAEVR: Normal Mode");
-      MAEVR.GUI.showLogo();
+      MAEVR.GUI.showElement("logo");
     }
   },
   resize: function(e) {
@@ -369,25 +369,20 @@ MAEVR.GUI = {
     scope.meterBarDiv.style.width = (MAEVR.Stems.getStemValue(0) * 100) + "%";
 
   },
-  showLogo: function() {
-    document.getElementById("logo").style.display = 'initial';
+  showElement: function(elementName){
+    document.getElementById(elementName).style.display = 'initial';
   },
-  hideLogo: function() {
-    document.getElementById("logo").style.display = 'none';
-  },
-  showWindow: function(windowName){
-    document.getElementById(windowName).style.display = 'initial';
-  },
-  hideWindow: function(windowName){
-    document.getElementById(windowName).style.display = 'none';
+  hideElement: function(elementName){
+    document.getElementById(elementName).style.display = 'none';
   },
   beginVR: function() {    
     MAEVR.GUI.beginStandard();
     MAEVR.vrManager.onVRClick_();
   },
   beginStandard: function() {
-    MAEVR.GUI.hideWindow("welcomeWindow");
-    MAEVR.GUI.showLogo();
+    MAEVR.GUI.hideElement("welcomeWindow");
+    MAEVR.GUI.hideElement("footer");
+    MAEVR.GUI.showElement("logo");
     
     // Show/Hide buttons
 

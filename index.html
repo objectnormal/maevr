@@ -17,9 +17,11 @@
     <div id=logo><a href="http://vertigomusic.com/" target="_blank"><img src="assets/gui/vertigoLogo.svg" width="96" height="36" alt=""></a></div>
     <div id="elaspedTime"></div>
     <div id="meter"><div id="meterBar"></div></div>
+    
     <div id="windows">
 
       <div id="welcomeWindow" class="window">
+        
         <div id="welcomeHeader"><img src="assets/gui/maevr.svg" width="128" height="32" alt=""></div>    
 
         <div id="welcomeButtons">
@@ -29,16 +31,17 @@
         <div id="welcomeButtonsVR">
           <button class="button" onclick="MAEVR.GUI.beginStandard()">NORMAL MODE</button>
           <button class="button" onclick="MAEVR.GUI.beginVR()">VR MODE</button>
-        </div> 
-
-        <div id="welcomeFooter">
-          <a href="http://vertigomusic.com/" target="_blank"><img src="assets/gui/vertigo.svg" width="96" height="48" style="margin: 0 8px;" alt=""></a>
-          <a href="http://objectnormal.com/" target="_blank"><img src="assets/gui/on.svg" width="96" height="48" style="margin: 0 8px;" alt=""></a>
         </div>  
 
       </div>
 
     </div>
+
+    <div id="footer">
+      <a href="http://vertigomusic.com/" target="_blank"><img src="assets/gui/vertigo.svg" width="96" height="48" style="vertical-align: middle;margin: 0 16px;" alt=""></a>
+      <div style="vertical-align: middle;display:inline-block;height: 32px;border-right: solid 1px #fff;"></div>
+      <a href="http://objectnormal.com/" target="_blank"><img src="assets/gui/on.svg" width="96" height="48" style="vertical-align: middle;margin: 0 16px;" alt=""></a>
+    </div> 
 
     <script>
       WebVRConfig = {

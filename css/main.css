@@ -36,6 +36,8 @@ body {
   z-index: 0;
   width: 96px;
   height: 36px;
+  display: none;
+  opacity: .25;
 }
 
 #elaspedTime {
@@ -102,12 +104,13 @@ body {
 }
 
 #welcomeHeader {
+  margin-bottom: 16px;
 }
 
 #welcomeFooter {
   font-size:.8em;
-  opacity: .45;
-  margin-bottom: -16px;
+  opacity: .25;
+  margin-bottom: -24px;
 }
 
 .button {

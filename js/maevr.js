@@ -387,6 +387,7 @@ MAEVR.GUI = {
   },
   beginStandard: function() {
     MAEVR.GUI.hideWindow("welcomeWindow");
+    MAEVR.GUI.showLogo();
     
     // Show/Hide buttons
 

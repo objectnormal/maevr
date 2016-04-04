@@ -79,7 +79,7 @@ body {
 
 #windows {
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0; left: 0; right: 0; bottom: 48px;
   
   display: flex;
   align-items: center;
@@ -92,7 +92,7 @@ body {
   text-align: center;
   border: 1px solid white;
   background: rgba(0,0,0,.5);
-  padding: 24px;
+  padding: 16px;
   width: 240px;
   display: none;
   pointer-events: auto;
@@ -114,7 +114,8 @@ body {
 }
 
 #welcomeHeader {
-  margin: 32px 0;
+  margin-top: 16px;
+  margin-bottom: 24px;
 }
 
 .button {
@@ -123,7 +124,7 @@ body {
   color: white;
   cursor: pointer;
   width: 112px;
-  height: 40px;
+  height: 36px;
 }
 
 .button:active {

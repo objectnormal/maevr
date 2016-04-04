@@ -1180,16 +1180,16 @@ VRDisplay.prototype.requestPresent = function(layer) {
         self.isPresenting = (fullscreenElement === actualFullscreenElement);
         self.fireVRDisplayPresentChange_();
         if (self.isPresenting) {
-          if (screen.orientation && screen.orientation.lock) {
-            screen.orientation.lock('landscape-primary');
-          }
+          // if (screen.orientation && screen.orientation.lock) {
+          //   screen.orientation.lock('landscape-primary');
+          // }
           self.waitingForPresent_ = false;
           self.beginPresent_();
           resolve();
         } else {
-          if (screen.orientation && screen.orientation.unlock) {
-            screen.orientation.unlock();
-          }
+          // if (screen.orientation && screen.orientation.unlock) {
+          //   screen.orientation.unlock();
+          // }
           self.removeFullscreenWrapper();
           self.wakelock_.release();
           self.endPresent_();
@@ -2440,7 +2440,7 @@ CardboardVRDisplay.prototype.beginPresent_ = function() {
     // interstitial. Otherwise, do the default thing.
     this.rotateInstructions_.showTemporarily(3000, this.layer_.source.parentElement);
   } else {
-    this.rotateInstructions_.update();
+    this.rotateInstructions_.update(this.layer_.source.parentElement);
   }
 
   // Listen for orientation change events in order to show interstitial.
@@ -4700,8 +4700,9 @@ function RotateInstructions() {
 }
 
 RotateInstructions.prototype.show = function(parent) {
+
   if (!parent && !this.overlay.parentElement) {
-    document.body.appendChild(this.overlay);
+    document.body.insertBefore(this.overlay, document.body.firstChild);
   } else if (parent) {
     if (this.overlay.parentElement && this.overlay.parentElement != parent)
       this.overlay.parentElement.removeChild(this.overlay);
@@ -4738,12 +4739,12 @@ RotateInstructions.prototype.disableShowTemporarily = function() {
   clearTimeout(this.timer);
 };
 
-RotateInstructions.prototype.update = function() {
+RotateInstructions.prototype.update = function(parent) {
   this.disableShowTemporarily();
   // In portrait VR mode, tell the user to rotate to landscape. Otherwise, hide
   // the instructions.
   if (!Util.isLandscapeMode() && Util.isMobile()) {
-    this.show();
+    this.show(parent);
   } else {
     this.hide();
   }
@@ -5022,19 +5023,9 @@ FusionPoseSensor.prototype.getOrientation = function() {
 };
 
 FusionPoseSensor.prototype.resetPose = function() {
-  
-  this.resetQ.copy(this.filter.getOrientation());
-
-  // Adjust for landscape orientation
-
-  if (Util.isLandscapeMode()) {
-    var orientationQ = new THREE.Quaternion()
-      .setFromAxisAngle ( new THREE.Vector3( 0, 0, 1 ) , -window.orientation * (Math.PI/180.0) );
-    this.resetQ.multiply(orientationQ);  
-  }
-
   // Reduce to inverted yaw-only
-
+  this.resetQ.copy(this.filter.getOrientation());
+  this.resetQ.multiply(this.worldToScreenQ);
   this.resetQ.x = 0;
   this.resetQ.y = 0;
   this.resetQ.z *= -1;

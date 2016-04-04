@@ -42,6 +42,8 @@ var MAEVR = {
     // Init VR
 
     MAEVR.vrControls = new THREE.VRControls(MAEVR.camera);
+    MAEVR.vrControls.resetSensor();
+
     MAEVR.vrEffect = new THREE.VREffect(MAEVR.renderer);
     MAEVR.vrEffect.setSize(window.innerWidth, window.innerHeight);
 
@@ -228,8 +230,14 @@ var MAEVR = {
 MAEVR.Events = {
   init: function() {
     window.addEventListener('resize', MAEVR.Events.resize, true);
+    window.addEventListener('orientationchange', MAEVR.Events.orientationchange, true);
     window.addEventListener('vrdisplaypresentchange', MAEVR.Events.resize, true);
     window.addEventListener('vrdisplaypresentchange', MAEVR.Events.vrdisplaypresentchange, true);
+
+  },
+  orientationchange: function(e) {
+    console.log("MAEVR.vrControls.resetSensor");
+    MAEVR.vrControls.resetSensor();    
   },
   vrdisplaypresentchange: function(e) {
     if (MAEVR.vrManager.hmd.isPresenting) {
@@ -239,6 +247,10 @@ MAEVR.Events = {
       console.log("MAEVR: Normal Mode");
       MAEVR.GUI.showElement("logo");
     }
+
+    console.log("MAEVR.vrControls.resetSensor");
+    MAEVR.vrControls.resetSensor();
+
   },
   resize: function(e) {
     console.log("RESIZE");

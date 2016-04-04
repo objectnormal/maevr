@@ -69,12 +69,39 @@ body {
 
 #footer {
   position: fixed;
-  bottom: 12px;
-  margin-left: -128px;
-  left: 50%;
-  width: 280px;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
   text-align: center;
   opacity: .2;
+}
+
+#footer img {
+  vertical-align: middle;
+}
+
+#credits {
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+}
+
+#social {
+  position: absolute;
+  bottom: 0;
+  right: 0;  
+}
+
+#social img {
+  margin-left: 4px;
+}
+
+.horizontalRule {
+    vertical-align: middle;
+    display:inline-block;
+    height: 32px;
+    border-right: solid 1px #fff; 
+    margin: 0 12px;
 }
 
 #windows {

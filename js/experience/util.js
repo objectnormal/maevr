@@ -188,37 +188,3 @@ MAEVR.Experience.CamCurves.checkFadeStatus = function(time){
 	else
 		return true;
 }
-
-
-/*
-MAEVR.Experience.Util.Align = function(camera, controls) {
-
-	THREE.VRControls.deviceQuaternion = new THREE.Quaternion();
-	THREE.VRControls.alignQuaternion = new THREE.Quaternion();
-	THREE.VRControls.finalQuaternion = new THREE.Quaternion();
-
-	var worldcenter = new THREE.Vector3();
-	var tempQuaternion = new THREE.Quaternion();
-	var tempVector3 = new THREE.Vector3();
-	var tempMatrix4 = new THREE.Matrix4();
-	var tempEuler = new THREE.Euler();
-	var up = new THREE.Vector3(0, 1, 0);
-
-	tempVector3.copy( camera.position ).applyQuaternion( tempQuaternion.copy( controls.deviceQuaternion ).inverse(), 'ZXY' );
-
-	tempEuler.setFromQuaternion(
-		tempQuaternion.setFromRotationMatrix(
-			tempMatrix4.lookAt(tempVector3, worldcenter, up)
-		)
-	);
-
-	// var ttt = tempEuler.y + Math.PI;
-	tempEuler.set(0, tempEuler.y, 0);
-	controls.alignQuaternion.setFromEuler(tempEuler);
-
-	console.log("re-align!");
-}
-*/
-
-
-

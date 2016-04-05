@@ -370,7 +370,8 @@ MAEVR.GUI = {
   },
   beginStandard: function() {
     MAEVR.GUI.hideElement("welcomeWindow");
-    MAEVR.GUI.hideElement("footer");
+    MAEVR.GUI.hideElement("credits");
+    MAEVR.GUI.hideElement("social");
     MAEVR.GUI.showElement("logo");
     
     // Show/Hide buttons

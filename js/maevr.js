@@ -3,13 +3,17 @@
 var MAEVR = {
   mode: null,
   audio: null,
+  initTime: 0,
+  elapsedTimeSinceInit: 0,
   startTime: 0,
   elapsedTime: 0,
   serverURL: "maevr.herokuapp.com",
   playing: false,
   init: function() {
 
-    var scope = this;
+    // Set init clock
+
+    MAEVR.initTime = performance.now()
 
     // Detect mode from Hash
 
@@ -31,7 +35,6 @@ var MAEVR = {
 
     MAEVR.scene = new THREE.Scene();
     MAEVR.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 10000);
-    MAEVR.clock = new THREE.Clock(true);
 
     MAEVR.camera.position.z = 397;
     MAEVR.parentCamera = new THREE.Object3D();
@@ -90,9 +93,9 @@ var MAEVR = {
   },
   animate: function(timestamp) {
 
-    var scope = MAEVR;
-
     // Update Time
+
+    MAEVR.elapsedTimeSinceInit = performance.now() - MAEVR.initTime;
 
     if (MAEVR.playing) {
       if (MAEVR.mode == MAEVR.Modes.EVENT) {

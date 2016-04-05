@@ -94,7 +94,7 @@ MAEVR.Experience = {
       
     }
 
-    scope.sky.material.uniforms['offset'].value = MAEVR.elapsedTime/100000;
+    scope.sky.material.uniforms['offset'].value = MAEVR.elapsedTimeSinceInit/100000;
     if(scope.animateCamera)
       scope.updateCamera();
     else{

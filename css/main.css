@@ -146,6 +146,7 @@ body {
   cursor: pointer;
   width: 112px;
   height: 36px;
+  margin: 0 2px;
 }
 
 .button:active {

@@ -18,7 +18,7 @@ var MAEVR = {
     // Detect mode from Hash
 
     if (window.location.hash == "#live") {
-      MAEVR.mode = MAEVR.Modes.EVENT;
+      MAEVR.mode = MAEVR.Modes.LIVE;
     } else if (window.location.hash == "#static") {
       MAEVR.mode = MAEVR.Modes.STATIC;
     }
@@ -98,7 +98,7 @@ var MAEVR = {
     MAEVR.elapsedTimeSinceInit = performance.now() - MAEVR.initTime;
 
     if (MAEVR.playing) {
-      if (MAEVR.mode == MAEVR.Modes.EVENT) {
+      if (MAEVR.mode == MAEVR.Modes.LIVE) {
         MAEVR.elapsedTime = performance.now() - MAEVR.startTime;
       } else {
         MAEVR.elapsedTime = MAEVR.audio.currentTime * 1000;
@@ -267,7 +267,7 @@ MAEVR.Events = {
 
 MAEVR.Modes = {
   STATIC: 0,
-  EVENT: 1
+  LIVE: 1
 }
 
 //
@@ -384,7 +384,7 @@ MAEVR.GUI = {
 
     // Connect or start audio
 
-    if (MAEVR.mode == MAEVR.Modes.EVENT) {
+    if (MAEVR.mode == MAEVR.Modes.LIVE) {
       MAEVR.Message.showMessage("WAITING...");
       MAEVR.connect();
     } else {

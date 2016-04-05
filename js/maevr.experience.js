@@ -29,14 +29,14 @@ MAEVR.Experience = {
     scope.time = 0;
     scope.timeMultiplier = 1;
 
-    scope.sky = new THREE.Mesh(new THREE.SphereGeometry(500),simpleMat5);
+    scope.sky = new THREE.Mesh(new THREE.SphereBufferGeometry(500),simpleMat5);
     scope.sky.material.uniforms['map'].value = scope.texCol;
     scope.sky.material.uniforms['map2'].value = scope.rgb;
     scope.sky.material.side = THREE.BackSide;
     MAEVR.scene.add(scope.sky);
 
-    scope.vertInQuad = new THREE.Mesh(new THREE.PlaneGeometry( 5.12,1.88), new THREE.MeshBasicMaterial( {map:scope.vertIn,transparent:true,opacity:0} ));
-    scope.vertOutQuad = new THREE.Mesh(new THREE.PlaneGeometry( 5.12,1.17), new THREE.MeshBasicMaterial( {map:scope.vertOut,transparent:true,opacity:0} ));
+    scope.vertInQuad = new THREE.Mesh(new THREE.PlaneBufferGeometry( 5.12,1.88), new THREE.MeshBasicMaterial( {map:scope.vertIn,transparent:true,opacity:0} ));
+    scope.vertOutQuad = new THREE.Mesh(new THREE.PlaneBufferGeometry( 5.12,1.17), new THREE.MeshBasicMaterial( {map:scope.vertOut,transparent:true,opacity:0} ));
 
     scope.quadParent = new THREE.Object3D();
     scope.quadParent.add(scope.vertInQuad);

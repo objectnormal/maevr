@@ -136,7 +136,7 @@ var MAEVR = {
 
       // Connect to socket
 
-      var socket = io.connect(MAEVR.serverURL,{});
+      var socket = io.connect(MAEVR.serverURL,{ transports: ['websocket', 'polling'] });
 
       socket.io.on('connect_error', function (data) {
         console.log("MAEVR: connect_error");

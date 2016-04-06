@@ -2118,7 +2118,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["38"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["38"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v1";
+Curves["38"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v101";
 Curves["39"] = function(){
 var Curve_v01 = [[v4(27.84,5.3,-4.98,1),
 v4(27.87,5.6,-4.75,1),
@@ -2173,7 +2173,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["39"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["39"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v2";
+Curves["39"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v102";
 Curves["40"] = function(){
 var Curve_v01 = [[v4(-36.74,36.28,-80.08,1),
 v4(-36.74,36.77,-80.09,1),
@@ -2228,7 +2228,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["40"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["40"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v3";
+Curves["40"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v103";
 Curves["41"] = function(){
 var Curve_v01 = [[v4(4.04,29.9,-56.7,1),
 v4(4.04,30.08,-56.74,1),
@@ -2283,7 +2283,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["41"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["41"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v4";
+Curves["41"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v104";
 Curves["42"] = function(){
 var Curve_v01 = [[v4(31.21,34.3,-67.87,1),
 v4(31.43,34.65,-67.79,1),
@@ -2338,7 +2338,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["42"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["42"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v5";
+Curves["42"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v105";
 Curves["43"] = function(){
 var Curve_v01 = [[v4(-79.7,51.39,-116,1),
 v4(-78.83,52.2,-116,1),
@@ -2393,7 +2393,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["43"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["43"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v6";
+Curves["43"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v106";
 Curves["44"] = function(){
 var Curve_v01 = [[v4(-7.76,2.72,-4.53,1),
 v4(-7.6,2.88,-4.54,1),
@@ -2448,7 +2448,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["44"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["44"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v7";
+Curves["44"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v107";
 Curves["45"] = function(){
 var Curve_v01 = [[v4(10.85,2.14,-5.25,1),
 v4(11.01,2.75,-5.27,1),
@@ -2503,7 +2503,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["45"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["45"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v8";
+Curves["45"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v108";
 Curves["46"] = function(){
 var Curve_v01 = [[v4(10.28,5.93,-10.21,1),
 v4(10.2,6.37,-10.21,1),
@@ -2558,7 +2558,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["46"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["46"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v9";
+Curves["46"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v109";
 Curves["47"] = function(){
 var Curve_v01 = [[v4(-0.9,15.99,-30.47,1),
 v4(-0.76,16.46,-30.47,1),
@@ -2613,7 +2613,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["47"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["47"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v10";
+Curves["47"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v110";
 Curves["48"] = function(){
 var Curve_v01 = [[v4(-16.79,4.66,-6.5,1),
 v4(-16.62,4.96,-6.62,1),
@@ -2668,7 +2668,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["48"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["48"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v11";
+Curves["48"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v111";
 Curves["49"] = function(){
 var Curve_v01 = [[v4(18.61,6.17,-5.69,1),
 v4(18.79,6.5,-5.61,1),
@@ -2723,7 +2723,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["49"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["49"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v12";
+Curves["49"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v112";
 Curves["50"] = function(){
 var Curve_v01 = [[v4(-19.62,2.48,-0.82,1),
 v4(-19.73,2.84,-0.7,1),
@@ -2778,7 +2778,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["50"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["50"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v13";
+Curves["50"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v113";
 Curves["51"] = function(){
 var Curve_v01 = [[v4(-6.39,4.96,-12.25,1),
 v4(-6.46,5.09,-12.27,1),
@@ -2833,7 +2833,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["51"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["51"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v14";
+Curves["51"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v114";
 Curves["52"] = function(){
 var Curve_v01 = [[v4(4.77,4.29,-10.61,1),
 v4(4.89,4.62,-10.58,1),
@@ -2888,7 +2888,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["52"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["52"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v15";
+Curves["52"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v115";
 Curves["53"] = function(){
 var Curve_v01 = [[v4(6.21,15.75,-29.62,1),
 v4(6.05,15.98,-29.62,1),
@@ -2943,7 +2943,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["53"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["53"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v16";
+Curves["53"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v116";
 Curves["54"] = function(){
 var Curve_v01 = [[v4(9.68,11.78,-22.61,1),
 v4(9.52,12.01,-22.47,1),
@@ -2998,7 +2998,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["54"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["54"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v17";
+Curves["54"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v117";
 Curves["55"] = function(){
 var Curve_v01 = [[v4(-16.62,9.37,-17.17,1),
 v4(-16.77,9.53,-17.14,1),
@@ -3053,7 +3053,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["55"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["55"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v18";
+Curves["55"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v118";
 Curves["56"] = function(){
 var Curve_v01 = [[v4(11.04,-1.54,7.85,1),
 v4(11.12,-1.29,7.91,1),
@@ -3108,7 +3108,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["56"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["56"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v19";
+Curves["56"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v119";
 Curves["57"] = function(){
 var Curve_v01 = [[v4(-12,-0.91,4.32,1),
 v4(-11.97,-0.65,4.56,1),
@@ -3163,7 +3163,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["57"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["57"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v20";
+Curves["57"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v120";
 Curves["58"] = function(){
 var Curve_v01 = [[v4(-11.34,11.35,-22.61,1),
 v4(-11.24,11.64,-22.69,1),
@@ -3218,7 +3218,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["58"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["58"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v21";
+Curves["58"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v121";
 Curves["59"] = function(){
 var Curve_v01 = [[v4(-18.92,-0.44,7.09,1),
 v4(-18.91,-0.26,7.25,1),
@@ -3273,7 +3273,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["59"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["59"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v22";
+Curves["59"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v122";
 Curves["60"] = function(){
 var Curve_v01 = [[v4(-31.45,7.11,-6.53,1),
 v4(-31.35,7.24,-6.63,1),
@@ -3328,7 +3328,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["60"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["60"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v23";
+Curves["60"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v123";
 Curves["61"] = function(){
 var Curve_v01 = [[v4(18.69,11.7,-20.64,1),
 v4(18.69,11.77,-20.54,1),
@@ -3383,7 +3383,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["61"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["61"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v24";
+Curves["61"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v124";
 Curves["62"] = function(){
 var Curve_v01 = [[v4(16.84,1.32,-1.26,1),
 v4(17.2,1.63,-1.31,1),
@@ -3438,7 +3438,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["62"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["62"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v25";
+Curves["62"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v125";
 Curves["63"] = function(){
 var Curve_v01 = [[v4(-12.13,-2.74,9.38,1),
 v4(-12.18,-2.55,9.19,1),
@@ -3493,7 +3493,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["63"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["63"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v26";
+Curves["63"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v126";
 Curves["64"] = function(){
 var Curve_v01 = [[v4(-43.15,0.72,31.7,1),
 v4(-42.96,1.07,31.95,1),
@@ -3548,7 +3548,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["64"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["64"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v27";
+Curves["64"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v127";
 Curves["65"] = function(){
 var Curve_v01 = [[v4(18.59,-0.87,3.91,1),
 v4(18.83,-0.65,4,1),
@@ -3603,7 +3603,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["65"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["65"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v28";
+Curves["65"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v128";
 Curves["66"] = function(){
 var Curve_v01 = [[v4(14.08,-3.81,12.97,1),
 v4(14.24,-3.45,12.92,1),
@@ -3658,7 +3658,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["66"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["66"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v29";
+Curves["66"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v129";
 Curves["67"] = function(){
 var Curve_v01 = [[v4(5,-2.33,26.56,1),
 v4(4.99,-2.23,26.75,1),
@@ -3713,7 +3713,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["67"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["67"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v30";
+Curves["67"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v130";
 Curves["68"] = function(){
 var Curve_v01 = [[v4(21.35,-5.42,28.18,1),
 v4(21.39,-4.97,28.56,1),
@@ -3768,7 +3768,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["68"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["68"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v31";
+Curves["68"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v131";
 Curves["69"] = function(){
 var Curve_v01 = [[v4(34.64,-4.71,16.74,1),
 v4(34.25,-3.96,16.92,1),
@@ -3823,7 +3823,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["69"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["69"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v32";
+Curves["69"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v132";
 Curves["70"] = function(){
 var Curve_v01 = [[v4(-15.61,-4.48,17.27,1),
 v4(-15.47,-4.23,17.03,1),
@@ -3878,7 +3878,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["70"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["70"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v33";
+Curves["70"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v133";
 Curves["71"] = function(){
 var Curve_v01 = [[v4(-19.24,-2.93,33.67,1),
 v4(-19.2,-2.55,34,1),
@@ -3933,7 +3933,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["71"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["71"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v34";
+Curves["71"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v134";
 Curves["72"] = function(){
 var Curve_v01 = [[v4(2.84,-5.76,30.23,1),
 v4(2.61,-5.31,30.5,1),
@@ -3988,7 +3988,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["72"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["72"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v35";
+Curves["72"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v135";
 Curves["73"] = function(){
 var Curve_v01 = [[v4(-8.42,-0.87,46.39,1),
 v4(-8.29,-0.67,46.38,1),
@@ -4045,7 +4045,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["73"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["73"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v36";
+Curves["73"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v136";
 Curves["74"] = function(){
 var Curve_v01 = [[v4(2.49,-2.01,48.99,1),
 v4(2.65,-1.52,48.69,1),
@@ -4100,7 +4100,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["74"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["74"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v37";
+Curves["74"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v137";
 Curves["75"] = function(){
 var Curve_v01 = [[v4(36.7,-1.63,55.92,1),
 v4(37.08,-1.11,55.44,1),
@@ -4155,7 +4155,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["75"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["75"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v38";
+Curves["75"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v138";
 Curves["76"] = function(){
 var Curve_v01 = [[v4(-31.27,5.93,56.81,1),
 v4(-31.53,6.22,56.73,1),
@@ -4210,7 +4210,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["76"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["76"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v39";
+Curves["76"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v139";
 Curves["77"] = function(){
 var Curve_v01 = [[v4(2.6,12.39,-25.71,1),
 v4(2.94,12.7,-25.73,1),
@@ -4265,7 +4265,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["77"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["77"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v40";
+Curves["77"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v140";
 Curves["78"] = function(){
 var Curve_v01 = [[v4(-46.29,14.44,-31.6,1),
 v4(-46.17,14.85,-31.82,1),
@@ -4320,7 +4320,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["78"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["78"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v41";
+Curves["78"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v141";
 Curves["79"] = function(){
 var Curve_v01 = [[v4(149.27,-3.15,-6.03,1),
 v4(149.44,-2.84,-5.49,1),
@@ -4375,7 +4375,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["79"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["79"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v42";
+Curves["79"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v142";
 Curves["80"] = function(){
 var Curve_v01 = [[v4(6.44,3.17,-4.85,1),
 v4(6.44,3.57,-5.17,1),
@@ -4430,7 +4430,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["80"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["80"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v43";
+Curves["80"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v143";
 Curves["81"] = function(){
 var Curve_v01 = [[v4(-9.25,0.76,-0.14,1),
 v4(-8.96,1.25,0.05,1),
@@ -4485,7 +4485,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["81"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["81"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v44";
+Curves["81"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v144";
 Curves["82"] = function(){
 var Curve_v01 = [[v4(16.13,7.06,-12.8,1),
 v4(15.95,7.29,-12.72,1),
@@ -4540,7 +4540,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["82"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["82"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v45";
+Curves["82"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v145";
 Curves["83"] = function(){
 var Curve_v01 = [[v4(11.56,0.79,-0.89,1),
 v4(11.51,1.11,-1.08,1),
@@ -4595,7 +4595,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["83"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["83"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v46";
+Curves["83"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v146";
 Curves["84"] = function(){
 var Curve_v01 = [[v4(-1.37,5.15,-12.08,1),
 v4(-1.59,5.46,-12.33,1),
@@ -4650,7 +4650,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["84"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["84"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v47";
+Curves["84"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v147";
 Curves["85"] = function(){
 var Curve_v01 = [[v4(-5,11.03,-25.23,1),
 v4(-4.91,11.35,-25.29,1),
@@ -4705,7 +4705,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["85"].animation = [[902,1],[1161,0.4813325041],[1232,0.475],[1562,0.475],[1596,0.3982702091],[1690,0.07022845857],[1891,-1]];
-Curves["85"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_20_1_v48";
+Curves["85"].divisions = "|MAEmodelsPrevis|ShootingStars_30000_300_2_124_202_247_1000_50_100_100_100_20|_60_1_v148";
 Curves.numCurves = 86;Curves["86"] = function(){
 var Curve_v01 = [[v4(0.72,2.96,0.12,1),
 v4(0.68,3.06,0.17,1),
@@ -5823,42 +5823,42 @@ return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 Curves["113"].animation = [[2388,1],[2442,-1]];
 Curves["113"].divisions = "|MAEmodelsPrevis|ExplosionAfastNarrow_500_1_1_124_202_247_800_100_100_100_10_20|_41_4_v13";
 Curves.numCurves = 114;Curves["114"] = function(){
-var Curve_v01 = [[v4(0.37,3.5,2.15,1),
-v4(-0.12,3.77,3.17,1),
-v4(-0.56,4.55,5.41,1),
-v4(0.18,6.87,8.08,1),
-v4(1.44,9.93,9.41,1),
-v4(2.97,13.16,9.38,1),
-v4(4.42,15.6,7.48,1),
-v4(4.72,17.71,5.45,1),
-v4(4.83,20.08,4.29,1),
-v4(3.28,22.37,3,1),
-v4(-0.75,24.32,1.38,1),
-v4(-3.06,26.95,-0.65,1),
-v4(1.46,31.08,-3.86,1),
-v4(16.08,35.65,-7.9,1),
-v4(21.74,39.71,-10.99,1),
-v4(21.43,43.85,-14.06,1),
-v4(18.94,46.91,-16.01,1),
-v4(17.07,48.42,-16.88,1),
-],[v4(-2.49,3.86,0.89,1),
-v4(-3.66,4.13,1.23,1),
-v4(-5.73,4.9,2.48,1),
-v4(-7.79,7.05,4.76,1),
-v4(-8.96,10.27,6.38,1),
-v4(-8.65,13.96,6.82,1),
-v4(-6.93,16.37,5.75,1),
-v4(-6.48,18.6,4.48,1),
-v4(-6.57,20.71,3.5,1),
-v4(-7.22,22.66,2.17,1),
-v4(-10,24.86,0.51,1),
-v4(-11.58,27.54,-1.61,1),
-v4(-8.31,30.39,-4.91,1),
-v4(9.37,35.95,-8.75,1),
-v4(19.2,40.37,-11.48,1),
-v4(20.05,44.76,-13.34,1),
-v4(17.99,47.99,-13.99,1),
-v4(16.17,49.69,-14.16,1),
+var Curve_v01 = [[v4(0.8,3.38,1.2,1),
+v4(0.38,3.63,1.83,1),
+v4(0.13,4.46,3.05,1),
+v4(1.14,6.59,4.43,1),
+v4(2.78,9.17,5.08,1),
+v4(3.74,11.47,4.86,1),
+v4(4.58,13.17,4.09,1),
+v4(5.31,14.5,3.14,1),
+v4(5.33,16.06,2.34,1),
+v4(4.26,18.05,1.66,1),
+v4(3.13,20.17,0.69,1),
+v4(4.08,22.6,-1.15,1),
+v4(8.6,26.04,-4.09,1),
+v4(16.87,30.96,-7.9,1),
+v4(21.64,35.52,-10.99,1),
+v4(20.91,39.9,-14.06,1),
+v4(18.1,43.15,-16.01,1),
+v4(16.07,44.76,-16.88,1),
+],[v4(-4.11,3.86,0.89,1),
+v4(-5.51,4.14,1.23,1),
+v4(-8.17,5.21,2.33,1),
+v4(-12.62,7.88,3.63,1),
+v4(-15.52,11.1,3.95,1),
+v4(-16.11,14.27,3.7,1),
+v4(-14.97,17.07,3.08,1),
+v4(-12.99,19.47,2.13,1),
+v4(-10.97,21.45,0.89,1),
+v4(-9.19,23.08,-0.49,1),
+v4(-7.3,24.72,-1.9,1),
+v4(-4.65,26.86,-3.49,1),
+v4(-0.22,29.76,-5.63,1),
+v4(7.54,33.31,-8.75,1),
+v4(16.98,38.06,-11.48,1),
+v4(18.44,41.7,-13.34,1),
+v4(16.57,44.69,-13.99,1),
+v4(14.76,46.39,-14.16,1),
 ],];
 var degree1_v01 =1;
 var degree2_v01 =17;
@@ -5867,45 +5867,45 @@ var knots2_v01 = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,
 var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v01, knots2_v01,Curve_v01);
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
-Curves["114"].animation = [[2332,1],[2361,0.8206172089],[2388,1],[2409,0.2262382265],[2663,-0.102329083],[2685,0.001639933914],[2747,0.3526411045],[2845,0.4614093976],[3034,0.1224669942],[3205,0.3966634489],[3354,-1]];
+Curves["114"].animation = [[2332,1],[2361,0.8206172089],[2388,1],[2409,0.2262382265],[2589,0.3576251504],[2643,0.4615941673],[2747,0.1398264592],[2845,0.4614093976],[3034,0.1224669942],[3205,0.3966634489],[3354,-1]];
 Curves["114"].divisions = "|MAEmodelsPrevis|ExplosionAfirst_500_1_2_124_202_247_100_100_100_100_100_20|_41_4_v1";
 Curves["115"] = function(){
-var Curve_v01 = [[v4(1.39,4.6,3.65,1),
-v4(1.85,5.13,4.62,1),
-v4(3.25,6.15,6.33,1),
-v4(6.45,8.13,7.72,1),
-v4(8.56,11.43,7.7,1),
-v4(9.61,14.82,6.1,1),
-v4(10.11,17.21,3.89,1),
-v4(9.02,19.81,2.53,1),
-v4(5.27,22.21,1.61,1),
-v4(-1.54,23.97,-0.04,1),
-v4(-3.47,26.84,-1.75,1),
-v4(-1.32,30.42,-3.94,1),
-v4(6.62,34.9,-6.85,1),
-v4(18.79,38.44,-10.26,1),
-v4(20.84,41.68,-13.35,1),
-v4(17.51,44.76,-16.5,1),
-v4(13.86,47.81,-18.31,1),
-v4(12.23,49.73,-19.02,1),
-],[v4(-2.75,3.86,2.01,1),
-v4(-3.37,4.15,3.12,1),
-v4(-3.94,4.98,5.57,1),
-v4(-3.67,7.38,8.64,1),
-v4(-3.25,10.96,10.24,1),
-v4(-2.2,14.64,9.69,1),
-v4(-2,16.85,7,1),
-v4(-3.77,19.06,4.78,1),
-v4(-5.18,21.33,3.2,1),
-v4(-8.56,23.73,1.32,1),
-v4(-10.52,26.75,-0.91,1),
-v4(-9.02,30.46,-3.85,1),
-v4(2.64,35.48,-7.52,1),
-v4(14.92,40.14,-11.26,1),
-v4(15.45,43.93,-14.18,1),
-v4(11.56,48.14,-16.49,1),
-v4(8.65,51.88,-17.61,1),
-v4(7.44,53.95,-18.07,1),
+var Curve_v01 = [[v4(1.89,4.42,2.02,1),
+v4(2.43,4.91,2.56,1),
+v4(4.1,5.93,3.44,1),
+v4(7.14,8.03,4.08,1),
+v4(9.72,10.65,3.95,1),
+v4(11.12,13.14,3.16,1),
+v4(10.73,14.48,2.15,1),
+v4(8.5,15.72,1.34,1),
+v4(5.49,17.44,0.62,1),
+v4(2.86,19.47,-0.28,1),
+v4(2.03,21.74,-1.72,1),
+v4(4.45,24.85,-3.97,1),
+v4(10.43,29.18,-6.94,1),
+v4(18.83,34.23,-10.26,1),
+v4(20.48,37.68,-13.35,1),
+v4(16.72,41.01,-16.5,1),
+v4(12.76,44.26,-18.31,1),
+v4(11,46.27,-19.02,1),
+],[v4(-2.89,3.86,1.16,1),
+v4(-3.89,4.15,1.85,1),
+v4(-6.31,5.15,3.21,1),
+v4(-10.56,7.71,4.71,1),
+v4(-12.49,10.81,5.35,1),
+v4(-12.42,13.71,5.03,1),
+v4(-11.33,15.9,4.05,1),
+v4(-9.75,17.5,2.9,1),
+v4(-8.67,19.18,1.85,1),
+v4(-8.99,21.73,0.7,1),
+v4(-9.2,25.39,-1.09,1),
+v4(-5.63,29.36,-3.84,1),
+v4(3.2,32.08,-7.52,1),
+v4(13.83,36.73,-11.26,1),
+v4(14.12,40.56,-14.18,1),
+v4(10.15,44.84,-16.49,1),
+v4(7.24,48.58,-17.61,1),
+v4(6.03,50.65,-18.07,1),
 ],];
 var degree1_v01 =1;
 var degree2_v01 =17;
@@ -5914,45 +5914,45 @@ var knots2_v01 = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,
 var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v01, knots2_v01,Curve_v01);
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
-Curves["115"].animation = [[2332,1],[2361,0.8206172089],[2388,1],[2409,0.2262382265],[2663,-0.102329083],[2685,0.001639933914],[2747,0.3526411045],[2845,0.4614093976],[3034,0.1224669942],[3205,0.3966634489],[3354,-1]];
+Curves["115"].animation = [[2332,1],[2361,0.8206172089],[2388,1],[2409,0.2262382265],[2589,0.3576251504],[2643,0.4615941673],[2747,0.1398264592],[2845,0.4614093976],[3034,0.1224669942],[3205,0.3966634489],[3354,-1]];
 Curves["115"].divisions = "|MAEmodelsPrevis|ExplosionAfirst_500_1_2_124_202_247_100_100_100_100_100_20|_41_4_v2";
 Curves["116"] = function(){
-var Curve_v01 = [[v4(0.49,4.6,0.43,1),
-v4(0.43,5.68,1.29,1),
-v4(2.71,6.76,2.7,1),
-v4(5.89,8.32,3.84,1),
-v4(9.1,11.18,4.32,1),
-v4(10.14,14.97,2.5,1),
-v4(9.72,17.89,0.79,1),
-v4(8.56,21.38,0.54,1),
-v4(5.07,24.36,-0.16,1),
-v4(-0.87,25.57,-1.93,1),
-v4(-0.54,28.38,-4.1,1),
-v4(11.79,33.2,-7.72,1),
-v4(20.92,37.46,-11.37,1),
-v4(22.68,41.65,-14.48,1),
-v4(22.07,46.7,-17.24,1),
-v4(16.91,51.31,-19.18,1),
-v4(11.9,54.88,-20.22,1),
-v4(9.7,56.71,-20.71,1),
+var Curve_v01 = [[v4(1.08,4.35,0.43,1),
+v4(1.11,5.38,1.29,1),
+v4(2.81,6.68,2.74,1),
+v4(6.96,8.22,3.87,1),
+v4(10.66,10.34,3.75,1),
+v4(13.13,13.02,2.71,1),
+v4(13.94,15.78,1.51,1),
+v4(12.44,18.1,0.57,1),
+v4(8.85,19.79,-0.38,1),
+v4(5.8,21.47,-1.92,1),
+v4(6.79,24.06,-4.39,1),
+v4(12.39,27.82,-7.69,1),
+v4(19.61,32.26,-11.37,1),
+v4(20.75,36.11,-14.48,1),
+v4(19.86,41.02,-17.24,1),
+v4(14.66,46.21,-19.18,1),
+v4(9.99,50.55,-20.22,1),
+v4(8.07,52.72,-20.71,1),
 ],[v4(-0.83,3.86,1.3,1),
-v4(-1.41,4.31,2.38,1),
-v4(-2.47,5.78,4.61,1),
-v4(-4.96,8.86,5.68,1),
-v4(-6.64,13.12,5.37,1),
-v4(-5.49,16.28,3.87,1),
-v4(-4.76,18.18,2.19,1),
-v4(-5.69,21,1.4,1),
-v4(-6.17,23.4,0.35,1),
-v4(-8.38,26.26,-1.4,1),
-v4(-8.47,29.52,-3.75,1),
-v4(3.29,32.82,-7.85,1),
-v4(19.23,37.1,-12.41,1),
-v4(24.01,42.96,-15.39,1),
-v4(21.26,47.77,-17.25,1),
-v4(12.47,53.17,-18.56,1),
-v4(6.57,57.49,-19.35,1),
-v4(4.49,59.21,-19.63,1),
+v4(-1.42,4.32,2.38,1),
+v4(-3.45,5.81,4.2,1),
+v4(-7.21,8.92,5.45,1),
+v4(-9.23,12.04,5.22,1),
+v4(-9.33,14.66,4.05,1),
+v4(-8.23,16.78,2.67,1),
+v4(-7.39,18.85,1.46,1),
+v4(-7.59,21.37,0.28,1),
+v4(-8.49,24.57,-1.38,1),
+v4(-6.03,28.05,-4,1),
+v4(3.35,30.82,-7.85,1),
+v4(16.85,33.16,-12.41,1),
+v4(21.25,38.1,-15.39,1),
+v4(18.6,42.71,-17.25,1),
+v4(10.29,48.85,-18.56,1),
+v4(5.1,54,-19.35,1),
+v4(3.33,56.02,-19.63,1),
 ],];
 var degree1_v01 =1;
 var degree2_v01 =17;
@@ -5961,45 +5961,45 @@ var knots2_v01 = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,
 var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v01, knots2_v01,Curve_v01);
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
-Curves["116"].animation = [[2332,1],[2361,0.8206172089],[2388,1],[2409,0.2262382265],[2663,-0.102329083],[2685,0.001639933914],[2747,0.3526411045],[2845,0.4614093976],[3034,0.1224669942],[3205,0.3966634489],[3354,-1]];
+Curves["116"].animation = [[2332,1],[2361,0.8206172089],[2388,1],[2409,0.2262382265],[2589,0.3576251504],[2643,0.4615941673],[2747,0.1398264592],[2845,0.4614093976],[3034,0.1224669942],[3205,0.3966634489],[3354,-1]];
 Curves["116"].divisions = "|MAEmodelsPrevis|ExplosionAfirst_500_1_2_124_202_247_100_100_100_100_100_20|_41_4_v3";
 Curves["117"] = function(){
-var Curve_v01 = [[v4(0.1,2,-1.7,1),
-v4(1.32,2.43,-2.52,1),
-v4(3.48,3.71,-4.57,1),
-v4(7.38,7.21,-6.25,1),
-v4(11.93,10.96,-6.23,1),
-v4(13.45,14.42,-6.86,1),
-v4(10.83,17.86,-7.06,1),
-v4(6.29,21.11,-6.72,1),
-v4(1.81,24.36,-7.44,1),
-v4(1.5,27.64,-8.95,1),
-v4(8.1,31.36,-11.54,1),
-v4(22.82,35.22,-15.4,1),
-v4(27.17,40.71,-18.13,1),
-v4(24.14,46.78,-19.55,1),
-v4(17.52,51.23,-19.14,1),
-v4(8.86,55.88,-17.79,1),
-v4(3.44,58.6,-17.02,1),
-v4(0.92,59.59,-16.76,1),
-],[v4(-4.81,3.86,-0.47,1),
-v4(-5.94,4.39,-1.09,1),
-v4(-8.95,5.41,-1.53,1),
-v4(-12.73,8.88,-0.08,1),
-v4(-13.46,12.94,0.94,1),
-v4(-12.49,16.13,-0.64,1),
-v4(-12.18,18.98,-2.79,1),
-v4(-12.1,21.86,-4.17,1),
-v4(-11.44,24.4,-5.4,1),
-v4(-11.81,27.09,-6.82,1),
-v4(-10.93,30.31,-8.68,1),
-v4(0.73,34.33,-11.9,1),
-v4(17.64,38.38,-15.83,1),
-v4(21.89,42.96,-18.36,1),
-v4(19.43,46.85,-19.91,1),
-v4(12.39,52.29,-20.27,1),
-v4(6.66,56.25,-19.42,1),
-v4(4.03,57.53,-18.72,1),
+var Curve_v01 = [[v4(0.5,2,-1.7,1),
+v4(1.77,2.43,-2.52,1),
+v4(4.26,3.83,-4.32,1),
+v4(8.58,7.14,-5.98,1),
+v4(12.32,10.53,-6.63,1),
+v4(13.59,12.89,-6.79,1),
+v4(12.03,14.61,-6.79,1),
+v4(8.92,17.02,-6.89,1),
+v4(6.37,20.42,-7.52,1),
+v4(7.09,23.96,-9.16,1),
+v4(12.61,27.38,-11.96,1),
+v4(20.29,31.14,-15.29,1),
+v4(24.75,35.71,-18.13,1),
+v4(21.55,41.41,-19.55,1),
+v4(15.07,46.24,-19.14,1),
+v4(7.11,52.04,-17.79,1),
+v4(2.19,55.59,-17.02,1),
+v4(-0.15,56.97,-16.76,1),
+],[v4(-5.49,3.86,-0.47,1),
+v4(-6.94,4.39,-1.09,1),
+v4(-9.92,5.87,-1.55,1),
+v4(-15.7,8.97,-1.18,1),
+v4(-19.65,12.5,-0.84,1),
+v4(-19.6,15.96,-1.12,1),
+v4(-17.21,18.97,-2.08,1),
+v4(-14.48,21.49,-3.51,1),
+v4(-11.56,23.72,-5.2,1),
+v4(-7.74,25.99,-7.12,1),
+v4(-3.66,28.71,-9.43,1),
+v4(3.49,32.35,-12.31,1),
+v4(12.78,33.88,-15.4,1),
+v4(18.33,37.04,-18.11,1),
+v4(17.64,42.04,-19.85,1),
+v4(10.81,48.48,-20.23,1),
+v4(5,52.76,-19.42,1),
+v4(2.6,54.44,-18.72,1),
 ],];
 var degree1_v01 =1;
 var degree2_v01 =17;
@@ -6008,8 +6008,8 @@ var knots2_v01 = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,
 var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v01, knots2_v01,Curve_v01);
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
-Curves["117"].animation = [[2332,1],[2361,0.8206172089],[2388,1],[2409,0.2262382265],[2663,-0.102329083],[2685,0.001639933914],[2747,0.3526411045],[2845,0.4614093976],[3034,0.1224669942],[3205,0.3966634489],[3354,-1]];
-Curves["117"].divisions = "|MAEmodelsPrevis|ExplosionAfirst_500_1_2_124_202_247_100_100_100_100_100_20|_41_4_v4";
+Curves["117"].animation = [[2332,1],[2361,0.8206172089],[2388,1],[2409,0.2262382265],[2589,0.3576251504],[2643,0.4615941673],[2747,0.1398264592],[2845,0.4614093976],[3034,0.1224669942],[3205,0.3966634489],[3354,-1]];
+Curves["117"].divisions = "|MAEmodelsPrevis|ExplosionAfirst_500_1_2_124_202_247_100_100_100_100_100_20|_41_4_v69";
 Curves.numCurves = 118;Curves["118"] = function(){
 var Curve_v01 = [[v4(11.11,4.51,8.64,1),
 v4(11.23,5.02,8.64,1),
@@ -7964,7 +7964,7 @@ var knots2_v01 = [0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,];
 var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v01, knots2_v01,Curve_v01);
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
-Curves["169"].animation = [[4300,-1],[4336,-0.6635958119],[4458,-0.1569129607],[5442,0.1740970978],[5528,1]];
+Curves["169"].animation = [[4300,-1],[4336,-0.6635958119],[4458,-0.1569129607],[5457,0.1740970978],[5528,1]];
 Curves["169"].divisions = "|MAEmodelsPrevis|colorGalaxyCenter_750_1_3_240_239_196_200_1000_1000_100_100_20|_29_9_v1";
 Curves["170"] = function(){
 var Curve_v01 = [[v4(5.38,280.14,-409.96,1),
@@ -8005,7 +8005,7 @@ var knots2_v01 = [0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,];
 var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v01, knots2_v01,Curve_v01);
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
-Curves["170"].animation = [[4300,-1],[4336,-0.6635958119],[4458,-0.1569129607],[5442,0.1740970978],[5528,1]];
+Curves["170"].animation = [[4300,-1],[4336,-0.6635958119],[4458,-0.1569129607],[5457,0.1740970978],[5528,1]];
 Curves["170"].divisions = "|MAEmodelsPrevis|colorGalaxyCenter_750_1_3_240_239_196_200_1000_1000_100_100_20|_29_9_v2";
 Curves["171"] = function(){
 var Curve_v01 = [[v4(-5.11,293.82,-379.53,1),
@@ -8046,7 +8046,7 @@ var knots2_v01 = [0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,];
 var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v01, knots2_v01,Curve_v01);
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
-Curves["171"].animation = [[4300,-1],[4336,-0.6635958119],[4458,-0.1569129607],[5442,0.1740970978],[5528,1]];
+Curves["171"].animation = [[4300,-1],[4336,-0.6635958119],[4458,-0.1569129607],[5457,0.1740970978],[5528,1]];
 Curves["171"].divisions = "|MAEmodelsPrevis|colorGalaxyCenter_750_1_3_240_239_196_200_1000_1000_100_100_20|_29_9_v3";
 Curves.numCurves = 172;Curves["172"] = function(){
 var Curve_v01 = [[v4(-171.76,326.26,-345.19,1),
@@ -8087,8 +8087,8 @@ var knots2_v01 = [0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,];
 var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v01, knots2_v01,Curve_v01);
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
-Curves["172"].animation = [[4257,-1],[4460,-0.1569129607],[5442,0.2760017861],[5455,1]];
-Curves["172"].divisions = "|MAEmodelsPrevis|colorGalaxyCenterFade_750_1_1_240_239_196_200_1000_1000_100_100_20|_29_9_v5";
+Curves["172"].animation = [[4257,-1],[4460,-0.1569129607],[5457,0.2760017861],[5497,1]];
+Curves["172"].divisions = "|MAEmodelsPrevis|colorGalaxyCenterFade_250_1_1_240_239_196_200_1000_1000_100_100_20|_29_9_v5";
 Curves.numCurves = 173;Curves["173"] = function(){
 var Curve_v01 = [[v4(-1.03,248.04,-581.08,1),
 v4(-67.09,250.09,-588.05,1),
@@ -8128,8 +8128,8 @@ var knots2_v01 = [0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,];
 var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v01, knots2_v01,Curve_v01);
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
-Curves["173"].animation = [[4257,-1],[4460,-0.1569129607],[5442,0.2760017861],[5455,1]];
-Curves["173"].divisions = "|MAEmodelsPrevis|colorGalaxy_750_1_1_240_239_151_200_1000_700_100_100_20|_29_9_v4";
+Curves["173"].animation = [[4257,-1],[4460,-0.1569129607],[5457,0.2760017861],[5497,1]];
+Curves["173"].divisions = "|MAEmodelsPrevis|colorGalaxy_250_1_1_240_239_151_200_1000_700_100_100_10|_29_9_v4";
 Curves["174"] = function(){
 var Curve_v01 = [[v4(-193.82,341,-344.28,1),
 v4(-205.06,341.81,-299.55,1),
@@ -8169,8 +8169,8 @@ var knots2_v01 = [0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,];
 var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v01, knots2_v01,Curve_v01);
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
-Curves["174"].animation = [[4257,-1],[4460,-0.1569129607],[5442,0.2760017861],[5455,1]];
-Curves["174"].divisions = "|MAEmodelsPrevis|colorGalaxy_750_1_1_240_239_151_200_1000_700_100_100_20|_29_9_v11";
+Curves["174"].animation = [[4257,-1],[4460,-0.1569129607],[5457,0.2760017861],[5497,1]];
+Curves["174"].divisions = "|MAEmodelsPrevis|colorGalaxy_250_1_1_240_239_151_200_1000_700_100_100_10|_29_9_v11";
 Curves["175"] = function(){
 var Curve_v01 = [[v4(342.81,207.92,-580.08,1),
 v4(203.49,211.62,-660.38,1),
@@ -8210,19 +8210,19 @@ var knots2_v01 = [0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,];
 var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v01, knots2_v01,Curve_v01);
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
-Curves["175"].animation = [[4257,-1],[4460,-0.1569129607],[5442,0.2760017861],[5455,1]];
-Curves["175"].divisions = "|MAEmodelsPrevis|colorGalaxy_750_1_1_240_239_151_200_1000_700_100_100_20|_29_9_v6";
+Curves["175"].animation = [[4257,-1],[4460,-0.1569129607],[5457,0.2760017861],[5497,1]];
+Curves["175"].divisions = "|MAEmodelsPrevis|colorGalaxy_250_1_1_240_239_151_200_1000_700_100_100_10|_29_9_v6";
 Curves["176"] = function(){
-var Curve_v01 = [[v4(229.23,321.07,-368.14,1),
-v4(210.61,304.23,-452.37,1),
-v4(91.99,277.43,-592.27,1),
-v4(-209.84,294.68,-568.71,1),
-v4(-316.39,333.25,-325.29,1),
-v4(-101.52,329.43,-124.76,1),
-v4(223.09,366.01,-158.01,1),
-v4(329.46,355.38,-385.8,1),
-v4(258.4,317.35,-527.71,1),
-v4(155.27,287.94,-573.55,1),
+var Curve_v01 = [[v4(229.23,275.26,-368.14,1),
+v4(210.61,258.43,-452.37,1),
+v4(91.99,231.63,-592.27,1),
+v4(-209.84,248.88,-568.71,1),
+v4(-316.39,287.45,-325.29,1),
+v4(-101.52,283.62,-124.76,1),
+v4(223.09,320.2,-158.01,1),
+v4(329.46,309.58,-385.8,1),
+v4(258.4,271.54,-527.71,1),
+v4(155.27,242.13,-573.55,1),
 ],[v4(390.01,263.53,-360.19,1),
 v4(354.9,244.82,-497.12,1),
 v4(149.88,206.29,-723.14,1),
@@ -8233,16 +8233,16 @@ v4(393.9,317.41,-18.92,1),
 v4(562.44,316.89,-391.72,1),
 v4(434.15,266.43,-620.86,1),
 v4(257.25,223.93,-693.62,1),
-],[v4(241.64,135.19,-359.03,1),
-v4(218.77,118.91,-440.72,1),
-v4(89.74,90.63,-575.09,1),
-v4(-218.35,110.09,-548.93,1),
-v4(-316.94,147.99,-309.89,1),
-v4(-88.83,141,-116.7,1),
-v4(245.2,184.79,-154.93,1),
-v4(345.64,176.28,-378.49,1),
-v4(264.8,133.75,-514.87,1),
-v4(155.88,101.88,-557.76,1),
+],[v4(241.64,185.33,-359.03,1),
+v4(218.77,169.05,-440.72,1),
+v4(89.74,140.78,-575.09,1),
+v4(-218.35,160.24,-548.93,1),
+v4(-316.94,198.13,-309.89,1),
+v4(-88.83,191.14,-116.7,1),
+v4(245.2,234.94,-154.93,1),
+v4(345.64,226.43,-378.49,1),
+v4(264.8,183.9,-514.87,1),
+v4(155.88,152.03,-557.76,1),
 ],];
 var degree1_v01 =2;
 var degree2_v01 =9;
@@ -8251,19 +8251,19 @@ var knots2_v01 = [0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,];
 var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v01, knots2_v01,Curve_v01);
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
-Curves["176"].animation = [[4257,-1],[4460,-0.1569129607],[5442,0.2760017861],[5455,1]];
-Curves["176"].divisions = "|MAEmodelsPrevis|colorGalaxy_750_1_1_240_239_151_200_1000_700_100_100_20|_29_9_v7";
+Curves["176"].animation = [[4257,-1],[4460,-0.1569129607],[5457,0.2760017861],[5497,1]];
+Curves["176"].divisions = "|MAEmodelsPrevis|colorGalaxy_250_1_1_240_239_151_200_1000_700_100_100_10|_29_9_v7";
 Curves.numCurves = 177;Curves["177"] = function(){
-var Curve_v01 = [[v4(252.07,372.67,-430.21,1),
-v4(222.77,363.16,-505.09,1),
-v4(88.9,347.11,-611.78,1),
-v4(-185.17,353.8,-576.76,1),
-v4(-341.83,390.49,-407.73,1),
-v4(-282.1,385.24,-171.43,1),
-v4(-39.9,379.89,-59.76,1),
-v4(239.26,422.39,-108.99,1),
-v4(344.77,435.73,-228.64,1),
-v4(363.96,424.82,-351.2,1),
+var Curve_v01 = [[v4(252.07,290.74,-430.21,1),
+v4(222.77,281.23,-505.09,1),
+v4(88.9,265.17,-611.78,1),
+v4(-185.17,271.86,-576.76,1),
+v4(-341.83,308.55,-407.73,1),
+v4(-282.1,303.31,-171.43,1),
+v4(-39.9,297.95,-59.76,1),
+v4(239.26,340.46,-108.99,1),
+v4(344.77,353.8,-228.64,1),
+v4(363.96,342.89,-351.2,1),
 ],[v4(400.37,257.78,-469.25,1),
 v4(351.74,248.78,-588.8,1),
 v4(131.15,231.3,-758.01,1),
@@ -8274,16 +8274,16 @@ v4(-66.69,264.01,126.01,1),
 v4(386.98,310.85,44.47,1),
 v4(557.04,328.03,-148.2,1),
 v4(586.2,317.4,-344.53,1),
-],[v4(309.25,128.9,-440.49,1),
-v4(268.36,119.69,-534.32,1),
-v4(89.15,102.69,-666.89,1),
-v4(-265.65,111.54,-620.27,1),
-v4(-463.26,148.93,-405.6,1),
-v4(-379.51,139.21,-107.59,1),
-v4(-61.1,132.19,30.38,1),
-v4(302.88,178.3,-35.89,1),
-v4(438.08,194.45,-188.41,1),
-v4(459.45,184.31,-342.98,1),
+],[v4(309.25,178.34,-440.49,1),
+v4(268.36,169.13,-534.32,1),
+v4(89.15,152.14,-666.89,1),
+v4(-265.65,160.99,-620.27,1),
+v4(-463.26,198.37,-405.6,1),
+v4(-379.51,188.65,-107.59,1),
+v4(-61.1,181.64,30.38,1),
+v4(302.88,227.75,-35.89,1),
+v4(438.08,243.9,-188.41,1),
+v4(459.45,233.75,-342.98,1),
 ],];
 var degree1_v01 =2;
 var degree2_v01 =9;
@@ -8292,19 +8292,19 @@ var knots2_v01 = [0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,];
 var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v01, knots2_v01,Curve_v01);
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
-Curves["177"].animation = [[4257,-1],[4460,-0.1569129607],[5442,0.2760017861],[5455,1]];
-Curves["177"].divisions = "|MAEmodelsPrevis|colorGalaxyOuterRing_750_1_1_247_210_124_200_1000_300_100_100_20|_29_9_v9";
+Curves["177"].animation = [[4257,-1],[4460,-0.1569129607],[5457,0.2760017861],[5497,1]];
+Curves["177"].divisions = "|MAEmodelsPrevis|colorGalaxyOuterRing_250_1_1_247_210_124_200_1000_300_100_100_20|_29_9_v9";
 Curves["178"] = function(){
-var Curve_v01 = [[v4(-255.74,402.46,-558.93,1),
-v4(-341.76,429.75,-540.16,1),
-v4(-444.9,448.38,-380.35,1),
-v4(-376.43,426.22,-144,1),
-v4(-59.86,392.46,-25.2,1),
-v4(294.61,433.09,-54.87,1),
-v4(472.61,466.66,-253.3,1),
-v4(495.41,466.21,-487.55,1),
-v4(366,433.46,-614.48,1),
-v4(251.97,413.66,-636.9,1),
+var Curve_v01 = [[v4(-255.74,310.6,-558.93,1),
+v4(-341.76,337.89,-540.16,1),
+v4(-444.9,356.52,-380.35,1),
+v4(-376.43,334.36,-144,1),
+v4(-59.86,300.6,-25.2,1),
+v4(294.61,341.23,-54.87,1),
+v4(472.61,374.8,-253.3,1),
+v4(495.41,374.35,-487.55,1),
+v4(366,341.6,-614.48,1),
+v4(251.97,321.8,-636.9,1),
 ],[v4(-372.93,232.16,-678.18,1),
 v4(-506.46,259.22,-649.11,1),
 v4(-664.77,273.53,-405.8,1),
@@ -8315,16 +8315,16 @@ v4(766.2,308.29,-223.38,1),
 v4(791.38,298.21,-577.23,1),
 v4(584.93,258.22,-766.89,1),
 v4(411.58,244.09,-800.37,1),
-],[v4(-261.47,110.67,-559.13,1),
-v4(-349.43,136.34,-539.74,1),
-v4(-450.93,148.34,-381.69,1),
-v4(-375.04,118.67,-150.23,1),
-v4(-45.31,90.78,-37.98,1),
-v4(320.69,143.64,-72.48,1),
-v4(499.83,184.06,-269.82,1),
-v4(512.07,176.5,-498.37,1),
-v4(373.26,141.83,-620.35,1),
-v4(257.45,127.23,-641.32,1),
+],[v4(-261.47,178.72,-559.13,1),
+v4(-349.43,204.38,-539.74,1),
+v4(-450.93,216.38,-381.69,1),
+v4(-375.04,186.71,-150.23,1),
+v4(-45.31,158.83,-37.98,1),
+v4(320.69,211.68,-72.48,1),
+v4(499.83,252.1,-269.82,1),
+v4(512.07,244.55,-498.37,1),
+v4(373.26,209.87,-620.35,1),
+v4(257.45,195.28,-641.32,1),
 ],];
 var degree1_v01 =2;
 var degree2_v01 =9;
@@ -8333,8 +8333,8 @@ var knots2_v01 = [0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,];
 var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v01, knots2_v01,Curve_v01);
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
-Curves["178"].animation = [[4257,-1],[4460,-0.1569129607],[5442,0.2760017861],[5455,1]];
-Curves["178"].divisions = "|MAEmodelsPrevis|colorGalaxyOuterRing_750_1_1_247_210_124_200_1000_300_100_100_20|_29_9_v10";
+Curves["178"].animation = [[4257,-1],[4460,-0.1569129607],[5457,0.2760017861],[5497,1]];
+Curves["178"].divisions = "|MAEmodelsPrevis|colorGalaxyOuterRing_250_1_1_247_210_124_200_1000_300_100_100_20|_29_9_v10";
 Curves.numCurves = 179;Curves["179"] = function(){
 var Curve_v01 = [[v4(-0.84,236.33,2.95,1),
 v4(-1.12,237.4,3.45,1),
@@ -8444,7 +8444,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["179"].animation = [[2442,1],[2515,-1],[2515.01,1],[5451,1],[5577,0.142960024],[6371,-0.334],[6557,-1]];
-Curves["179"].divisions = "|MAEmodelsPrevis|FlowerA_500_1_2_256_256_229_200_50_100_100_100_10|_121_9_v6";
+Curves["179"].divisions = "|MAEmodelsPrevis|FlowerA_500_1_2_256_256_242_200_50_100_100_100_5|_121_9_v6";
 Curves["180"] = function(){
 var Curve_v01 = [[v4(3.37,236.94,-4.79,1),
 v4(3.56,238.01,-5.12,1),
@@ -8554,7 +8554,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["180"].animation = [[2442,1],[2515,-1],[2515.01,1],[5451,1],[5577,0.142960024],[6371,-0.334],[6557,-1]];
-Curves["180"].divisions = "|MAEmodelsPrevis|FlowerA_500_1_2_256_256_229_200_50_100_100_100_10|_121_9_v7";
+Curves["180"].divisions = "|MAEmodelsPrevis|FlowerA_500_1_2_256_256_242_200_50_100_100_100_5|_121_9_v7";
 Curves["181"] = function(){
 var Curve_v01 = [[v4(0.9,236.37,-5.77,1),
 v4(1.34,237.42,-5.66,1),
@@ -8664,7 +8664,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["181"].animation = [[2442,1],[2515,-1],[2515.01,1],[5451,1],[5577,0.142960024],[6371,-0.334],[6557,-1]];
-Curves["181"].divisions = "|MAEmodelsPrevis|FlowerA_500_1_2_256_256_229_200_50_100_100_100_10|_121_9_v8";
+Curves["181"].divisions = "|MAEmodelsPrevis|FlowerA_500_1_2_256_256_242_200_50_100_100_100_5|_121_9_v8";
 Curves["182"] = function(){
 var Curve_v01 = [[v4(-1.26,240.14,10.33,1),
 v4(-1.18,241.31,10.62,1),
@@ -8774,7 +8774,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["182"].animation = [[2442,1],[2515,-1],[2515.01,1],[5451,1],[5577,0.142960024],[6371,-0.334],[6557,-1]];
-Curves["182"].divisions = "|MAEmodelsPrevis|FlowerA_500_1_2_256_256_229_200_50_100_100_100_10|_121_9_v9";
+Curves["182"].divisions = "|MAEmodelsPrevis|FlowerA_500_1_2_256_256_242_200_50_100_100_100_5|_121_9_v9";
 Curves["183"] = function(){
 var Curve_v01 = [[v4(-0.2,238.37,4.25,1),
 v4(-0.61,239.45,4.71,1),
@@ -8884,7 +8884,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["183"].animation = [[2442,1],[2515,-1],[2515.01,1],[5451,1],[5577,0.142960024],[6371,-0.334],[6557,-1]];
-Curves["183"].divisions = "|MAEmodelsPrevis|FlowerA_500_1_2_256_256_229_200_50_100_100_100_10|_121_9_v10";
+Curves["183"].divisions = "|MAEmodelsPrevis|FlowerA_500_1_2_256_256_242_200_50_100_100_100_5|_121_9_v10";
 Curves.numCurves = 184;Curves["184"] = function(){
 var Curve_v01 = [[v4(-0.84,236.33,2.95,1),
 v4(-1.12,237.4,3.45,1),
@@ -8994,7 +8994,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["184"].animation = [[6212,1],[6369,0.43],[6898,-0.334],[7376,0.449]];
-Curves["184"].divisions = "|MAEmodelsPrevis|tunnelFlowerA_2000_1_2_256_256_230_75_50_100_100_100_5|_121_9_v1";
+Curves["184"].divisions = "|MAEmodelsPrevis|tunnelFlowerA_2000_1_2_256_256_243_75_50_100_100_100_3|_121_9_v1";
 Curves["185"] = function(){
 var Curve_v01 = [[v4(3.37,236.94,-4.79,1),
 v4(3.56,238.01,-5.12,1),
@@ -9104,7 +9104,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["185"].animation = [[6212,1],[6369,0.43],[6898,-0.334],[7376,0.449]];
-Curves["185"].divisions = "|MAEmodelsPrevis|tunnelFlowerA_2000_1_2_256_256_230_75_50_100_100_100_5|_121_9_v2";
+Curves["185"].divisions = "|MAEmodelsPrevis|tunnelFlowerA_2000_1_2_256_256_243_75_50_100_100_100_3|_121_9_v2";
 Curves["186"] = function(){
 var Curve_v01 = [[v4(0.9,236.37,-5.77,1),
 v4(1.34,237.42,-5.66,1),
@@ -9214,7 +9214,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["186"].animation = [[6212,1],[6369,0.43],[6898,-0.334],[7376,0.449]];
-Curves["186"].divisions = "|MAEmodelsPrevis|tunnelFlowerA_2000_1_2_256_256_230_75_50_100_100_100_5|_121_9_v3";
+Curves["186"].divisions = "|MAEmodelsPrevis|tunnelFlowerA_2000_1_2_256_256_243_75_50_100_100_100_3|_121_9_v3";
 Curves["187"] = function(){
 var Curve_v01 = [[v4(-1.26,240.14,10.33,1),
 v4(-1.18,241.31,10.62,1),
@@ -9324,7 +9324,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["187"].animation = [[6212,1],[6369,0.43],[6898,-0.334],[7376,0.449]];
-Curves["187"].divisions = "|MAEmodelsPrevis|tunnelFlowerA_2000_1_2_256_256_230_75_50_100_100_100_5|_121_9_v4";
+Curves["187"].divisions = "|MAEmodelsPrevis|tunnelFlowerA_2000_1_2_256_256_243_75_50_100_100_100_3|_121_9_v4";
 Curves["188"] = function(){
 var Curve_v01 = [[v4(-0.2,238.37,4.25,1),
 v4(-0.61,239.45,4.71,1),
@@ -9434,7 +9434,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["188"].animation = [[6212,1],[6369,0.43],[6898,-0.334],[7376,0.449]];
-Curves["188"].divisions = "|MAEmodelsPrevis|tunnelFlowerA_2000_1_2_256_256_230_75_50_100_100_100_5|_121_9_v5";
+Curves["188"].divisions = "|MAEmodelsPrevis|tunnelFlowerA_2000_1_2_256_256_243_75_50_100_100_100_3|_121_9_v5";
 Curves.numCurves = 189;Curves["189"] = function(){
 var Curve_v01 = [[v4(3.6,278.46,-4.59,1),
 v4(4.44,282.61,-4.64,1),
@@ -11477,7 +11477,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["289"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["289"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v1";
+Curves["289"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v1";
 Curves["290"] = function(){
 var Curve_v01 = [[v4(27.84,5.3,-4.98,1),
 v4(27.87,5.6,-4.75,1),
@@ -11532,7 +11532,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["290"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["290"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v2";
+Curves["290"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v2";
 Curves["291"] = function(){
 var Curve_v01 = [[v4(-36.74,36.28,-80.08,1),
 v4(-36.74,36.77,-80.09,1),
@@ -11587,7 +11587,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["291"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["291"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v3";
+Curves["291"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v3";
 Curves["292"] = function(){
 var Curve_v01 = [[v4(4.04,29.9,-56.7,1),
 v4(4.04,30.08,-56.74,1),
@@ -11642,7 +11642,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["292"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["292"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v4";
+Curves["292"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v4";
 Curves["293"] = function(){
 var Curve_v01 = [[v4(31.21,34.3,-67.87,1),
 v4(31.43,34.65,-67.79,1),
@@ -11697,7 +11697,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["293"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["293"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v5";
+Curves["293"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v5";
 Curves["294"] = function(){
 var Curve_v01 = [[v4(-79.7,51.39,-116,1),
 v4(-78.83,52.2,-116,1),
@@ -11752,7 +11752,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["294"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["294"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v6";
+Curves["294"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v6";
 Curves["295"] = function(){
 var Curve_v01 = [[v4(-7.76,2.72,-4.53,1),
 v4(-7.6,2.88,-4.54,1),
@@ -11807,7 +11807,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["295"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["295"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v7";
+Curves["295"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v7";
 Curves["296"] = function(){
 var Curve_v01 = [[v4(10.85,2.14,-5.25,1),
 v4(11.01,2.75,-5.27,1),
@@ -11862,7 +11862,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["296"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["296"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v8";
+Curves["296"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v8";
 Curves["297"] = function(){
 var Curve_v01 = [[v4(10.28,5.93,-10.21,1),
 v4(10.2,6.37,-10.21,1),
@@ -11917,7 +11917,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["297"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["297"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v9";
+Curves["297"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v9";
 Curves["298"] = function(){
 var Curve_v01 = [[v4(-0.9,15.99,-30.47,1),
 v4(-0.76,16.46,-30.47,1),
@@ -11972,7 +11972,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["298"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["298"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v10";
+Curves["298"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v10";
 Curves["299"] = function(){
 var Curve_v01 = [[v4(-16.79,4.66,-6.5,1),
 v4(-16.62,4.96,-6.62,1),
@@ -12027,7 +12027,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["299"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["299"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v11";
+Curves["299"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v11";
 Curves["300"] = function(){
 var Curve_v01 = [[v4(18.61,6.17,-5.69,1),
 v4(18.79,6.5,-5.61,1),
@@ -12082,7 +12082,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["300"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["300"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v12";
+Curves["300"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v12";
 Curves["301"] = function(){
 var Curve_v01 = [[v4(-19.62,2.48,-0.82,1),
 v4(-19.73,2.84,-0.7,1),
@@ -12137,7 +12137,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["301"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["301"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v13";
+Curves["301"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v13";
 Curves["302"] = function(){
 var Curve_v01 = [[v4(-6.39,4.96,-12.25,1),
 v4(-6.46,5.09,-12.27,1),
@@ -12192,7 +12192,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["302"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["302"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v14";
+Curves["302"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v14";
 Curves["303"] = function(){
 var Curve_v01 = [[v4(4.77,4.29,-10.61,1),
 v4(4.89,4.62,-10.58,1),
@@ -12247,7 +12247,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["303"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["303"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v15";
+Curves["303"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v15";
 Curves["304"] = function(){
 var Curve_v01 = [[v4(6.21,15.75,-29.62,1),
 v4(6.05,15.98,-29.62,1),
@@ -12302,7 +12302,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["304"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["304"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v16";
+Curves["304"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v16";
 Curves["305"] = function(){
 var Curve_v01 = [[v4(9.68,11.78,-22.61,1),
 v4(9.52,12.01,-22.47,1),
@@ -12357,7 +12357,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["305"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["305"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v17";
+Curves["305"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v17";
 Curves["306"] = function(){
 var Curve_v01 = [[v4(-16.62,9.37,-17.17,1),
 v4(-16.77,9.53,-17.14,1),
@@ -12412,7 +12412,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["306"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["306"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v18";
+Curves["306"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v18";
 Curves["307"] = function(){
 var Curve_v01 = [[v4(11.04,-1.54,7.85,1),
 v4(11.12,-1.29,7.91,1),
@@ -12467,7 +12467,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["307"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["307"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v19";
+Curves["307"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v19";
 Curves["308"] = function(){
 var Curve_v01 = [[v4(-12,-0.91,4.32,1),
 v4(-11.97,-0.65,4.56,1),
@@ -12522,7 +12522,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["308"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["308"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v20";
+Curves["308"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v20";
 Curves["309"] = function(){
 var Curve_v01 = [[v4(-11.34,11.35,-22.61,1),
 v4(-11.24,11.64,-22.69,1),
@@ -12577,7 +12577,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["309"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["309"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v21";
+Curves["309"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v21";
 Curves["310"] = function(){
 var Curve_v01 = [[v4(-18.92,-0.44,7.09,1),
 v4(-18.91,-0.26,7.25,1),
@@ -12632,7 +12632,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["310"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["310"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v22";
+Curves["310"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v22";
 Curves["311"] = function(){
 var Curve_v01 = [[v4(-31.45,7.11,-6.53,1),
 v4(-31.35,7.24,-6.63,1),
@@ -12687,7 +12687,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["311"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["311"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v23";
+Curves["311"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v23";
 Curves["312"] = function(){
 var Curve_v01 = [[v4(18.69,11.7,-20.64,1),
 v4(18.69,11.77,-20.54,1),
@@ -12742,7 +12742,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["312"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["312"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v24";
+Curves["312"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v24";
 Curves["313"] = function(){
 var Curve_v01 = [[v4(16.84,1.32,-1.26,1),
 v4(17.2,1.63,-1.31,1),
@@ -12797,7 +12797,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["313"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["313"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v25";
+Curves["313"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v25";
 Curves["314"] = function(){
 var Curve_v01 = [[v4(-12.13,-2.74,9.38,1),
 v4(-12.18,-2.55,9.19,1),
@@ -12852,7 +12852,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["314"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["314"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v26";
+Curves["314"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v26";
 Curves["315"] = function(){
 var Curve_v01 = [[v4(-43.15,0.72,31.7,1),
 v4(-42.96,1.07,31.95,1),
@@ -12907,7 +12907,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["315"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["315"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v27";
+Curves["315"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v27";
 Curves["316"] = function(){
 var Curve_v01 = [[v4(18.59,-0.87,3.91,1),
 v4(18.83,-0.65,4,1),
@@ -12962,7 +12962,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["316"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["316"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v28";
+Curves["316"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v28";
 Curves["317"] = function(){
 var Curve_v01 = [[v4(14.08,-3.81,12.97,1),
 v4(14.24,-3.45,12.92,1),
@@ -13017,7 +13017,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["317"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["317"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v29";
+Curves["317"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v29";
 Curves["318"] = function(){
 var Curve_v01 = [[v4(5,-2.33,26.56,1),
 v4(4.99,-2.23,26.75,1),
@@ -13072,7 +13072,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["318"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["318"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v30";
+Curves["318"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v30";
 Curves["319"] = function(){
 var Curve_v01 = [[v4(21.35,-5.42,28.18,1),
 v4(21.39,-4.97,28.56,1),
@@ -13127,7 +13127,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["319"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["319"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v31";
+Curves["319"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v31";
 Curves["320"] = function(){
 var Curve_v01 = [[v4(34.64,-4.71,16.74,1),
 v4(34.25,-3.96,16.92,1),
@@ -13182,7 +13182,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["320"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["320"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v32";
+Curves["320"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v32";
 Curves["321"] = function(){
 var Curve_v01 = [[v4(-15.61,-4.48,17.27,1),
 v4(-15.47,-4.23,17.03,1),
@@ -13237,7 +13237,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["321"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["321"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v33";
+Curves["321"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v33";
 Curves["322"] = function(){
 var Curve_v01 = [[v4(-19.24,-2.93,33.67,1),
 v4(-19.2,-2.55,34,1),
@@ -13292,7 +13292,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["322"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["322"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v34";
+Curves["322"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v34";
 Curves["323"] = function(){
 var Curve_v01 = [[v4(2.84,-5.76,30.23,1),
 v4(2.61,-5.31,30.5,1),
@@ -13347,7 +13347,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["323"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["323"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v35";
+Curves["323"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v35";
 Curves["324"] = function(){
 var Curve_v01 = [[v4(-8.18,-0.87,46.39,1),
 v4(-7.23,-0.1,45.44,1),
@@ -13402,7 +13402,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["324"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["324"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v36";
+Curves["324"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v36";
 Curves["325"] = function(){
 var Curve_v01 = [[v4(2.49,-2.01,48.99,1),
 v4(2.65,-1.52,48.69,1),
@@ -13457,7 +13457,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["325"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["325"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v37";
+Curves["325"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v37";
 Curves["326"] = function(){
 var Curve_v01 = [[v4(36.7,-1.63,55.92,1),
 v4(37.08,-1.11,55.44,1),
@@ -13512,7 +13512,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["326"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["326"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v38";
+Curves["326"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v38";
 Curves["327"] = function(){
 var Curve_v01 = [[v4(-31.27,5.93,56.81,1),
 v4(-31.53,6.22,56.73,1),
@@ -13567,7 +13567,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["327"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["327"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v39";
+Curves["327"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v39";
 Curves["328"] = function(){
 var Curve_v01 = [[v4(2.6,12.39,-25.71,1),
 v4(2.94,12.7,-25.73,1),
@@ -13622,7 +13622,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["328"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["328"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v40";
+Curves["328"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v40";
 Curves["329"] = function(){
 var Curve_v01 = [[v4(-46.29,14.44,-31.6,1),
 v4(-46.17,14.85,-31.82,1),
@@ -13677,7 +13677,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["329"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["329"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v41";
+Curves["329"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v41";
 Curves["330"] = function(){
 var Curve_v01 = [[v4(149.27,-3.15,-6.03,1),
 v4(149.44,-2.84,-5.49,1),
@@ -13732,7 +13732,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["330"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["330"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v42";
+Curves["330"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v42";
 Curves["331"] = function(){
 var Curve_v01 = [[v4(6.44,3.17,-4.85,1),
 v4(6.44,3.57,-5.17,1),
@@ -13787,7 +13787,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["331"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["331"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v43";
+Curves["331"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v43";
 Curves["332"] = function(){
 var Curve_v01 = [[v4(-9.25,0.76,-0.14,1),
 v4(-8.96,1.25,0.05,1),
@@ -13842,7 +13842,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["332"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["332"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v44";
+Curves["332"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v44";
 Curves["333"] = function(){
 var Curve_v01 = [[v4(16.13,7.06,-12.8,1),
 v4(15.95,7.29,-12.72,1),
@@ -13897,7 +13897,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["333"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["333"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v45";
+Curves["333"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v45";
 Curves["334"] = function(){
 var Curve_v01 = [[v4(11.56,0.79,-0.89,1),
 v4(11.51,1.11,-1.08,1),
@@ -13952,7 +13952,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["334"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["334"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v46";
+Curves["334"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v46";
 Curves["335"] = function(){
 var Curve_v01 = [[v4(-1.37,5.15,-12.08,1),
 v4(-1.59,5.46,-12.33,1),
@@ -14007,7 +14007,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["335"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["335"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v47";
+Curves["335"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v47";
 Curves["336"] = function(){
 var Curve_v01 = [[v4(-5,11.03,-25.23,1),
 v4(-4.91,11.35,-25.29,1),
@@ -14062,7 +14062,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["336"].animation = [[6585.995,-1],[6586,1],[7124,-1]];
-Curves["336"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_20_1_v48";
+Curves["336"].divisions = "|MAEmodelsPrevis|ShootingStarsEnd_30000_300_2_242_256_256_1000_50_100_100_100_0|_61_1_v48";
 Curves.numCurves = 337;Curves["337"] = function(){
 var Curve_v01 = [[v4(-33.72,44.28,14.41,1),
 v4(-33.29,41.2,14.41,1),
@@ -14272,32 +14272,32 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["342"].animation = [[4267,-1],[4392.855,-1],[4392.91,1],[4492.55,-1],[4603.755,-1],[4703.425,-1]];
-Curves["342"].divisions = "|MAEmodelsPrevis|DustPlaneD_2000_1_1_189_247_224_100_1000_400_100_3_20|_21_5_v316";
+Curves["342"].divisions = "|MAEmodelsPrevis|DustPlaneD_2000_1_1_189_247_224_100_1000_400_100_3_20|_81_5_v1";
 Curves["343"] = function(){
-var Curve_v01 = [[v4(8.66,172.16,8.61,1),
-v4(9.94,169.08,8.61,1),
-v4(17.5,162.92,8.61,1),
-v4(25.61,153.69,8.61,1),
-v4(25.54,144.45,8.61,1),
-v4(17.47,135.21,8.61,1),
-v4(10.21,129.05,8.61,1),
-v4(9.27,125.98,8.61,1),
-],[v4(-0.16,172.16,10.46,1),
-v4(1.13,169.08,10.46,1),
-v4(8.68,162.92,10.46,1),
-v4(16.79,153.69,10.46,1),
-v4(16.73,144.45,10.46,1),
-v4(8.66,135.21,10.46,1),
-v4(1.4,129.05,10.46,1),
-v4(0.46,125.98,10.46,1),
-],[v4(-7.46,172.16,8.61,1),
-v4(-6.18,169.08,8.61,1),
-v4(1.38,162.92,8.61,1),
-v4(9.49,153.69,8.61,1),
-v4(9.43,144.45,8.61,1),
-v4(1.35,135.21,8.61,1),
-v4(-5.91,129.05,8.61,1),
-v4(-6.85,125.98,8.61,1),
+var Curve_v01 = [[v4(8.07,172.16,8.61,1),
+v4(8.28,169.08,8.61,1),
+v4(11,162.92,8.61,1),
+v4(15.45,153.69,8.61,1),
+v4(15.38,144.45,8.61,1),
+v4(10.96,135.21,8.61,1),
+v4(8.45,129.05,8.61,1),
+v4(8.59,125.98,8.61,1),
+],[v4(-0.74,172.16,10.46,1),
+v4(-0.54,169.08,10.46,1),
+v4(2.18,162.92,10.46,1),
+v4(6.63,153.69,10.46,1),
+v4(6.57,144.45,10.46,1),
+v4(2.14,135.21,10.46,1),
+v4(-0.37,129.05,10.46,1),
+v4(-0.22,125.98,10.46,1),
+],[v4(-8.05,172.16,8.61,1),
+v4(-7.84,169.08,8.61,1),
+v4(-5.12,162.92,8.61,1),
+v4(-0.67,153.69,8.61,1),
+v4(-0.74,144.45,8.61,1),
+v4(-5.16,135.21,8.61,1),
+v4(-7.67,129.05,8.61,1),
+v4(-7.53,125.98,8.61,1),
 ],];
 var degree1_v01 =2;
 var degree2_v01 =7;
@@ -14307,7 +14307,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["343"].animation = [[4267,-1],[4392.855,-1],[4392.91,1],[4492.55,-1],[4603.755,-1],[4703.425,-1]];
-Curves["343"].divisions = "|MAEmodelsPrevis|DustPlaneD_2000_1_1_189_247_224_100_1000_400_100_3_20|_21_5_v325";
+Curves["343"].divisions = "|MAEmodelsPrevis|DustPlaneD_2000_1_1_189_247_224_100_1000_400_100_3_20|_81_5_v2";
 Curves.numCurves = 344;Curves["344"] = function(){
 var Curve_v01 = [[v4(-6.8,193.97,9.67,1),
 v4(-6.35,190.89,9.67,1),
@@ -14342,32 +14342,32 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["344"].animation = [[4648,1],[4765.265,-1],[4858.155,-1],[4961.7,-1],[4961.73,1],[5054.6,-1]];
-Curves["344"].divisions = "|MAEmodelsPrevis|DustPlaneE_4000_1_1_240_239_151_60_0_100_100_3_40|_21_5_v317";
+Curves["344"].divisions = "|MAEmodelsPrevis|DustPlaneE_4000_1_1_240_239_151_60_0_100_100_3_40|_61_5_v325";
 Curves["345"] = function(){
-var Curve_v01 = [[v4(-8.54,213.14,3.44,1),
-v4(-9.2,210.06,3.44,1),
-v4(-16.32,203.91,3.84,1),
-v4(-24.38,194.67,5.12,1),
-v4(-24.29,185.43,6.6,1),
-v4(-16.16,176.2,7.82,1),
-v4(-9.08,170.04,8.18,1),
-v4(-8.51,166.96,8.18,1),
-],[v4(-0.85,213.14,5.95,1),
-v4(-1.51,210.06,5.95,1),
-v4(-8.63,203.91,6.35,1),
-v4(-16.69,194.67,7.63,1),
-v4(-16.6,185.43,9.11,1),
-v4(-8.47,176.2,10.33,1),
-v4(-1.39,170.04,10.69,1),
-v4(-0.82,166.96,10.69,1),
-],[v4(7.4,213.14,3.44,1),
-v4(6.75,210.06,3.44,1),
-v4(-0.38,203.91,3.84,1),
-v4(-8.44,194.67,5.12,1),
-v4(-8.35,185.43,6.6,1),
-v4(-0.22,176.2,7.82,1),
-v4(6.86,170.04,8.18,1),
-v4(7.44,166.96,8.18,1),
+var Curve_v01 = [[v4(-7.99,213.14,3.44,1),
+v4(-7.81,210.06,3.44,1),
+v4(-11.28,203.91,3.84,1),
+v4(-16.48,194.67,5.12,1),
+v4(-16.4,185.43,6.6,1),
+v4(-11.14,176.2,7.82,1),
+v4(-7.7,170.04,8.18,1),
+v4(-7.95,166.96,8.18,1),
+],[v4(-0.3,213.14,5.95,1),
+v4(-0.12,210.06,5.95,1),
+v4(-3.59,203.91,6.35,1),
+v4(-8.79,194.67,7.63,1),
+v4(-8.71,185.43,9.11,1),
+v4(-3.45,176.2,10.33,1),
+v4(-0.01,170.04,10.69,1),
+v4(-0.27,166.96,10.69,1),
+],[v4(7.95,213.14,3.44,1),
+v4(8.13,210.06,3.44,1),
+v4(4.66,203.91,3.84,1),
+v4(-0.54,194.67,5.12,1),
+v4(-0.46,185.43,6.6,1),
+v4(4.8,176.2,7.82,1),
+v4(8.24,170.04,8.18,1),
+v4(7.99,166.96,8.18,1),
 ],];
 var degree1_v01 =2;
 var degree2_v01 =7;
@@ -14377,7 +14377,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["345"].animation = [[4648,1],[4765.265,-1],[4858.155,-1],[4961.7,-1],[4961.73,1],[5054.6,-1]];
-Curves["345"].divisions = "|MAEmodelsPrevis|DustPlaneE_4000_1_1_240_239_151_60_0_100_100_3_40|_21_5_v324";
+Curves["345"].divisions = "|MAEmodelsPrevis|DustPlaneE_4000_1_1_240_239_151_60_0_100_100_3_40|_61_5_v326";
 Curves.numCurves = 346;Curves["346"] = function(){
 var Curve_v01 = [[v4(11.51,229.6,14.12,1),
 v4(11.06,226.52,14.12,1),
@@ -14412,7 +14412,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["346"].animation = [[4906,-1],[5023.265,-1],[5116.155,-1],[5219.7,-1],[5219.73,1],[5314,-1]];
-Curves["346"].divisions = "|MAEmodelsPrevis|DustPlaneF_1000_1_1_240_239_196_35_300_500_100_2_20|_21_5_v318";
+Curves["346"].divisions = "|MAEmodelsPrevis|DustPlaneF_1000_1_1_240_239_196_35_300_500_100_2_20|_41_5_v312";
 Curves["347"] = function(){
 var Curve_v01 = [[v4(6.07,248.77,3.15,1),
 v4(5.62,245.69,3.15,1),
@@ -14447,7 +14447,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["347"].animation = [[4906,-1],[5023.265,-1],[5116.155,-1],[5219.7,-1],[5219.73,1],[5314,-1]];
-Curves["347"].divisions = "|MAEmodelsPrevis|DustPlaneF_1000_1_1_240_239_196_35_300_500_100_2_20|_21_5_v323";
+Curves["347"].divisions = "|MAEmodelsPrevis|DustPlaneF_1000_1_1_240_239_196_35_300_500_100_2_20|_41_5_v313";
 Curves.numCurves = 348;Curves["348"] = function(){
 var Curve_v01 = [[v4(-19.91,273.51,7.19,1),
 v4(-18.11,270.84,7.19,1),
@@ -14758,7 +14758,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["354"].animation = [[3304,1],[3380,-1]];
-Curves["354"].divisions = "|MAEmodelsPrevis|tunnelBurstBexpToRib_250_300_2_124_247_237_150_100_100_100_2_10|_10_10_v5";
+Curves["354"].divisions = "|MAEmodelsPrevis|tunnelBurstBexpToRib_250_300_2_124_247_237_75_100_100_100_2_10|_10_10_v5";
 Curves["355"] = function(){
 var Curve_v01 = [[v4(9.45,38.17,-11.82,1),
 v4(6.92,37.38,-4.6,1),
@@ -14785,7 +14785,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["355"].animation = [[3304,1],[3380,-1]];
-Curves["355"].divisions = "|MAEmodelsPrevis|tunnelBurstBexpToRib_250_300_2_124_247_237_150_100_100_100_2_10|_10_10_v6";
+Curves["355"].divisions = "|MAEmodelsPrevis|tunnelBurstBexpToRib_250_300_2_124_247_237_75_100_100_100_2_10|_10_10_v6";
 Curves.numCurves = 356;Curves["356"] = function(){
 var Curve_v01 = [[v4(-3.76,120.77,-6.27,1),
 v4(-3.14,119.19,1.67,1),
@@ -14812,7 +14812,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["356"].animation = [[4261,1],[4327,-1]];
-Curves["356"].divisions = "|MAEmodelsPrevis|tunnelBurstCribToGal_0_1_1_189_247_224_1000_100_100_100_1_10|_10_10_v9";
+Curves["356"].divisions = "|MAEmodelsPrevis|tunnelBurstCribToGal_0_50_1_189_247_224_200_100_100_100_1_10|_10_10_v9";
 Curves["357"] = function(){
 var Curve_v01 = [[v4(-6.94,120.26,-6.07,1),
 v4(-4.38,124.63,0.28,1),
@@ -14839,7 +14839,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["357"].animation = [[4261,1],[4327,-1]];
-Curves["357"].divisions = "|MAEmodelsPrevis|tunnelBurstCribToGal_0_1_1_189_247_224_1000_100_100_100_1_10|_10_10_v10";
+Curves["357"].divisions = "|MAEmodelsPrevis|tunnelBurstCribToGal_0_50_1_189_247_224_200_100_100_100_1_10|_10_10_v10";
 Curves.numCurves = 358;Curves["358"] = function(){
 var Curve_v01 = [[v4(20.33,273.33,-362.78,1),
 v4(-17.57,260.95,-313.73,1),
@@ -14866,7 +14866,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["358"].animation = [[5439,1],[5505,-1]];
-Curves["358"].divisions = "|MAEmodelsPrevis|tunnelBurstDgalToFlowerLIVE_0_3_2_240_239_196_100_100_100_100_2_10|_10_10_v1";
+Curves["358"].divisions = "|MAEmodelsPrevis|tunnelBurstDgalToFlowerLIVE_0_30_1_240_239_196_200_100_100_100_2_10|_10_10_v1";
 Curves["359"] = function(){
 var Curve_v01 = [[v4(4.78,291.91,-369.53,1),
 v4(13.59,292.39,-306.94,1),
@@ -14893,7 +14893,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["359"].animation = [[5439,1],[5505,-1]];
-Curves["359"].divisions = "|MAEmodelsPrevis|tunnelBurstDgalToFlowerLIVE_0_3_2_240_239_196_100_100_100_100_2_10|_10_10_v2";
+Curves["359"].divisions = "|MAEmodelsPrevis|tunnelBurstDgalToFlowerLIVE_0_30_1_240_239_196_200_100_100_100_2_10|_10_10_v2";
 Curves.numCurves = 360;Curves["360"] = function(){
 var Curve_v01 = [[v4(-1.02,285.44,-0.43,1),
 v4(-0.66,274.69,2.16,1),
@@ -14974,7 +14974,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["362"].animation = [[5997,1],[6073,-1]];
-Curves["362"].divisions = "|MAEmodelsPrevis|tunnelBurstFend_500_500_3_240_239_196_110_120_100_100_2_10|_10_10_v11";
+Curves["362"].divisions = "|MAEmodelsPrevis|tunnelBurstFend_500_500_3_240_239_196_110_70_100_100_2_10|_10_10_v11";
 Curves["363"] = function(){
 var Curve_v01 = [[v4(11.84,301.58,6.21,1),
 v4(2.74,297.24,10.76,1),
@@ -15001,24 +15001,24 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["363"].animation = [[5997,1],[6073,-1]];
-Curves["363"].divisions = "|MAEmodelsPrevis|tunnelBurstFend_500_500_3_240_239_196_110_120_100_100_2_10|_10_10_v12";
+Curves["363"].divisions = "|MAEmodelsPrevis|tunnelBurstFend_500_500_3_240_239_196_110_70_100_100_2_10|_10_10_v12";
 Curves.numCurves = 364;Curves["364"] = function(){
-var Curve_v01 = [[v4(1.01,309.1,5.08,1),
-v4(3.53,298.8,8.2,1),
-v4(13.44,286.62,15.89,1),
-v4(56.99,292.48,44.38,1),
-],[v4(0.85,309.21,5.27,1),
-v4(-0.78,298.84,10.44,1),
-v4(2.58,283.9,12.02,1),
-v4(14.82,241.1,-20.23,1),
-],[v4(1.01,309.28,5.33,1),
-v4(3.34,303.32,12.53,1),
-v4(0.37,295.45,21.19,1),
-v4(-50.36,276.35,49.25,1),
-],[v4(1.17,309.31,5.34,1),
-v4(5.08,302.4,10.53,1),
-v4(9.08,295.92,18.99,1),
-v4(19.32,303.16,70.88,1),
+var Curve_v01 = [[v4(1.45,309.36,4.82,1),
+v4(1.02,298.74,7.88,1),
+v4(6.02,284.76,17.09,1),
+v4(41.06,281.44,55.89,1),
+],[v4(1.27,309.49,4.97,1),
+v4(-3.63,299.66,8.97,1),
+v4(-3.8,284.33,10.48,1),
+v4(7.66,240.09,-20.06,1),
+],[v4(1.43,309.53,5.08,1),
+v4(0.61,303.19,12.28,1),
+v4(-5.97,296.05,19.45,1),
+v4(-64.94,287.58,32.76,1),
+],[v4(1.58,309.53,5.12,1),
+v4(2.58,301.94,10.73,1),
+v4(2.93,294.73,19.53,1),
+v4(0.7,299.47,72.66,1),
 ],];
 var degree1_v01 =3;
 var degree2_v01 =3;
@@ -15028,24 +15028,24 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["364"].animation = [[6129,1],[6205,-1]];
-Curves["364"].divisions = "|MAEmodelsPrevis|tunnelBurstGend_500_400_2_240_239_196_170_180_100_100_2_10|_10_10_v13";
+Curves["364"].divisions = "|MAEmodelsPrevis|tunnelBurstGend_500_400_2_240_239_196_170_80_100_100_2_10|_10_10_v13";
 Curves["365"] = function(){
-var Curve_v01 = [[v4(-2.67,307.55,3.22,1),
-v4(-1.08,302.82,13.08,1),
-v4(-0.98,289.46,24.35,1),
-v4(-10.27,238.66,15.58,1),
-],[v4(-2.43,307.54,3.09,1),
-v4(3.47,304.49,12.71,1),
-v4(3.82,299.85,27.39,1),
-v4(-23.74,309.38,73.99,1),
-],[v4(-2.5,307.38,3.01,1),
-v4(1.76,300.38,8.06,1),
-v4(10.87,296.16,14.77,1),
-v4(67.56,313.18,29.64,1),
-],[v4(-2.61,307.27,2.98,1),
-v4(-0.78,300.39,9.24,1),
-v4(3.31,291.27,14.69,1),
-v4(33.5,249.34,1.25,1),
+var Curve_v01 = [[v4(-1.85,308.6,2.01,1),
+v4(-3.82,303.6,11.68,1),
+v4(-9.24,290.44,21.83,1),
+v4(-25.75,242.67,8.11,1),
+],[v4(-1.6,308.55,1.95,1),
+v4(0.91,304.31,12.55,1),
+v4(-3.43,299.62,26.56,1),
+v4(-39.62,314.35,65.23,1),
+],[v4(-1.68,308.41,1.84,1),
+v4(-0.32,300.66,7.39,1),
+v4(5.74,294.62,15.92,1),
+v4(58.91,299.62,45.47,1),
+],[v4(-1.79,308.32,1.78,1),
+v4(-3.02,301.17,7.9,1),
+v4(-2.34,291.38,13.67,1),
+v4(21.44,244.24,5.84,1),
 ],];
 var degree1_v01 =3;
 var degree2_v01 =3;
@@ -15055,7 +15055,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["365"].animation = [[6129,1],[6205,-1]];
-Curves["365"].divisions = "|MAEmodelsPrevis|tunnelBurstGend_500_400_2_240_239_196_170_180_100_100_2_10|_10_10_v14";
+Curves["365"].divisions = "|MAEmodelsPrevis|tunnelBurstGend_500_400_2_240_239_196_170_80_100_100_2_10|_10_10_v14";
 Curves.numCurves = 366;Curves["366"] = function(){
 var Curve_v01 = [[v4(5.27,319.71,7.95,1),
 v4(-1.08,311.45,11.65,1),
@@ -15082,7 +15082,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["366"].animation = [[6232,1],[6308,-1]];
-Curves["366"].divisions = "|MAEmodelsPrevis|tunnelBurstHend_500_0_1_240_239_196_240_100_100_100_2_10|_10_10_v15";
+Curves["366"].divisions = "|MAEmodelsPrevis|tunnelBurstHend_500_200_1_240_239_196_240_90_100_100_2_10|_10_10_v15";
 Curves["367"] = function(){
 var Curve_v01 = [[v4(3.64,322.28,11.14,1),
 v4(5.9,312.21,15.11,1),
@@ -15109,7 +15109,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["367"].animation = [[6232,1],[6308,-1]];
-Curves["367"].divisions = "|MAEmodelsPrevis|tunnelBurstHend_500_0_1_240_239_196_240_100_100_100_2_10|_10_10_v16";
+Curves["367"].divisions = "|MAEmodelsPrevis|tunnelBurstHend_500_200_1_240_239_196_240_90_100_100_2_10|_10_10_v16";
 Curves.numCurves = 368;Curves["368"] = function(){
 var Curve_v01 = [[v4(-1.32,324.9,-3.27,1),
 v4(-3.73,320.49,6.58,1),
@@ -15136,7 +15136,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["368"].animation = [[6322,1],[6398,-1]];
-Curves["368"].divisions = "|MAEmodelsPrevis|tunnelBurstIend_500_300_1_240_239_196_300_100_100_100_2_10|_10_10_v17";
+Curves["368"].divisions = "|MAEmodelsPrevis|tunnelBurstIend_500_300_1_240_239_196_100_100_100_100_2_10|_10_10_v17";
 Curves["369"] = function(){
 var Curve_v01 = [[v4(0.54,328.31,-1.2,1),
 v4(3.37,318.82,3.73,1),
@@ -15163,7 +15163,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["369"].animation = [[6322,1],[6398,-1]];
-Curves["369"].divisions = "|MAEmodelsPrevis|tunnelBurstIend_500_300_1_240_239_196_300_100_100_100_2_10|_10_10_v18";
+Curves["369"].divisions = "|MAEmodelsPrevis|tunnelBurstIend_500_300_1_240_239_196_100_100_100_100_2_10|_10_10_v18";
 Curves.numCurves = 370;Curves["370"] = function(){
 var Curve_v01 = [[v4(11.11,4.51,8.64,1),
 v4(11.23,5.02,8.64,1),
@@ -18859,7 +18859,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["480"].animation = [[2859,1],[3051,0.3862176645],[3140,0.2670583093],[4202,0.02916583781],[4269,-0.5167973122],[4307,-1]];
-Curves["480"].divisions = "|MAEmodelsPrevis|RibbonWideREDO_2000_1_2_124_202_247_100_100_300_300_120_20|_61_5_v4";
+Curves["480"].divisions = "|MAEmodelsPrevis|RibbonWideREDO_2000_1_2_124_202_247_100_100_300_300_200_20|_61_5_v4";
 Curves["481"] = function(){
 var Curve_v01 = [[v4(4.83,-8.41,-23.99,1),
 v4(6.79,-7,-24,1),
@@ -18969,7 +18969,7 @@ var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v
 return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["481"].animation = [[2859,1],[3051,0.3862176645],[3140,0.2670583093],[4202,0.02916583781],[4269,-0.5167973122],[4307,-1]];
-Curves["481"].divisions = "|MAEmodelsPrevis|RibbonWideREDO_2000_1_2_124_202_247_100_100_300_300_120_20|_61_5_v3";
+Curves["481"].divisions = "|MAEmodelsPrevis|RibbonWideREDO_2000_1_2_124_202_247_100_100_300_300_200_20|_61_5_v3";
 Curves.numCurves = 482;Curves["482"] = function(){
 var Curve_v01 = [[v4(-11.85,101.47,-82.96,1),
 v4(-10.59,100.37,-80.73,1),
@@ -19852,4 +19852,374 @@ return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
 };
 Curves["493"].animation = [[2859,-1],[3140,-0.102],[4202,0.191],[4269,0.517],[4307,1]];
 Curves["493"].divisions = "|MAEmodelsPrevis|tunnelRibbonWideREDOtop_2000_1_3_124_202_247_60_100_100_100_70_20|_41_5_v311";
-Curves.numCurves = 494;
+Curves.numCurves = 494;Curves["494"] = function(){
+var Curve_v01 = [[v4(-1.01,2.29,2.92,1),
+v4(-0.46,2.84,3.17,1),
+v4(0.6,3.86,3.7,1),
+v4(2.15,5.68,4.52,1),
+v4(3.15,8.27,5.18,1),
+v4(3.83,11.2,5.42,1),
+v4(3.65,14.26,5.1,1),
+v4(2.6,17.66,4.59,1),
+v4(1.48,21.29,4.23,1),
+v4(2.87,25.37,3.64,1),
+v4(6.82,28.67,2.62,1),
+v4(9.25,29.84,1.57,1),
+v4(10.16,30.21,0.88,1),
+],[v4(0.71,2.29,0.54,1),
+v4(1.24,2.84,0.71,1),
+v4(2.27,3.86,1.13,1),
+v4(4.06,5.62,2.05,1),
+v4(5,8.17,2.93,1),
+v4(5.39,10.9,3.52,1),
+v4(5.26,13.83,3.69,1),
+v4(4.05,17.75,3.52,1),
+v4(2.93,22.54,3.27,1),
+v4(6.47,26.66,2.7,1),
+v4(9.78,29.06,1.56,1),
+v4(10.97,30.08,0.63,1),
+v4(11.65,30.46,0.08,1),
+],];
+var degree1_v01 =1;
+var degree2_v01 =12;
+var knots1_v01 = [0,0,1,1,];
+var knots2_v01 = [0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,];
+var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v01, knots2_v01,Curve_v01);
+return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
+};
+Curves["494"].animation = [[2332,1],[2361,0.8206172089],[2388,1],[2409,0.2262382265],[2473,-1],[2473.005,1],[2595.99,-1],[2619,-1],[2619.005,1],[2741.99,-1],[2765,-1],[2765.005,1],[2887.99,-1],[2911,-1],[2911.005,1],[3033.99,-1],[3057,-1],[3057.005,1],[3179.99,-1],[3203,-1],[3203.005,1],[3325.99,-1],[3354,-1]];
+Curves["494"].divisions = "|MAEmodelsPrevis|ExplosionStrands_5000_3_3_124_230_247_200_40_100_100_100_40|_41_2_v1";
+Curves["495"] = function(){
+var Curve_v01 = [[v4(5.97,21.67,-4.14,1),
+v4(5.44,22.16,-4.41,1),
+v4(4.42,23.48,-5.14,1),
+v4(5.09,25.7,-6.42,1),
+v4(7.03,27.18,-7.56,1),
+v4(9.33,28.37,-8.85,1),
+v4(11.79,29.48,-10.29,1),
+v4(14.16,30.67,-11.77,1),
+v4(16.36,32,-13.13,1),
+v4(18.28,33.46,-14.28,1),
+v4(19.94,35,-15.19,1),
+v4(20.89,36.06,-15.7,1),
+v4(21.32,36.6,-15.94,1),
+],[v4(7.49,20.53,-3.38,1),
+v4(6.96,21.02,-3.64,1),
+v4(5.97,22.37,-4.39,1),
+v4(6.92,24.71,-5.89,1),
+v4(9.19,26.47,-7.52,1),
+v4(11.71,28.03,-9.32,1),
+v4(14.08,29.45,-11,1),
+v4(15.9,30.59,-12.2,1),
+v4(17.37,31.61,-13.1,1),
+v4(18.7,32.68,-13.86,1),
+v4(20.03,33.94,-14.59,1),
+v4(20.92,34.94,-15.06,1),
+v4(21.36,35.48,-15.3,1),
+],];
+var degree1_v01 =1;
+var degree2_v01 =12;
+var knots1_v01 = [0,0,1,1,];
+var knots2_v01 = [0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,];
+var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v01, knots2_v01,Curve_v01);
+return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
+};
+Curves["495"].animation = [[2332,1],[2361,0.8206172089],[2388,1],[2409,0.2262382265],[2473,-1],[2473.005,1],[2595.99,-1],[2619,-1],[2619.005,1],[2741.99,-1],[2765,-1],[2765.005,1],[2887.99,-1],[2911,-1],[2911.005,1],[3033.99,-1],[3057,-1],[3057.005,1],[3179.99,-1],[3203,-1],[3203.005,1],[3325.99,-1],[3354,-1]];
+Curves["495"].divisions = "|MAEmodelsPrevis|ExplosionStrands_5000_3_3_124_230_247_200_40_100_100_100_40|_41_2_v2";
+Curves["496"] = function(){
+var Curve_v01 = [[v4(-2.59,2.97,-0.84,1),
+v4(-4.23,3.63,-1.41,1),
+v4(-7.22,4.74,-1.95,1),
+v4(-11.23,6.78,-1.18,1),
+v4(-13.79,10.08,0.54,1),
+v4(-15.31,15.72,0.89,1),
+v4(-13.57,21.25,-1.49,1),
+v4(-10.96,23.98,-3.64,1),
+v4(-8.11,26.39,-5.44,1),
+v4(-4.52,28.29,-6.68,1),
+v4(0.24,29.97,-7.12,1),
+v4(3.59,30.87,-7.36,1),
+v4(5.25,31.3,-7.46,1),
+],[v4(-2.35,4.13,-1.39,1),
+v4(-3.91,4.74,-1.74,1),
+v4(-6.63,5.81,-1.8,1),
+v4(-10.07,7.84,-0.78,1),
+v4(-12.29,10.9,0.66,1),
+v4(-13.5,16.07,0.8,1),
+v4(-11.08,21.56,-1.67,1),
+v4(-7.83,24.26,-3.91,1),
+v4(-4.55,26.74,-5.74,1),
+v4(-0.69,28.73,-6.81,1),
+v4(4.1,30.48,-7.25,1),
+v4(7.42,31.41,-7.49,1),
+v4(9.07,31.84,-7.6,1),
+],];
+var degree1_v01 =1;
+var degree2_v01 =12;
+var knots1_v01 = [0,0,1,1,];
+var knots2_v01 = [0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,];
+var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v01, knots2_v01,Curve_v01);
+return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
+};
+Curves["496"].animation = [[2332,1],[2361,0.8206172089],[2388,1],[2409,0.2262382265],[2473,-1],[2473.005,1],[2595.99,-1],[2619,-1],[2619.005,1],[2741.99,-1],[2765,-1],[2765.005,1],[2887.99,-1],[2911,-1],[2911.005,1],[3033.99,-1],[3057,-1],[3057.005,1],[3179.99,-1],[3203,-1],[3203.005,1],[3325.99,-1],[3354,-1]];
+Curves["496"].divisions = "|MAEmodelsPrevis|ExplosionStrands_5000_3_3_124_230_247_200_40_100_100_100_40|_41_2_v3";
+Curves["497"] = function(){
+var Curve_v01 = [[v4(0.2,2.77,0.43,1),
+v4(-0.71,2.89,0.67,1),
+v4(-2.54,3.4,1.32,1),
+v4(-4.49,5.21,2.53,1),
+v4(-5.74,7.43,3.84,1),
+v4(-6.57,9.87,4.76,1),
+v4(-6.91,12.32,5.1,1),
+v4(-6.92,15.12,4.78,1),
+v4(-5.81,18.8,3.96,1),
+v4(-2.43,22.69,2.69,1),
+v4(1.19,24.91,1.02,1),
+v4(2.83,25.55,-0.08,1),
+v4(3.65,25.84,-0.66,1),
+],[v4(0.87,3.1,3.87,1),
+v4(0.03,3.22,4.21,1),
+v4(-1.5,3.76,4.97,1),
+v4(-2.83,5.56,6.05,1),
+v4(-3.58,7.69,7.04,1),
+v4(-4.19,9.99,7.77,1),
+v4(-4.71,12.37,8.05,1),
+v4(-4.59,14.99,7.73,1),
+v4(-3.21,18.12,7.1,1),
+v4(-1.12,21.25,6.19,1),
+v4(1.39,23.58,4.8,1),
+v4(2.82,24.58,3.7,1),
+v4(3.56,25.05,3.11,1),
+],];
+var degree1_v01 =1;
+var degree2_v01 =12;
+var knots1_v01 = [0,0,1,1,];
+var knots2_v01 = [0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,];
+var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v01, knots2_v01,Curve_v01);
+return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
+};
+Curves["497"].animation = [[2332,1],[2361,0.8206172089],[2388,1],[2409,0.2262382265],[2473,-1],[2473.005,1],[2595.99,-1],[2619,-1],[2619.005,1],[2741.99,-1],[2765,-1],[2765.005,1],[2887.99,-1],[2911,-1],[2911.005,1],[3033.99,-1],[3057,-1],[3057.005,1],[3179.99,-1],[3203,-1],[3203.005,1],[3325.99,-1],[3354,-1]];
+Curves["497"].divisions = "|MAEmodelsPrevis|ExplosionStrands_5000_3_3_124_230_247_200_40_100_100_100_40|_41_2_v4";
+Curves["498"] = function(){
+var Curve_v01 = [[v4(0.04,2.39,0.85,1),
+v4(0.47,2.62,0.92,1),
+v4(1.38,3.09,1.09,1),
+v4(2.83,3.91,1.5,1),
+v4(4.34,5.37,2.09,1),
+v4(5.69,7.45,2.76,1),
+v4(6.36,10.03,3.08,1),
+v4(6.31,12.78,2.77,1),
+v4(5.47,15.39,2.25,1),
+v4(4.59,17.65,2.04,1),
+v4(3.83,19.58,1.75,1),
+v4(3.18,20.69,1.4,1),
+v4(2.84,21.13,1.2,1),
+],[v4(2.19,2.91,-0.08,1),
+v4(2.6,3.14,-0.01,1),
+v4(3.37,3.61,0.15,1),
+v4(4.5,4.38,0.48,1),
+v4(5.61,5.61,0.94,1),
+v4(6.65,7.23,1.5,1),
+v4(7.48,9.15,1.95,1),
+v4(7.82,11.37,2.09,1),
+v4(7.37,13.76,1.78,1),
+v4(6.36,16.19,1.3,1),
+v4(5.23,18.41,1.1,1),
+v4(4.45,19.55,0.97,1),
+v4(4.06,20.03,0.86,1),
+],];
+var degree1_v01 =1;
+var degree2_v01 =12;
+var knots1_v01 = [0,0,1,1,];
+var knots2_v01 = [0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,];
+var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v01, knots2_v01,Curve_v01);
+return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
+};
+Curves["498"].animation = [[2332,1],[2361,0.8206172089],[2388,1],[2409,0.2262382265],[2473,-1],[2473.005,1],[2595.99,-1],[2619,-1],[2619.005,1],[2741.99,-1],[2765,-1],[2765.005,1],[2887.99,-1],[2911,-1],[2911.005,1],[3033.99,-1],[3057,-1],[3057.005,1],[3179.99,-1],[3203,-1],[3203.005,1],[3325.99,-1],[3354,-1]];
+Curves["498"].divisions = "|MAEmodelsPrevis|ExplosionStrands_5000_3_3_124_230_247_200_40_100_100_100_40|_41_2_v5";
+Curves["499"] = function(){
+var Curve_v01 = [[v4(-1.23,26.78,-3.09,1),
+v4(-0.64,27.17,-3.33,1),
+v4(0.66,27.95,-3.79,1),
+v4(2.87,29.09,-4.43,1),
+v4(5.29,30.26,-5.06,1),
+v4(7.8,31.49,-5.69,1),
+v4(10.31,32.77,-6.35,1),
+v4(12.72,34.09,-7.04,1),
+v4(14.86,35.53,-7.81,1),
+v4(16.56,37.1,-8.68,1),
+v4(17.38,39.14,-9.88,1),
+v4(16.44,40.4,-10.64,1),
+v4(15.92,40.85,-10.9,1),
+],[v4(0.47,26.78,-1.78,1),
+v4(1.13,27.04,-1.94,1),
+v4(2.53,27.49,-2.23,1),
+v4(4.81,28.27,-2.71,1),
+v4(7.29,29.31,-3.3,1),
+v4(9.94,30.51,-3.94,1),
+v4(12.62,31.72,-4.57,1),
+v4(15.02,33.16,-5.31,1),
+v4(16.89,34.91,-6.24,1),
+v4(18.15,36.88,-7.31,1),
+v4(18.44,39.42,-8.75,1),
+v4(17.21,40.94,-9.64,1),
+v4(16.61,41.44,-9.94,1),
+],];
+var degree1_v01 =1;
+var degree2_v01 =12;
+var knots1_v01 = [0,0,1,1,];
+var knots2_v01 = [0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,];
+var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v01, knots2_v01,Curve_v01);
+return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
+};
+Curves["499"].animation = [[2332,1],[2361,0.8206172089],[2388,1],[2409,0.2262382265],[2473,-1],[2473.005,1],[2595.99,-1],[2619,-1],[2619.005,1],[2741.99,-1],[2765,-1],[2765.005,1],[2887.99,-1],[2911,-1],[2911.005,1],[3033.99,-1],[3057,-1],[3057.005,1],[3179.99,-1],[3203,-1],[3203.005,1],[3325.99,-1],[3354,-1]];
+Curves["499"].divisions = "|MAEmodelsPrevis|ExplosionStrands_5000_3_3_124_230_247_200_40_100_100_100_40|_41_2_v6";
+Curves["500"] = function(){
+var Curve_v01 = [[v4(-7.28,7.6,1.72,1),
+v4(-7.97,8.23,2.08,1),
+v4(-9.16,9.67,2.71,1),
+v4(-10.4,12.35,3.16,1),
+v4(-11.04,15.63,2.8,1),
+v4(-10.77,19.19,1.99,1),
+v4(-8.55,22.54,0.91,1),
+v4(-3.86,25.42,-0.43,1),
+v4(2.11,27.48,-2.07,1),
+v4(7.05,29.22,-4.26,1),
+v4(10.5,30.88,-6.04,1),
+v4(12.29,31.98,-6.79,1),
+v4(13.15,32.63,-7.02,1),
+],[v4(-5.62,6.6,2.93,1),
+v4(-6.32,7.23,3.27,1),
+v4(-7.54,8.87,3.91,1),
+v4(-8.9,12.19,4.45,1),
+v4(-9.34,15.97,4.08,1),
+v4(-7.63,19.55,3.26,1),
+v4(-4.2,22.84,2.27,1),
+v4(0.78,25.5,1.09,1),
+v4(5.66,27.54,-0.48,1),
+v4(9.01,29.25,-2.54,1),
+v4(11.62,30.8,-4.4,1),
+v4(13.4,31.93,-5.29,1),
+v4(14.24,32.57,-5.61,1),
+],];
+var degree1_v01 =1;
+var degree2_v01 =12;
+var knots1_v01 = [0,0,1,1,];
+var knots2_v01 = [0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,];
+var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v01, knots2_v01,Curve_v01);
+return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
+};
+Curves["500"].animation = [[2332,1],[2361,0.8206172089],[2388,1],[2409,0.2262382265],[2473,-1],[2473.005,1],[2595.99,-1],[2619,-1],[2619.005,1],[2741.99,-1],[2765,-1],[2765.005,1],[2887.99,-1],[2911,-1],[2911.005,1],[3033.99,-1],[3057,-1],[3057.005,1],[3179.99,-1],[3203,-1],[3203.005,1],[3325.99,-1],[3354,-1]];
+Curves["500"].divisions = "|MAEmodelsPrevis|ExplosionStrands_5000_3_3_124_230_247_200_40_100_100_100_40|_41_2_v8";
+Curves["501"] = function(){
+var Curve_v01 = [[v4(3.41,3.65,-1.35,1),
+v4(3.92,4.35,-1.42,1),
+v4(5.16,5.36,-1.34,1),
+v4(6.68,6.98,-1,1),
+v4(7.69,9.04,-0.65,1),
+v4(8.13,11.62,-0.45,1),
+v4(7.77,14.47,-0.76,1),
+v4(6.72,16.74,-1.12,1),
+v4(5.34,18.54,-1.04,1),
+v4(3.77,20.98,-1.09,1),
+v4(4.64,24.84,-1.87,1),
+v4(7.16,26.18,-2.73,1),
+v4(8,26.56,-3.13,1),
+],[v4(2.89,3,-1.23,1),
+v4(3.68,3.52,-1.41,1),
+v4(5.6,4.24,-1.49,1),
+v4(8.07,6.18,-1.18,1),
+v4(9.38,9.09,-0.72,1),
+v4(9.81,11.87,-0.5,1),
+v4(9.39,14.68,-0.81,1),
+v4(8.27,17.04,-1.18,1),
+v4(6.97,18.98,-1.44,1),
+v4(5.44,20.73,-1.97,1),
+v4(5.14,23.52,-2.8,1),
+v4(6.92,25.16,-3.49,1),
+v4(7.58,25.74,-3.82,1),
+],];
+var degree1_v01 =1;
+var degree2_v01 =12;
+var knots1_v01 = [0,0,1,1,];
+var knots2_v01 = [0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,];
+var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v01, knots2_v01,Curve_v01);
+return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
+};
+Curves["501"].animation = [[2332,1],[2361,0.8206172089],[2388,1],[2409,0.2262382265],[2473,-1],[2473.005,1],[2595.99,-1],[2619,-1],[2619.005,1],[2741.99,-1],[2765,-1],[2765.005,1],[2887.99,-1],[2911,-1],[2911.005,1],[3033.99,-1],[3057,-1],[3057.005,1],[3179.99,-1],[3203,-1],[3203.005,1],[3325.99,-1],[3354,-1]];
+Curves["501"].divisions = "|MAEmodelsPrevis|ExplosionStrands_5000_3_3_124_230_247_200_40_100_100_100_40|_41_2_v9";
+Curves["502"] = function(){
+var Curve_v01 = [[v4(7.71,33.42,-5.86,1),
+v4(8.45,33.6,-6.28,1),
+v4(9.91,34.02,-7.13,1),
+v4(12.59,35.37,-8.71,1),
+v4(13.96,38.43,-10.18,1),
+v4(13.34,41.69,-11.3,1),
+v4(11.31,44.49,-12.38,1),
+v4(8.6,46.49,-13.42,1),
+v4(6.29,48.28,-14.5,1),
+v4(4.76,50.16,-15.61,1),
+v4(3.52,52,-16.74,1),
+v4(2.87,53.3,-17.53,1),
+v4(2.58,53.96,-17.93,1),
+],[v4(8.96,32.96,-5.2,1),
+v4(9.68,33.18,-5.62,1),
+v4(11.14,33.68,-6.46,1),
+v4(13.77,34.99,-7.95,1),
+v4(15.53,37.98,-9.43,1),
+v4(15.25,41.53,-10.57,1),
+v4(13.44,44.61,-11.58,1),
+v4(10.84,46.8,-12.51,1),
+v4(8.41,48.38,-13.42,1),
+v4(6.65,49.9,-14.34,1),
+v4(5.19,51.43,-15.28,1),
+v4(4.42,52.57,-15.97,1),
+v4(4.07,53.15,-16.33,1),
+],];
+var degree1_v01 =1;
+var degree2_v01 =12;
+var knots1_v01 = [0,0,1,1,];
+var knots2_v01 = [0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,];
+var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v01, knots2_v01,Curve_v01);
+return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
+};
+Curves["502"].animation = [[2332,1],[2361,0.8206172089],[2388,1],[2409,0.2262382265],[2473,-1],[2473.005,1],[2595.99,-1],[2619,-1],[2619.005,1],[2741.99,-1],[2765,-1],[2765.005,1],[2887.99,-1],[2911,-1],[2911.005,1],[3033.99,-1],[3057,-1],[3057.005,1],[3179.99,-1],[3203,-1],[3203.005,1],[3325.99,-1],[3354,-1]];
+Curves["502"].divisions = "|MAEmodelsPrevis|ExplosionStrands_5000_3_3_124_230_247_200_40_100_100_100_40|_41_2_v10";
+Curves["503"] = function(){
+var Curve_v01 = [[v4(-0.37,3.22,2.69,1),
+v4(0.05,3.97,3.13,1),
+v4(0.76,5.58,4.36,1),
+v4(0.82,8.33,6.27,1),
+v4(0.66,11.03,7.08,1),
+v4(0.26,13.74,7.08,1),
+v4(-0.62,16.25,7.08,1),
+v4(-1.2,18.88,6.26,1),
+v4(-0.97,21.65,4.15,1),
+v4(0.28,24.15,1.6,1),
+v4(2.68,25.68,0.32,1),
+v4(4.37,26.4,-0.04,1),
+v4(5.26,26.78,-0.09,1),
+],[v4(0.58,3.22,0.31,1),
+v4(1.01,3.98,0.74,1),
+v4(1.8,5.52,1.96,1),
+v4(2.15,8.24,3.92,1),
+v4(2.21,10.98,4.75,1),
+v4(2.07,13.79,4.75,1),
+v4(1.34,16.4,4.75,1),
+v4(0.77,19.05,3.9,1),
+v4(1.11,21.88,1.56,1),
+v4(2.5,24.45,-1.12,1),
+v4(5.04,26.03,-2.23,1),
+v4(6.77,26.77,-2.42,1),
+v4(7.65,27.16,-2.42,1),
+],];
+var degree1_v01 =1;
+var degree2_v01 =12;
+var knots1_v01 = [0,0,1,1,];
+var knots2_v01 = [0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,];
+var nurbsSurface_v01 = new THREE.NURBSSurface(degree1_v01, degree2_v01, knots1_v01, knots2_v01,Curve_v01);
+return function(u, v) {return nurbsSurface_v01.getPoint(v,u);};
+};
+Curves["503"].animation = [[2332,1],[2361,0.8206172089],[2388,1],[2409,0.2262382265],[2473,-1],[2473.005,1],[2595.99,-1],[2619,-1],[2619.005,1],[2741.99,-1],[2765,-1],[2765.005,1],[2887.99,-1],[2911,-1],[2911.005,1],[3033.99,-1],[3057,-1],[3057.005,1],[3179.99,-1],[3203,-1],[3203.005,1],[3325.99,-1],[3354,-1]];
+Curves["503"].divisions = "|MAEmodelsPrevis|ExplosionStrands_5000_3_3_124_230_247_200_40_100_100_100_40|_41_2_v11";
+Curves.numCurves = 504;

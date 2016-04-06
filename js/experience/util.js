@@ -173,8 +173,11 @@ MAEVR.Experience.CamCurves.parentRX =
 [240,-Math.PI/2],
 [10000,-Math.PI/2]];
 
+MAEVR.Experience.CamCurves.light = 
+[[0,0],[1,1],[3,1],[5,0]];
+
 MAEVR.Experience.CamCurves.intro = 
-[[0,0],[3,1],[5,1],[8,0]];
+[[4,0],[5,1],[6,1],[7,0]];
 
 MAEVR.Experience.CamCurves.outro = 
 [[253,0],[256,1],[10000,1]];

@@ -17,6 +17,7 @@ MAEVR.Experience = {
 
     scope.vertIn = loader.load('assets/img/VertigoIntro.png', onTextureLoaded);
     scope.vertOut = loader.load('assets/img/VertigoOutro.png', onTextureLoaded);
+    scope.lightTitle = loader.load('assets/img/lightTitle.png', onTextureLoaded);
 
     function onTextureLoaded(texture) {
       console.log("MAEVR.Experience: onTextureLoaded");
@@ -37,10 +38,12 @@ MAEVR.Experience = {
 
     scope.vertInQuad = new THREE.Mesh(new THREE.PlaneBufferGeometry( 5.12,1.88), new THREE.MeshBasicMaterial( {map:scope.vertIn,transparent:true,opacity:0} ));
     scope.vertOutQuad = new THREE.Mesh(new THREE.PlaneBufferGeometry( 5.12,1.17), new THREE.MeshBasicMaterial( {map:scope.vertOut,transparent:true,opacity:0} ));
+    scope.titleCard = new THREE.Mesh(new THREE.PlaneBufferGeometry( 5.12,.64), new THREE.MeshBasicMaterial( {map:scope.lightTitle,transparent:true,opacity:0} ));
 
     scope.quadParent = new THREE.Object3D();
     scope.quadParent.add(scope.vertInQuad);
     scope.quadParent.add(scope.vertOutQuad);
+    scope.quadParent.add(scope.titleCard);
     scope.quadParent.scale.set(2,2,2);
     scope.quadParent.position.z = -15;
     scope.quadParent.isInScene = false;
@@ -145,6 +148,15 @@ MAEVR.Experience = {
           MAEVR.camera.add(scope.quadParent);
           scope.quadParent.isInScene = true;
         }
+
+        getLerp = MAEVR.Experience.Util.FindInOut(
+        .001*MAEVR.elapsedTime*scope.timeMultiplier,MAEVR.Experience.CamCurves.light);
+        value = MAEVR.Experience.Util.Remap(
+        MAEVR.Experience.Util.SmoothStep(getLerp[0]),0,1,
+        MAEVR.Experience.CamCurves.light[getLerp[1]][1],
+        MAEVR.Experience.CamCurves.light[getLerp[2]][1]);
+
+        scope.titleCard.material.opacity = value;
 
         getLerp = MAEVR.Experience.Util.FindInOut(
         .001*MAEVR.elapsedTime*scope.timeMultiplier,MAEVR.Experience.CamCurves.intro);

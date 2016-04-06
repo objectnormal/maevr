@@ -113,7 +113,7 @@ body {
 .window {
   text-align: center;
   padding: 16px;
-  width: 90%;
+  width: 100%;
   max-width: 640px;
   display: none;
   pointer-events: auto;
@@ -155,4 +155,36 @@ body {
 
 .webvr-button {
   visibility: hidden;
+}
+
+@media (max-width: 720px) and (orientation: landscape) {
+  .window {
+    width: 80%;
+  }
+}
+
+@media (max-width: 360px) and (orientation: portrait) {
+  .window {
+    width: 100%;
+  }
+  #credits {
+    bottom: 12px;
+  }
+  #credits img{
+    width: 80px;
+    height: 40px;
+  }
+}
+
+@media (max-height: 360px) and (orientation: landscape) {
+  .window {
+    width: 60%;
+  }
+  #credits {
+    bottom: 12px;
+  }
+  #credits img{
+    width: 80px;
+    height: 40px;
+  }
 }

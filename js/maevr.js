@@ -21,6 +21,8 @@ var MAEVR = {
       MAEVR.mode = MAEVR.Modes.LIVE;
     } else if (window.location.hash == "#static") {
       MAEVR.mode = MAEVR.Modes.STATIC;
+    } else if (window.location.hash == "#capture") {
+      MAEVR.mode = MAEVR.Modes.CAPTURE;
     }
 
     // Init Three.jS
@@ -98,11 +100,17 @@ var MAEVR = {
     MAEVR.elapsedTimeSinceInit = performance.now() - MAEVR.initTime;
 
     if (MAEVR.playing) {
+
       if (MAEVR.mode == MAEVR.Modes.LIVE) {
         MAEVR.elapsedTime = performance.now() - MAEVR.startTime;
+      } else if (MAEVR.mode == MAEVR.Modes.CAPTURE) {  
+        MAEVR.elapsedTime = Math.round(MAEVR.Capture.captureIndex * (1000/30));
+        console.log(MAEVR.elapsedTime );
+        MAEVR.elapsedTimeSinceInit = MAEVR.elapsedTime;
       } else {
         MAEVR.elapsedTime = MAEVR.audio.currentTime * 1000;
       }
+
     } else {
       MAEVR.elapsedTime = 0;
     }
@@ -121,9 +129,13 @@ var MAEVR = {
     if(MAEVR.Experience.loaded)
       MAEVR.Experience.animate(timestamp);
 
-    // Schedule next frame
+    // Capture
 
-    requestAnimationFrame(MAEVR.animate);
+    if(MAEVR.mode == MAEVR.Modes.CAPTURE && MAEVR.playing) {
+      MAEVR.Capture.save();
+    } else {
+      requestAnimationFrame(MAEVR.animate);
+    }
 
   },
   connect: function() {
@@ -225,6 +237,54 @@ var MAEVR = {
         MAEVR.play();
       }
 
+  } 
+}
+
+//
+
+MAEVR.Capture = {
+  captureIndex: 0,
+  init: function() {
+
+    MAEVR.camera.aspect = 1920 / 1080;
+    MAEVR.camera.updateProjectionMatrix();
+    MAEVR.renderer.setSize( 1920, 1080, false);
+
+    MAEVR.play();
+
+  },
+  save: function() {
+
+    // Image
+
+    var imageData = MAEVR.renderer.domElement.toDataURL();
+    var blob = MAEVR.Capture.dataURItoBlob(imageData);
+
+    // Request
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'http://localhost:3999/' + MAEVR.Capture.captureIndex, true);
+
+    xhr.onload = function(e) {
+      if (this.status == 200) {
+        console.log("File Uploaded: " + MAEVR.Capture.captureIndex);
+
+        MAEVR.Capture.captureIndex++;
+        MAEVR.animate();
+      }
+    };
+
+    xhr.send(blob);
+
+  },
+  dataURItoBlob: function(dataURI) {
+    var mimetype = dataURI.split(",")[0].split(':')[1].split(';')[0];
+    var byteString = atob(dataURI.split(',')[1]);
+    var u8a = new Uint8Array(byteString.length);
+    for (var i = 0; i < byteString.length; i++) {
+      u8a[i] = byteString.charCodeAt(i);
+    }
+    return new Blob([u8a.buffer], { type: mimetype });
   }
 }
 
@@ -267,7 +327,8 @@ MAEVR.Events = {
 
 MAEVR.Modes = {
   STATIC: 0,
-  LIVE: 1
+  LIVE: 1,
+  CAPTURE: 2
 }
 
 //
@@ -387,6 +448,8 @@ MAEVR.GUI = {
     if (MAEVR.mode == MAEVR.Modes.LIVE) {
       MAEVR.Message.showMessage("WAITING...");
       MAEVR.connect();
+    } else if (MAEVR.mode == MAEVR.Modes.CAPTURE) {
+      MAEVR.Capture.init();
     } else {
       MAEVR.Message.showMessage("LOADING...");
       MAEVR.loadAudio();  

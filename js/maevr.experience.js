@@ -80,7 +80,7 @@ MAEVR.Experience = {
     console.log("MAEVR.Experience: play");
 
     console.log("MAEVR.vrControls.resetSensor");
-    MAEVR.vrControls.resetSensor();
+    //MAEVR.vrControls.resetSensor();
 
   },
 
@@ -118,7 +118,7 @@ MAEVR.Experience = {
       MAEVR.Experience.CamCurves.camZ[getLerp[1]][1],
       MAEVR.Experience.CamCurves.camZ[getLerp[2]][1]);
 
-    MAEVR.camera.position.z = value;
+    MAEVR.cameraInnerRig.position.z = value;
 
     getLerp = MAEVR.Experience.Util.FindInOut(
       .001*MAEVR.elapsedTime*scope.timeMultiplier,MAEVR.Experience.CamCurves.parentY);
@@ -127,7 +127,7 @@ MAEVR.Experience = {
       MAEVR.Experience.CamCurves.parentY[getLerp[1]][1],
       MAEVR.Experience.CamCurves.parentY[getLerp[2]][1]);
 
-     MAEVR.parentCamera.position.y = value;
+     MAEVR.cameraOuterRig.position.y = value;
 
     getLerp = MAEVR.Experience.Util.FindInOut(
       .001*MAEVR.elapsedTime*scope.timeMultiplier,MAEVR.Experience.CamCurves.parentRX);
@@ -136,7 +136,7 @@ MAEVR.Experience = {
       MAEVR.Experience.CamCurves.parentRX[getLerp[1]][1],
       MAEVR.Experience.CamCurves.parentRX[getLerp[2]][1]);
 
-     MAEVR.parentCamera.rotation.x = value;
+     MAEVR.cameraOuterRig.rotation.x = value;
 
     //fade in and out the titles
 

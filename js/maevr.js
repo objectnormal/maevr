@@ -38,16 +38,26 @@ var MAEVR = {
     MAEVR.scene = new THREE.Scene();
     MAEVR.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 10000);
 
-    MAEVR.camera.position.z = 397;
-    MAEVR.parentCamera = new THREE.Object3D();
-    MAEVR.parentCamera.position.y = 12;
-    MAEVR.parentCamera.add(MAEVR.camera);
-    MAEVR.scene.add(MAEVR.parentCamera);
+    MAEVR.cameraOuterRig = new THREE.Object3D();
+    MAEVR.cameraInnerRig = new THREE.Object3D();
+
+    MAEVR.cameraInnerRig.position.z = 397;
+    MAEVR.cameraOuterRig.position.y = 12;
+
+    MAEVR.cameraInnerRig.add(MAEVR.camera);
+    MAEVR.cameraOuterRig.add(MAEVR.cameraInnerRig);
+    MAEVR.scene.add(MAEVR.cameraOuterRig);
+
+    // MAEVR.camera.position.z = 397;
+    // MAEVR.parentCamera = new THREE.Object3D();
+    // MAEVR.parentCamera.position.y = 12;
+    // MAEVR.parentCamera.add(MAEVR.camera);
+    // MAEVR.scene.add(MAEVR.parentCamera);
   
     // Init VR
 
     MAEVR.vrControls = new THREE.VRControls(MAEVR.camera);
-    MAEVR.vrControls.resetSensor();
+    //MAEVR.vrControls.resetSensor();
 
     MAEVR.vrEffect = new THREE.VREffect(MAEVR.renderer);
     MAEVR.vrEffect.setSize(window.innerWidth, window.innerHeight);
@@ -105,7 +115,6 @@ var MAEVR = {
         MAEVR.elapsedTime = performance.now() - MAEVR.startTime;
       } else if (MAEVR.mode == MAEVR.Modes.CAPTURE) {  
         MAEVR.elapsedTime = Math.round(MAEVR.Capture.captureIndex * (1000/30));
-        console.log(MAEVR.elapsedTime );
         MAEVR.elapsedTimeSinceInit = MAEVR.elapsedTime;
       } else {
         MAEVR.elapsedTime = MAEVR.audio.currentTime * 1000;
@@ -300,7 +309,7 @@ MAEVR.Events = {
   },
   orientationchange: function(e) {
     console.log("MAEVR.vrControls.resetSensor");
-    MAEVR.vrControls.resetSensor();    
+    //MAEVR.vrControls.resetSensor();    
   },
   vrdisplaypresentchange: function(e) {
     if (MAEVR.vrManager.hmd.isPresenting) {
@@ -312,7 +321,7 @@ MAEVR.Events = {
     }
 
     console.log("MAEVR.vrControls.resetSensor");
-    MAEVR.vrControls.resetSensor();
+    //MAEVR.vrControls.resetSensor();
 
   },
   resize: function(e) {

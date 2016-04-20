@@ -9,7 +9,7 @@ MAEVR.Experience.Util = {
 		var nameSplit = params.surface.divisions.split("|");
 		var divisions = nameSplit[3].split("_");
 		var shaderInfo = nameSplit[2].split("_");
-		var divisionMultiplier = new THREE.Vector2(0, 0); // 3,2 for more detail
+		var divisionMultiplier = new THREE.Vector2(1, 1); // 3,2 for more detail
 		var geometry = new THREE.ParametricGeometry( params.surface(), parseInt(divisions[1]) * divisionMultiplier.x, parseInt(divisions[2]) * divisionMultiplier.y );
 		var swirl = new THREE.Mesh( geometry, params.material===undefined?new THREE.MeshNormalMaterial(  ):params.material );
 

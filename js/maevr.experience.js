@@ -79,8 +79,8 @@ MAEVR.Experience = {
   play: function() {
     console.log("MAEVR.Experience: play");
 
-    console.log("MAEVR.vrControls.resetSensor");
-    MAEVR.vrControls.resetSensor();
+    // console.log("MAEVR.vrControls.resetSensor");
+    // MAEVR.vrControls.resetSensor();
 
   },
 

@@ -57,7 +57,7 @@ var MAEVR = {
     // Init VR
 
     MAEVR.vrControls = new THREE.VRControls(MAEVR.camera);
-    MAEVR.vrControls.resetSensor();
+    // MAEVR.vrControls.resetSensor();
 
     MAEVR.vrEffect = new THREE.VREffect(MAEVR.renderer);
     MAEVR.vrEffect.setSize(window.innerWidth, window.innerHeight);
@@ -308,8 +308,8 @@ MAEVR.Events = {
 
   },
   orientationchange: function(e) {
-    console.log("MAEVR.vrControls.resetSensor");
-    MAEVR.vrControls.resetSensor();
+    // console.log("MAEVR.vrControls.resetSensor");
+    // MAEVR.vrControls.resetSensor();
   },
   vrdisplaypresentchange: function(e) {
     if (MAEVR.vrManager.hmd.isPresenting) {
@@ -320,8 +320,8 @@ MAEVR.Events = {
       MAEVR.GUI.showElement("logo");
     }
 
-    console.log("MAEVR.vrControls.resetSensor");
-    MAEVR.vrControls.resetSensor();
+    // console.log("MAEVR.vrControls.resetSensor");
+    // MAEVR.vrControls.resetSensor();
 
   },
   resize: function(e) {
@@ -329,6 +329,9 @@ MAEVR.Events = {
     MAEVR.vrEffect.setSize(window.innerWidth, window.innerHeight);
     MAEVR.camera.aspect = window.innerWidth / window.innerHeight;
     MAEVR.camera.updateProjectionMatrix();
+
+    MAEVR.renderer.domElement.style.width = window.innerWidth + 'px';
+    MAEVR.renderer.domElement.style.height = window.innerHeight + 'px';
   }
 }
 

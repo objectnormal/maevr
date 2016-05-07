@@ -98,6 +98,14 @@ var MAEVR = {
 
     document.body.appendChild(MAEVR.renderer.domElement);
     
+    // Check for VR Support
+
+    window.onload = function() {
+      if (MAEVR.vrManager.isVRCompatible) {
+        document.getElementById("welcomeWindow").className += " vr";
+      }
+    }
+
   },
   play: function() {
     MAEVR.Experience.play();

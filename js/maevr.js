@@ -74,10 +74,6 @@ var MAEVR = {
 
     MAEVR.vrManager = new WebVRManager(MAEVR.renderer, MAEVR.vrEffect, vrParams);
 
-    if (MAEVR.vrManager.isVRCompatible) {
-      document.getElementById("welcomeWindow").className += " vr";
-    }
-
     // Initialize Events
 
     MAEVR.Events.init();
@@ -102,7 +98,10 @@ var MAEVR = {
 
     window.onload = function() {
       if (MAEVR.vrManager.isVRCompatible) {
+        console.log("VR compatible");
         document.getElementById("welcomeWindow").className += " vr";
+      } else {
+        console.log("VR incompatible");
       }
     }
 

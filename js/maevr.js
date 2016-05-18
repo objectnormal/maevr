@@ -74,6 +74,15 @@ var MAEVR = {
 
     MAEVR.vrManager = new WebVRManager(MAEVR.renderer, MAEVR.vrEffect, vrParams);
 
+    MAEVR.vrManager.on("initialized", function () {
+      if (MAEVR.vrManager.isVRCompatible) {
+        console.log("VR compatible");
+        document.getElementById("welcomeWindow").className += " vr";
+      } else {
+        console.log("VR incompatible");
+      }
+    });
+
     // Initialize Events
 
     MAEVR.Events.init();
@@ -93,17 +102,6 @@ var MAEVR = {
     // Add to DOM
 
     document.body.appendChild(MAEVR.renderer.domElement);
-    
-    // Check for VR Support
-
-    window.onload = function() {
-      if (MAEVR.vrManager.isVRCompatible) {
-        console.log("VR compatible");
-        document.getElementById("welcomeWindow").className += " vr";
-      } else {
-        console.log("VR incompatible");
-      }
-    }
 
   },
   play: function() {

@@ -147,6 +147,7 @@ body {
   width: 112px;
   height: 36px;
   margin: 0 2px;
+  font-size: .8em;
 }
 
 .button:active {
